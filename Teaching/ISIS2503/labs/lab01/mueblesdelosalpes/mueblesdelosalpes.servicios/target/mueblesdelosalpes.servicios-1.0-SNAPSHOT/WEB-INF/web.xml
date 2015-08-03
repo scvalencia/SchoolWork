@@ -10,6 +10,8 @@
         </session-timeout>
     </session-config>
     
+     <display-name>SampleWebService</display-name>
+    
     <servlet>
         <servlet-name>ServletAdaptor</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
