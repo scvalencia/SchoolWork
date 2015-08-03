@@ -1,10 +1,11 @@
 package models;
+
 import com.avaje.ebean.Model;
 import com.fasterxml.jackson.databind.JsonNode;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Created by scvalencia606 on 02/08/2015.
  */
