@@ -1,0 +1,30 @@
+2012-01-01	09:08	Boston	Toys	88.56	Discover
+2012-01-01	09:09	San Jose	Toys	337.71	Cash
+2012-01-01	09:52	San Jose	Toys	450.33	MasterCard
+2012-01-01	09:52	San Jose	Toys	62.41	Discover
+2012-01-01	10:08	New York	Music	93.37	Visa
+2012-01-01	10:22	San Jose	Music	369.94	MasterCard
+2012-01-01	10:58	New York	Music	119.12	Cash
+2012-01-01	10:58	New York	Music	395.93	Discover
+2012-01-01	11:01	New York	Music	476.82	Cash
+2012-01-01	11:15	New York	Music	22.34	Visa
+2012-01-01	11:31	San Jose	Music	114.03	Cash
+2012-01-01	11:36	Boston	Music	296.76	Discover
+2012-01-01	11:52	San Jose	Music	347.24	Amex
+2012-01-01	12:01	New York	Toys	154.86	Discover
+2012-01-01	12:08	New York	Toys	391.65	Visa
+2012-01-01	12:19	Boston	Toys	165.05	Cash
+2012-01-01	12:19	Boston	Toys	293.76	Discover
+2012-01-01	12:48	New York	Toys	212.47	MasterCard
+2012-01-01	12:55	Boston	Toys	352.38	Discover
+2012-01-01	13:04	Boston	Music	303.96	MasterCard
+2012-01-01	13:12	New York	Music	429.44	Cash
+2012-01-01	13:44	Boston	Toys	249.6	MasterCard
+2012-01-01	14:20	Boston	Toys	71.13	MasterCard
+2012-01-01	14:34	San Jose	Toys	72.04	Amex
+2012-01-01	14:38	Boston	Music	113.24	MasterCard
+2012-01-01	14:44	San Jose	Toys	290.5	Amex
+2012-01-01	15:22	San Jose	Toys	0.79	MasterCard
+2012-01-01	15:51	Boston	Toys	74.13	Cash
+2012-01-01	16:01	New York	Toys	92.19	MasterCard
+2012-01-01	16:26	New York	Music	246.12	Cash

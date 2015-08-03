@@ -1,0 +1,36 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                       controllers.Application.index()
+
+########################################################################################################################
+#
+#                                               ###    ########  ####
+#                                              ## ##   ##     ##  ##
+#                                             ##   ##  ##     ##  ##
+#                                            ##     ## ########   ##
+#                                            ######### ##         ##
+#                                            ##     ## ##         ##
+#                                            ##     ## ##        ####
+#
+########################################################################################################################
+
+
+POST        /ciudad                 controllers.CiudadController.create()
+
+GET         /ciudad                 controllers.CiudadController.read()
+
+POST        /experiencia            controllers.ExperienciaVendedorController.create()
+
+GET         /experiencia            controllers.ExperienciaVendedorController.read()
+
+GET         /experiencia/:id        controllers.ExperienciaVendedorController.get(id : Long)
+
+PUT         /experiencia/:id        controllers.ExperienciaVendedorController.update(id : Long)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
