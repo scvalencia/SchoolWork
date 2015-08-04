@@ -1,0 +1,2 @@
+1. Bajar el archivo e imprima los que pasaron de ING mecánica (en un sc.valencia606.sh)
+2. Hacer sort sobre la nota final de la materia 
