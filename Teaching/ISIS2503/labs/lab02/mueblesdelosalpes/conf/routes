@@ -30,6 +30,9 @@ GET         /experiencia/:id        controllers.ExperienciaVendedorController.ge
 
 PUT         /experiencia/:id        controllers.ExperienciaVendedorController.update(id : Long)
 
+POST        /mueble                 controllers.MuebleController.create()
+
+GET         /mueble                 controllers.MuebleController.read()
 
 
 # Map static resources from the /public folder to the /assets URL path
