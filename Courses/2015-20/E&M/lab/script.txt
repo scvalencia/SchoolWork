@@ -1,0 +1,23 @@
+William Alarcón
+wf.alarcon10@uniandes.edu.co
+I-115
+
+
+Pre-informe
+	* Nombre, bibliografía, título
+	* Marco teórico
+	* ¿Qué se va a medir y/o calcular?
+	* ¿Cómo se va a medir y/o calcular?
+	* Cálculo de errores
+
+		- Error instrumento
+		- Desviación estándar -> Fórmula
+		- Error porcentual -> Fórmula
+		- Propagación de errores -> Fórmula
+		- Índice de correlación -> Calculadora
+
+Informe
+	* Títuo
+	* Análisis cualitativo
+	* Análisis cunatitativo
+	* Conclusiones

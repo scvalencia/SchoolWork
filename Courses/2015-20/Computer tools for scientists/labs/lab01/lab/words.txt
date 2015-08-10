@@ -1,0 +1,3 @@
+       2       6      40 test.txt
+       0       0       0 words.txt
+       2       6      40 total
