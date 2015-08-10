@@ -1,7 +1,10 @@
 package models;
 
 import com.avaje.ebean.Model;
+import com.fasterxml.jackson.databind.JsonNode;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -12,6 +15,7 @@ import javax.persistence.Id;
 public class Mueble extends Model {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long referencia;
 
     private String nombre;
@@ -31,8 +35,7 @@ public class Mueble extends Model {
     public Mueble() {
     }
 
-    public Mueble(Long referencia, String nombre, String descripcion, TipoMueble tipo, double precio, String imagen, int cantidad, boolean seleccion) {
-        this.referencia = referencia;
+    public Mueble(String nombre, String descripcion, TipoMueble tipo, double precio, String imagen, int cantidad, boolean seleccion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tipo = tipo;
@@ -112,5 +115,17 @@ public class Mueble extends Model {
 
     public void reducirCantidad() {
         cantidad--;
+    }
+
+    public static Mueble bind(JsonNode j) {
+        String nombre = j.findPath("nombre").asText();
+        String descripcion = j.findPath("descripcion").asText();
+        TipoMueble tipo = TipoMueble.valueOf(j.findPath("tipo").asText());
+        double precio = j.findPath("precio").asDouble();
+        String imagen = j.findPath("imagen").asText();
+        int cantidad = j.findPath("cantidad").asInt();
+        boolean seleccion = j.findPath("seleccion").asBoolean();
+        Mueble mueble = new Mueble(nombre, descripcion, tipo, precio, imagen, cantidad, seleccion);
+        return mueble;
     }
 }
