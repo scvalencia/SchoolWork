@@ -1,3 +1,14 @@
+/**
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $Id$ Vendedor.java
+ * Universidad de los Andes (Bogotá - Colombia)
+ * Departamento de Ingeniería de Sistemas y Computación
+ * Licenciado bajo el esquema Academic Free License version 3.0
+ *
+ * Ejercicio: Muebles de los Alpes
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package models;
 
 import com.avaje.ebean.Model;
@@ -12,6 +23,10 @@ import java.util.List;
 
 @Entity
 public class Vendedor extends Model {
+
+    //-----------------------------------------------------------
+    // Atributos
+    //-----------------------------------------------------------
 
     @Id
     private Long id;
@@ -30,6 +45,10 @@ public class Vendedor extends Model {
 
     private String foto;
 
+    //-----------------------------------------------------------
+    // Constructores
+    //-----------------------------------------------------------
+
     public Vendedor() {
         experiencia = new ArrayList<ExperienciaVendedor>();
     }
@@ -44,6 +63,10 @@ public class Vendedor extends Model {
         this.perfil = perfil;
         this.foto = foto;
     }
+
+    //-----------------------------------------------------------
+    // Getters y setters
+    //-----------------------------------------------------------
 
     public long getId() {
         return id;
