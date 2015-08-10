@@ -1,9 +1,39 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by scvalencia606 on 7/31/15.
  */
 
 public enum TipoUsuario {
-    Administrador,Cliente
+    Administrador,
+    Cliente;
+
+    private static Map<String, TipoUsuario> namesMap = new HashMap<String, TipoUsuario>(2);
+
+    static {
+        namesMap.put("administrador", Administrador);
+        namesMap.put("cliente", Cliente);
+    }
+
+    @JsonCreator
+    public static TipoUsuario forValue(String value) {
+        return namesMap.get(StringUtils.lowerCase(value));
+    }
+
+    @JsonValue
+    public String toValue() {
+        for (Map.Entry<String, TipoUsuario> entry : namesMap.entrySet()) {
+            if (entry.getValue() == this)
+                return entry.getKey();
+        }
+
+        return null;
+    }
 }
