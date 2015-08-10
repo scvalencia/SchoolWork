@@ -1,3 +1,14 @@
+/**
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $Id$ Profesion.java
+ * Universidad de los Andes (Bogotá - Colombia)
+ * Departamento de Ingeniería de Sistemas y Computación
+ * Licenciado bajo el esquema Academic Free License version 3.0
+ *
+ * Ejercicio: Muebles de los Alpes
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -8,6 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Enumeración con las posibles profesiones en el sistema
  * Created by scvalencia606 on 7/31/15.
  */
 
