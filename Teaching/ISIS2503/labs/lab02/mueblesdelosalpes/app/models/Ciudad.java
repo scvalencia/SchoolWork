@@ -1,3 +1,14 @@
+/**
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $Id$ Ciudad.java
+ * Universidad de los Andes (Bogotá - Colombia)
+ * Departamento de Ingeniería de Sistemas y Computación
+ * Licenciado bajo el esquema Academic Free License version 3.0
+ *
+ * Ejercicio: Muebles de los Alpes
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
 package models;
 
 import com.avaje.ebean.Model;
@@ -66,7 +77,7 @@ public class Ciudad extends Model {
     //-----------------------------------------------------------
 
     /**
-     * Crea un objeto ciudad apartir de un nodo Json
+     * Crea un objeto Ciudad apartir de un nodo Json
      * @param j Nodo Json con atributos y valores de un objeto Ciudad
      */
     public static Ciudad bind(JsonNode j) {
