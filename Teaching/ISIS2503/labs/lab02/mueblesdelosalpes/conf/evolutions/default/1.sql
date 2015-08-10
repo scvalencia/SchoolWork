@@ -17,7 +17,7 @@ create table experiencia_vendedor (
 ;
 
 create table mueble (
-  referencia                bigint not null,
+  referencia                bigint auto_increment not null,
   nombre                    varchar(255),
   descripcion               varchar(255),
   tipo                      integer,
@@ -69,8 +69,6 @@ create table vendedor (
   constraint pk_vendedor primary key (id))
 ;
 
-create sequence mueble_seq;
-
 create sequence usuario_seq;
 
 create sequence vendedor_seq;
@@ -97,8 +95,6 @@ drop table if exists usuario;
 drop table if exists vendedor;
 
 SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists mueble_seq;
 
 drop sequence if exists usuario_seq;
 
