@@ -34,6 +34,9 @@ POST        /mueble                 controllers.MuebleController.create()
 
 GET         /mueble                 controllers.MuebleController.read()
 
+GET         /usuario                controllers.UsuarioController.read()
+
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
