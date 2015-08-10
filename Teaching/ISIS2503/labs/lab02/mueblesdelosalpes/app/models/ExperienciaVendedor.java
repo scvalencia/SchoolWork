@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
+ * Clase que modela un ìtem de experiencia de vendedor.
  * Created by scvalencia606 on 8/3/15.
  */
 
@@ -15,7 +16,7 @@ import javax.persistence.Id;
 public class ExperienciaVendedor extends Model {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     public Long id;
 
     private String nombreEmpesa;
