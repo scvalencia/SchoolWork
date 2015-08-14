@@ -1,0 +1,78 @@
+\documentclass{article}
+\title{Unix \textbf{WC(1)} manual: BSD General Commands Manual}
+\author{Brian Kernighan}
+\date{July 1971}
+
+\begin{document}
+\maketitle
+
+\section{Name}
+\textbf{wc} -- word, line, character, and byte count
+
+\section{Synopsis}
+\textbf{wc} [-clmw] [file ...]
+
+\section{Description}
+The \textbf{WC} utility displays the number of lines, words, and bytes contained
+in each input file, or standard input (if no file is specified) to the
+standard output.  A line is defined as a string of characters delimited
+by a \textless newline\textgreater \ character.  Characters beyond the final  
+\textless newline\textgreater \ character will not be included in the line count.\\
+
+A word is defined as a string of characters delimited by white space
+characters.  White space characters are the set of characters for which
+the iswspace(3) function returns true.  If more than one input file is
+specified, a line of cumulative counts for all the files is displayed on
+a separate line after the output for the last file.\\
+
+The following options are available:
+
+\begin{description}
+  	\item[-L] The number	of characters in the longest input line	is written to
+	     the standard output.  When	more then one file argument is speci-
+	     fied, the longest input line of all files is reported as the
+	     value of the final	``total''.
+  	\item[-c]	     The number	of bytes in each input file is written to the standard
+	     output.  This will	cancel out any prior usage of the -m option.
+  	\item[-l]	     The number	of lines in each input file is written to the standard
+	     output.
+	\item[-m]	     The number	of characters in each input file is written to the
+	     standard output.  If the current locale does not support multi-
+	     byte characters, this is equivalent to the	-c option.  This will
+	     cancel out	any prior usage	of the -c option.
+	\item[-w]	     The number	of words in each input file is written to the standard
+	     output.
+\end{description}
+
+When an option is specified, wc only reports the information requested by
+that option.  The order of	output always takes the	form of	line, word,
+byte, and file name.  The default action is equivalent to specifying the
+-c, -l and	-w options.\\
+
+If	no files are specified,	the standard input is used and no file name is
+displayed.	 The prompt will accept	input until receiving EOF, or  in
+most environments.
+
+\section{History}
+A \textbf{wc} command appeared in Version 1	AT\&T UNIX.
+
+\section{Author}
+Written by Paul Rubin and David MacKenzie.
+
+\section{Reporting Bugs}
+Report \textbf{wc} bugs to bug-coreutils@gnu.org\\
+GNU coreutils home page: \underline{http://www.gnu.org/software/coreutils}\\
+General help using GNU software: \underline{http://www.gnu.org/gethelp}\\
+
+\section{Copyright}
+Copyright 2009 Free Software Foundation, Inc.   License  GPLv3+:  GNU\\
+GPL version 3 or later \underline{http://gnu.org/licenses/gpl.html}.\\
+This  is  free  software:  you  are free to change and redistribute it.\\
+There is NO WARRANTY, to the extent permitted by law.\\
+
+\section{See also}
+The full documentation for wc is maintained as a  Texinfo  manual.   If
+the  info  and  \textbf{wc}  programs  are  properly installed at your site, the
+command
+
+\end{document}

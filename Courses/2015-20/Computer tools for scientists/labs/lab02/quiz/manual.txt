@@ -1,0 +1,80 @@
+
+WC(1)                     BSD General Commands Manual                    WC(1)
+
+NNAAMMEE
+     wwcc -- word, line, character, and byte count
+
+SSYYNNOOPPSSIISS
+     wwcc [--ccllmmww] [_f_i_l_e _._._.]
+
+DDEESSCCRRIIPPTTIIOONN
+     The wwcc utility displays the number of lines, words, and bytes contained
+     in each input _f_i_l_e, or standard input (if no file is specified) to the
+     standard output.  A line is defined as a string of characters delimited
+     by a <newline> character.  Characters beyond the final <newline> charac-
+     ter will not be included in the line count.
+
+     A word is defined as a string of characters delimited by white space
+     characters.  White space characters are the set of characters for which
+     the iswspace(3) function returns true.  If more than one input file is
+     specified, a line of cumulative counts for all the files is displayed on
+     a separate line after the output for the last file.
+
+     The following options are available:
+
+     --cc      The number of bytes in each input file is written to the standard
+             output.  This will cancel out any prior usage of the --mm option.
+
+     --ll      The number of lines in each input file is written to the standard
+             output.
+
+     --mm      The number of characters in each input file is written to the
+             standard output.  If the current locale does not support multi-
+             byte characters, this is equivalent to the --cc option.  This will
+             cancel out any prior usage of the --cc option.
+
+     --ww      The number of words in each input file is written to the standard
+             output.
+
+     When an option is specified, wwcc only reports the information requested by
+     that option.  The order of output always takes the form of line, word,
+     byte, and file name.  The default action is equivalent to specifying the
+     --cc, --ll and --ww options.
+
+     If no files are specified, the standard input is used and no file name is
+     displayed.  The prompt will accept input until receiving EOF, or [^D] in
+     most environments.
+
+EENNVVIIRROONNMMEENNTT
+     The LANG, LC_ALL and LC_CTYPE environment variables affect the execution
+     of wwcc as described in environ(7).
+
+EEXXIITT SSTTAATTUUSS
+     The wwcc utility exits 0 on success, and >0 if an error occurs.
+
+EEXXAAMMPPLLEESS
+     Count the number of characters, words and lines in each of the files
+     _r_e_p_o_r_t_1 and _r_e_p_o_r_t_2 as well as the totals for both:
+
+           wc -mlw report1 report2
+
+CCOOMMPPAATTIIBBIILLIITTYY
+     Historically, the wwcc utility was documented to define a word as a ``maxi-
+     mal string of characters delimited by <space>, <tab> or <newline> charac-
+     ters''.  The implementation, however, did not handle non-printing charac-
+     ters correctly so that ``  ^D^E  '' counted as 6 spaces, while
+     ``foo^D^Ebar'' counted as 8 characters.  4BSD systems after 4.3BSD modi-
+     fied the implementation to be consistent with the documentation.  This
+     implementation defines a ``word'' in terms of the iswspace(3) function,
+     as required by IEEE Std 1003.2 (``POSIX.2'').
+
+SSEEEE AALLSSOO
+     iswspace(3)
+
+SSTTAANNDDAARRDDSS
+     The wwcc utility conforms to IEEE Std 1003.1-2001 (``POSIX.1'').
+
+HHIISSTTOORRYY
+     A wwcc command appeared in Version 1 AT&T UNIX.
+
+BSD                            February 23, 2005                           BSD
