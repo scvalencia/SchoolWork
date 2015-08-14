@@ -263,7 +263,7 @@
         <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z121"></relationship>
     </object>
     <object type="LMREQUEST" id="z121">
-        <attribute name="body" type="string">[{"data":{"json":"{\\"nombre\\":\\"Silla real\\",\\"descripcion\\":\\"Esta es una silla dorada estilo colonial con tela roja\\",\\"tipo\\":\\"Interior\\",\\"precio\\":4000000,\\"imagen\\":\\"url\\\\\\/image\\\\\\/sillareal\\",\\"cantidad\\":2,\\"seleccion\\":true}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
+        <attribute name="body" type="string">[{"data":{"json":"{\\"nombre\\":\\"Silla real\\",\\"descripcion\\":\\"Esta es una silla dorada estilo colonial con tela roja\\",\\"tipo\\":\\"Interior\\",\\"precio\\":4000000,\\"imagen\\":\\"url\\/image\\/sillareal\\",\\"cantidad\\":2,\\"seleccion\\":true}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
         <attribute name="uuid" type="string">36476FF8-75B2-4F00-A7D1-CDED494EBC88</attribute>
         <attribute name="url" type="string">http://localhost:9000/mueble</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
