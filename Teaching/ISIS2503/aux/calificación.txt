@@ -1,0 +1,9 @@
+* Participación github: Todos o nada, si es similar el aporte 5, sino, dependiendo el grado de disimilitud se baja la nota. Preguntar a cada uno su aporte, y a los demás si están de acuerdo, ¿tienen algo que reportar?
+
+* Preguntar, cuestionar e indagar sus elecciones, que tácticas, patrones y estilos usaron, además cuestionar la elección de tecnologías (servidor, lenguaje, base de datos). Saber que saben como mejorar los requerimientos pedidos, y que hicieron para mejorarlo. Comparar sus elecciones con la vida real
+
+* Indagar las rutas de la aplicación, ver si estas satisfacen las requerimeintos funcionales pedidos, probar en timepo real la más pesada (GET y POST, también PUT), indagar por los posibles cuellos de botella de las aplicaciones
+
+* Indagar si el procesos que los llevó ahí fue un procesos iterativo de haber tenido resultados insatisfactorios, ver que hicieron, que pensaron y cómo resolvieron las cosas.
+
+* Hacer checkout hasta el commit inmediatamente anterior al deadline, ser flexible en la calificación
