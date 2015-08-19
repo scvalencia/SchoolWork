@@ -1,0 +1,590 @@
+Universidad de los Andes
+Departamento de Ingeniería Industrial
+Probabilidad y Estadística I (IIND2106)
+Profesores: Mario Castillo, Hernando Mutis, Gonzalo Torres
+Instructores: Astrid Bernal, Carlos Castellanos, Alejandra López y Fabio Lagos.
+Segundo Semestre 2015
+TAREA 1
+Normas para la presentación de la Tarea
+
+
+La tarea puede realizarse en parejas de cualquier sección.
+
+
+
+La presente tarea puede realizarla a computador o a mano. Debe tener en cuenta que la
+presentación del informe puede influir en la calificación final.
+
+
+
+El informe debe ser presentado en hojas blancas, numeradas, impresión por ambos lados y en la
+parte superior de cada hoja se debe especificar el nombre y código de cada estudiante.
+
+
+
+La primera hoja de su tarea debe contener el formato que se presenta en la siguiente página.
+Las tareas que no tengan este formato tendrán una penalización de cero punto cinco (0.5) sobre
+la nota final de la tarea.
+
+
+
+Será responsabilidad de los integrantes del grupo verificar el contenido de la tarea antes de la
+entrega. Luego de entregado el documento, no se recibirán adiciones por motivos de problemas
+de impresión en fórmulas o ecuaciones.
+
+
+
+Debe respetar el horario y el lugar de entrega de las tareas. Las tareas entregadas después de
+este plazo no serán recibidas y su calificación será de cero (0).
+
+
+
+Por ningún motivo la tarea será recibida por correo electrónico.
+
+
+
+El incumplimiento de alguna de las anteriores instrucciones tendrá un impacto negativo en la nota
+de la tarea.
+
+
+
+Cualquier sospecha de fraude será tratada de acuerdo con el reglamento de la Universidad.
+
+
+
+Si usted encuentra algún GAZAPO1 en la solución correspondiente a esta tarea por favor
+comuníquelo a ma.galvis138. Si su observación es válida, se verá recompensado con un
+incremento del 5% en la nota de la tarea.
+
+Forma de entrega
+
+
+El informe de la tarea debe ser entregado en los casilleros de Ingeniería Industrial, en el séptimo
+piso del ML, antes de la fecha límite de entrega. El casillero será habilitado el día anterior a la
+entrega de la tarea.
+
+
+
+Adicionalmente, el informe de la tarea junto a sus archivos de soporte deberán ser colgados en
+el link habilitado en SicuaPlus, antes de la fecha límite de entrega. Por lo tanto, si usted realizó
+su tarea a mano, debe escanear el documento y subirlo al link correspondiente.
+
+Fecha de entrega
+La fecha límite de entrega es el miércoles 19 de agosto de 2015, antes de las 5:00 p.m.
+
+1
+
+Yerro que por inadvertencia deja escapar quien escribe o habla. (Definición según La Real Academia de la Lengua Española)
+
+1
+
+Integrante 1:
+Integrante 2:
+
+Código:
+Código:
+
+Numeral
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+TOTAL
+NOTA
+
+Sección:
+Sección:
+
+Puntaje
+a)
+
+/1
+
+b)
+
+/3
+
+c)
+
+/1
+
+d)
+
+/2
+
+e)
+
+/2
+
+f)
+
+/2
+
+g)
+
+/2
+
+h)
+
+/2
+
+i)
+
+/2
+
+j)
+
+/2
+
+k)
+
+/3
+
+l)
+
+/3
+
+a)
+
+/15
+
+a)
+
+/2
+
+b)
+
+/3
+
+c)
+
+/3
+
+d)
+
+/3
+
+e)
+
+/2
+
+f)
+
+/3
+
+g)
+
+/4
+
+a)
+
+/5
+
+b)
+
+/5
+
+c)
+
+/3
+
+d)
+
+/3
+
+a)
+
+/18
+
+b)
+
+/8
+
+c)
+
+/3
+
+d)
+
+/3
+
+a)
+
+/5
+
+b)
+
+/5
+
+c)
+
+/4
+
+d)
+
+/2
+
+e)
+
+/3
+
+f)
+
+/3
+/130
+/5
+
+2
+
+Punto 1. Cálculo de probabilidades de eventos (Diagrama de Venn) – (25 puntos)
+Petrocol es una multinacional dedicada a la producción de petróleo que opera en Colombia. El plan
+estratégico de la compañía contempla la inversión en exploración y explotación de nuevos
+yacimientos. En este plan existen dos alternativas de inversión que son atractivas económicamente
+para la junta directiva. La primera alternativa (Alternativa A) consiste en explorar y explotar las
+reservas de petróleo ubicadas en aguas profundas del caribe colombiano. La segunda alternativa
+(Alternativa B) consiste en explorar y explotar las reservas petroleras distribuidas en los municipios
+de Arauca y Casanare. Petrocol reconoce que, por restricciones presupuestarias, no cuenta con los
+recursos operativos (maquinaria y equipo) suficientes para implementar las dos alternativas de
+manera simultánea. Esto implica que se debe elegir cuál de las dos alternativas se implementará
+primero. Adicionalmente, la junta directiva está considerando varias alternativas de financiación para
+respaldar el proyecto que se elija. Estas alternativas de financiación son:
+1) Crédito Bancario: obtener el 100% de los recursos económicos que requiere la alternativa
+a través de un crédito.
+2) Exceso de Caja: financiar la totalidad del proyecto de contado, a partir del exceso de caja
+que se obtuvo el año anterior.
+3) Emisión de Acciones: realizar una emisión de acciones para recaudar el capital necesario
+de la alternativa.
+Con el fin de analizar las dos alternativas de inversión, la junta directiva realizó una encuesta a 5000
+accionistas de la compañía, seleccionados de manera aleatoria. La junta directiva espera que la
+encuesta les permita evaluar las preferencias de los accionistas en cuanto al proyecto que se debería
+realizar y al método de financiación que considerarían apropiado.
+Los resultados de la encuesta arrojaron la siguiente información:
+
+
+
+
+
+
+
+
+
+
+
+
+
+2320 accionistas están de acuerdo con la inversión en la alternativa A.
+745 accionistas no están de acuerdo con el plan estratégico de la junta directiva.
+1690 accionistas están de acuerdo en invertir en la alternativa A y financiarla a partir de un
+crédito bancario. De esos 1690, hay 865 que también aceptarían utilizar el exceso de caja
+como forma de financiación.
+185 accionistas están de acuerdo con invertir en la alternativa B y consideran que la opción
+3 es el único método de financiación adecuado.
+De los accionistas que apoyan la alternativa B y que consideran apropiado utilizar el exceso
+de caja, hay 145 que también estarían dispuestos a aceptar una emisión de acciones, pero
+que no aceptarían solicitar un crédito bancario.
+1285 accionistas están de acuerdo con invertir en la alternativa B y financiarla a partir de un
+crédito bancario. De estos 1285, 610 también estarían de acuerdo con una emisión de
+acciones; y de los 610, son 200 los accionistas que también estarían de acuerdo con utilizar
+el exceso de caja.
+De los 1285 accionistas que financiarían la alternativa B con un crédito bancario, hay 315
+que estarían también de acuerdo con utilizar el exceso de caja pero no estarían de acuerdo
+con una emisión de acciones.
+De los accionistas que apoyan la alternativa A, ninguno de ellos considera que una emisión
+de acciones es un método viable de financiación.
+
+3
+
+Con base en la información anterior, de respuesta a los siguientes literales:
+a. (1 punto) Con base en la información anterior, mencione los eventos que se presentan en la
+situación expuesta.
+b. (3 puntos) Realice un diagrama de Venn que indique la cantidad de accionistas que pertenecen
+a cada evento.
+Suponga que se selecciona un accionista al azar, calcule las siguientes probabilidades. Sea
+explícito con el uso de la notación, tenga en cuenta los eventos, las uniones y las
+intersecciones.
+c. (1 punto) Cuál es la relación entre los eventos, financiarse vía emisión de acciones e invertir en
+la alternativa B.
+d. (2 puntos) Si se tienen los eventos A y B relacionados con que un accionista esté de acuerdo
+en invertir en la alternativa A o B, ¿se podría afirmar que estos eventos son independientes?
+Justifique su respuesta.
+Nota. Recuerde que, de acuerdo con el teorema de Bayes, la independencia de dos eventos está
+dada por:
+𝑃(𝐴|𝐵) = 𝑃(𝐴) ⟶ 𝑃(𝐴 ∩ 𝐵) ≠ 0
+e. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo con invertir en la
+alternativa B.
+f. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo con invertir en la
+alternativa A y en la alternativa B.
+g. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo con financiarse vía
+préstamo bancario.
+h. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo con invertir en la
+alternativa A y que tenga preferencias por obtener un crédito bancario y usar el exceso de caja
+como posibles métodos de financiación.
+i. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo con financiarse
+únicamente con una emisión de acciones.
+j. (2 puntos) Calcule la probabilidad de que el accionista esté de acuerdo invertir en la alternativa
+B y tenga preferencias únicamente por dos de los tres métodos de financiación.
+k. (3 puntos) Si se sabe que el accionista prefiere la inversión en la alternativa B, ¿cuál es la
+probabilidad de que el accionista tenga preferencias únicamente por las opciones de financiación
+vía emisión de acciones y préstamo bancario?
+l. (3 puntos) Si se sabe que el accionista prefiere financiar el proyecto vía préstamo bancario,
+¿cuál es la probabilidad de que el accionista esté de acuerdo en invertir en la alternativa A?
+
+4
+
+Punto 2. Cálculo de probabilidades de eventos (Gráficas) – (15 puntos)
+Se dispone de un sistema eléctrico que está conformado por 6 componentes, tal como se ilustra en
+la Figura 1. Este sistema funciona si es posible enviar corriente desde la entrada del sistema hasta
+su salida. La probabilidad de que cada uno de los componentes funcione apropiadamente es
+independiente de los demás componentes, y su valor se presenta en la figura que se muestra a
+continuación, entre paréntesis.
+
+Entrada
+
+A
+
+B
+
+(0.85)
+
+(0.95)
+
+E
+(0.98)
+
+D
+
+Salida
+
+(0.93)
+
+C
+
+F
+
+(0.75)
+
+(0.86)
+
+Figura 1. Sistema eléctrico
+
+Tenga en cuenta que un sistema en serie funciona si todos sus componentes funcionan; y que un
+sistema en paralelo funciona si por lo menos uno de los componentes, o serie de componentes,
+funciona. Con base en la información anterior, responda la pregunta enunciada en el literal a.
+Ayuda: para facilitar la solución de este problema, el sistema se puede dividir en tres subsistemas
+como se muestra en la Figura 2. Para que la corriente logre llegar a la salida, debe ocurrir que los
+tres subsistemas funcionen al mismo tiempo, porque los subsistemas forman un sistema en serie.
+A modo de ejemplo, la probabilidad de que el segundo subsistema funcione es igual a la probabilidad
+de que el componente D funcione (𝑃(𝑆2 𝐹𝑢𝑛𝑐𝑖𝑜𝑛𝑒) = 𝑃(𝐷) = 0.93).
+
+S1
+
+Entrada
+
+S2
+
+A
+
+B
+
+(0.85)
+
+(0.95)
+
+S3
+
+E
+D
+
+(0.98)
+
+Salida
+
+(0.93)
+
+C
+
+F
+
+(0.75)
+
+(0.86)
+
+Figura 2. Sistema eléctrico dividido en subsistemas
+
+a. (15 puntos) Calcule la probabilidad de que el sistema eléctrico funcione. Sea explícito con el uso
+de fórmulas, eventos, uniones e intersecciones.
+
+5
+
+Punto 3. Técnicas de Conteo – (20 puntos)
+El próximo torneo de fútbol al que fue invitada la Universidad de los Andes se llevará a cabo en el
+mes de octubre, y en él competirán 8 equipos. Para este torneo, la Universidad de los Andes contará
+con la presencia de sus mejores cuatro equipos, pertenecientes a las facultades de Ingeniería,
+Administración, Derecho y Matemáticas. Los restantes cuatro equipos, provenientes de otras
+universidades, pertenecen a las facultades de Ingeniería, Comunicación, Psicología y Diseño.
+Los organizadores del torneo aún no han informado cuál es el sistema de eliminación, sin embargo,
+usted supone que se implementará un sistema de puntos en el que todos juegan contra todos.
+Conteste las siguientes preguntas bajo el supuesto de que es un torneo en el que todos juegan
+contra todos.
+a. (2 puntos) ¿Cuántos resultados posibles se pueden dar en términos de los puestos obtenidos
+por cada equipo?
+b. (3 puntos) ¿Cuál es la probabilidad de que el primer y el segundo puesto sean ocupados por
+equipos de los Andes?
+c. (3 puntos) ¿Cuál es la probabilidad de que los tres primeros lugares sean ocupados por equipos
+de las facultades de Comunicación, Derecho y Administración (sin importar el orden)?
+d. (3 puntos) ¿Cuál es la probabilidad de que el primer lugar sea ocupado por un equipo de
+Ingeniería, el segundo por el de Matemáticas y el tercero por el de Diseño?
+Su otro supuesto sobre el sistema de eliminación consiste en que se organizarán dos grupos de
+cuatro equipos, y se realizará una ronda final entre los ganadores de cada uno de los grupos. Bajo
+este supuesto, de respuesta a las siguientes preguntas.
+e. (2 puntos) ¿De cuántas formas distintas se podrían organizar los 8 equipos en dos grupos?
+f. (3 puntos) ¿Cuál es la probabilidad de que en un mismo grupo quede únicamente un equipo de
+Ingeniería y el equipo de Diseño?
+g. (4 puntos) Si se supone que los cuatro equipos representantes de la Universidad de los Andes
+quedan en el mismo grupo ¿Cuál es la probabilidad de que los equipos de las facultades de
+Ingeniería queden de primeros en cada grupo?
+
+Punto 4. Teorema de Bayes y Árboles de Probabilidad – (16 puntos)
+Luego del impresionante duelo que se vio entre el ciclista británico Chris Froome y el colombiano
+Nairo Quintana en el Tour de Francia 2015, ambos podrían volver a enfrentarse el próximo 22 de
+agosto en la 70ª edición de la Vuelta Ciclística a España. Conocedores del trazado han analizado
+que, de las 21 etapas que conforman los 3,374.4 kilómetros de la Vuelta, hay 3 en especial que se
+podrían considerar decisivas para coronarse en Madrid. Según datos históricos, el ganador de la
+Vuelta únicamente ha necesitado acumular dos victorias en cualquiera de las siguientes tres etapas
+para sacar suficiente ventaja sobre el segundo:
+
+6
+
+Etapa 11: Andorra – Els Cortals d’Encamp. 138 km. Considerada como la etapa más dura de la
+historia del evento, cuenta con seis puertos de montaña en 138 km que suman 5,230 metros de
+desnivel acumulado.
+Etapa 16: Luarca – Ermita del Alba. 184 km. Esta etapa consta de siete puertos, quizá no de la
+dificultad de los dispuestos en la 11ª, pero con dos semanas encima de carrera el cansancio empieza
+a influir. A su vez, la trazada presenta curvas en herradura, muros de más del 20% durante más de
+2000 metros.
+Etapa 20: San Lorenzo de El Escorial – Cercedilla. 181 km. Esta será la etapa de cierre de la vuelta
+con puertos ya bastante conocidos como Navacerrada, Cotos o La Morcuera pero sin final en alto.
+Este será el terreno definitivo para que, después de tres semanas de actividad, se definan los
+primeros puestos de la vuelta.
+Según estimaciones realizadas por expertos, la probabilidad de que Nairo gané en la 11ª Etapa de
+la Vuelta es de 0.65; y, suponiendo que Nairo ganó dicha etapa, la probabilidad de que también gane
+la 16ª es de 0.7. Por otro lado, si Froome gana la 11ª Etapa, la probabilidad de que gane la 16ª sería
+de 0.5.
+Los analistas estiman que si alguno de los dos gana las etapas 11 y 16, se proclamará como el
+ganador de la vuelta a España, sin importar el resultado de la 20ª Etapa. Pero, en caso de que no
+se defina el título en las etapas 11 y 16, el ganador se definirá en la 20ª Etapa, antes de llegar a
+Madrid, para la cual los dos ciclistas tienen igual probabilidad de ganarla. Asumiendo que cada etapa
+es independiente de las otras y que únicamente Nairo y Froome las podrían ganar, responda las
+siguientes preguntas. Sea explícito con el uso de la notación, tenga en cuenta los eventos, las
+uniones y las intersecciones.
+Nota: para resolver este punto, se definen los siguientes eventos:
+
+
+
+
+
+N1: Nairo gana la vuelta a España.
+N1: Nairo gana la 11ª etapa.
+N2: Nairo gana la 16ª etapa.
+N3: Nairo gana la 20ª etapa.
+
+a. (5 puntos) Construya un árbol de probabilidad que represente la situación descrita.
+b. (5 puntos) ¿Cuál es la probabilidad de que Nairo Quintana gane la Vuelta a España? ¿Cuál es
+la probabilidad de que Chris Froome gane la Vuelta a España?
+c. (3 puntos) ¿Cuál es la probabilidad de que el ganador de la Vuelta se haya coronado ganando
+las etapas 11ª y 16ª?
+d. (3 puntos) Si se sabe que Froome ganó la 16ª etapa, ¿cuál es la probabilidad de que haya
+ganado la 11ª?
+
+7
+
+Punto 5. Variables Aleatorias Discretas – (32 puntos)
+Alberto y sus amigos han diseñado un juego de azar que consiste en lanzar 2 dados al tiempo y
+luego sacar una bola de una urna que contiene 3 bolas blancas, 3 rojas y 3 negras. La apuesta de
+este juego son 10 dólares, y cada participante debe elegir un número del 1 al 6 y un color entre
+blanco, rojo y negro. Las reglas del juego son las siguientes:
+
+
+
+
+
+
+Si no se obtiene el número elegido en ninguno de los dados, sin importar si se adivinó el
+color de la bola, el jugador pierde lo apostado.
+Si el número elegido sale en 1 de los 2 dados y no se saca la bola del color seleccionado,
+se recibe lo apostado y no se pierde dinero.
+Si el número elegido sale en 1 de los 2 dados y se saca la bola del color seleccionado, se
+recibe el doble de lo apostado.
+Si el número sale en los 2 dados y no se saca la bola del color seleccionado se recibe 5
+veces lo apostado
+Si el número sale en los 2 dados y se saca la bola del color seleccionado se recibe 8 veces
+lo apostado.
+
+Se define X como la variable aleatoria que representa la ganancia o pérdida neta del juego.
+Responda los siguientes literales:
+a. (18 puntos) Encuentre la Función de Probabilidad de la variable aleatoria X y grafíquela.
+b. (8 puntos) Encuentre la Función de Distribución Acumulada de la variable aleatoria X y
+grafíquela.
+c. (3 puntos) Calcule el valor esperado y la desviación estándar de la variable aleatoria X.
+Interprete sus resultados.
+d. (3 puntos) ¿Cuál es la probabilidad de generar ganancia en el juego? Interprete el resultado.
+
+Punto 6. Variables Aleatorias Continuas – (22 puntos)
+La nueva junta administrativa del Hospital Santa Concepción está interesada en desarrollar nuevas
+estrategias para implementar el próximo año, que permitan mejorar el nivel de servicio que se ofrece
+a sus pacientes. En la pasada reunión se decidió que el hospital requiere prestar más atención a los
+tiempos de espera de los pacientes ambulatorios. Como base para la toma de decisiones
+encaminadas a mejorar en este aspecto, la junta realizó un acuerdo con la Universidad de los Andes
+para que se realice una evaluación de las salas de espera en el hospital. Luego de casi seis meses
+de toma de tiempos y análisis estadístico, los investigadores de la universidad lograron caracterizar
+el tiempo, en horas, que un paciente ambulatorio debe esperar antes de ser atendido como una
+variable aleatoria X cuya función de densidad de probabilidad está dada por:
+𝑥2
+𝑓𝑋 (𝑥) =
+
+𝑘
+3
+− 𝑥+3
+2
+{
+0
+
+0≤𝑥<1
+4
+1≤𝑥<
+3
+4
+≤𝑥≤2
+3
+𝑑. 𝑙. 𝑐
+
+8
+
+Con base en la información anterior, responda las siguientes preguntas:
+a. (5 puntos) ¿Cuál es el valor de la constante k que garantiza que la función de densidad de
+probabilidad de la variable aleatoria X esté correctamente definida? Realice la gráfica de la
+distribución de probabilidad.
+b. (5 puntos) Halle la función de distribución acumulada del tiempo de espera de un paciente
+ambulatorio en el hospital y grafíquela.
+c. (4 puntos) ¿Cuánto tiempo se espera que un paciente ambulatorio del hospital debería esperar
+antes de ser atendido? ¿Cuánto sería la desviación estándar de dicho tiempo de espera?
+d. (2 puntos) Si se selecciona un paciente del hospital al azar, ¿cuál es la probabilidad de que este
+deba esperar exactamente una hora para ser atendido?
+e. (3 puntos) Calcule la probabilidad de que un paciente seleccionado al azar deba esperar entre
+1.25 y 1.75 horas antes de ser atendido. Grafique la región correspondiente.
+f. (3 puntos) Si se sabe que el tiempo de espera será superior a 1 hora, Calcule la probabilidad
+de que un paciente seleccionado al azar deba esperar entre 1.25 y 1.75 horas antes de ser
+atendido.
+
+9
+
+
