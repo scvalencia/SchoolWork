@@ -1,0 +1,15 @@
+options{  static = false;}PARSER_BEGIN(NuevoParser)package uniandes.teolen.parserJavaCC.newParser;
+
+public class NuevoParser{
+  }PARSER_END(NuevoParser)SKIP :{  " "| "\r" | "\t"| "\n"}TOKEN : // OPERATORS {  < PLUS : "+" >| < MINUS : "-" >| < MULTIPLY : "*" >| < DIVIDE : "/" >
+| < COMMA : "," >
+| < IMAGINARY : "i" >
+| < OPEN : "[" >
+| < CLOSE : "]" >}TOKEN :{  < CONSTANT : (< DIGIT >)+ | (< MINUS >)?(< DIGIT >)+(< EXPONENT >)(< DIGIT >)+>| < #DIGIT : [ "0"-"9" ] >
+| < NAME : ["a"-"z", "A"-"Z"] >
+| < EXPONENT : ("e" | "E") >
+| < COMPLEX : (< MINUS >)?(< CONSTANT >)(< COMMA >)(< MINUS >)?(< CONSTANT >)(< IMAGINARY >) >}void one_line() :{}{  exp() ";"  {  }| ";"  {  }}void exp() :{}{  term()  (    (      < PLUS >    | < MINUS >    )    term()  )*}void exp_aux() :{}{  term_aux()  (    (      < PLUS >    | < MINUS >    )    term_aux()  )*}void term() :{}{  fact()  (    (      < MULTIPLY >    | < DIVIDE >    )    fact()  )*}void term_aux() :{}{  fact_aux()  (    (      < MULTIPLY >    | < DIVIDE >    )    fact_aux()  )*}void fact() :{}{  (< MINUS > )? (  array()
+| < COMPLEX >
+| < CONSTANT >| "(" exp() ")")}void fact_aux() :{}{  (< MINUS > )? (    array()| < CONSTANT > | "(" exp_aux() ")")}void array() :{}{  < NAME > "[" exp_aux() "]"}
+
+
