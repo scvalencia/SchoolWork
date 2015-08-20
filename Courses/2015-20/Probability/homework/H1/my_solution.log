@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 AUG 2015 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 AUG 2015 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,9 +293,38 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
+
+! LaTeX Error: Option clash for package graphicx.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage
+               {fancyhdr}
+The package graphicx has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [pdftex]
+Adding the global options:
+  ,pdftex
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -345,8 +374,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen113
 \lineht@=\dimen114
 \@envbody=\toks21
-\multlinegap=\skip44
-\multlinetaggap=\skip45
+\multlinegap=\skip53
+\multlinetaggap=\skip54
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -373,20 +402,20 @@ LaTeX Info: Redefining \% on input line 10.
 )
 \openout1 = `my_solution.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -449,12 +478,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -466,7 +495,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 ...cuesta a 5000 accionistas de la compañí
+l.30 ...cuesta a 5000 accionistas de la compañí
                                                   a, seleccionados de manera...
 
 Your command was ignored.
@@ -480,16 +509,22 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 ...esos 1690, hay 865 que también aceptarí
+l.35 ...esos 1690, hay 865 que también aceptarí
                                                   an utilizar el exceso de caja
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 25.2842pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
 
 ! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
 
@@ -497,7 +532,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 de caja, hay 145 que tambié
+l.39 de caja, hay 145 que tambié
                                   n estarían dispuestos a aceptar una emis...
 
 Your command was ignored.
@@ -511,7 +546,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 de caja, hay 145 que también estarí
+l.39 de caja, hay 145 que también estarí
                                             an dispuestos a aceptar una emis...
 
 Your command was ignored.
@@ -525,7 +560,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 ...tarían dispuestos a aceptar una emisió
+l.39 ...tarían dispuestos a aceptar una emisió
                                                   n de acciones, pero
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -538,7 +573,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 que no aceptarí
+l.40 que no aceptarí
                       an solicitar un crédito bancario.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -551,7 +586,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 que no aceptarían solicitar un cré
+l.40 que no aceptarían solicitar un cré
                                            dito bancario.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -564,7 +599,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 \item 1285 accionistas está
+l.41 \item 1285 accionistas está
                                   n de acuerdo con invertir en la alternativ...
 
 Your command was ignored.
@@ -578,7 +613,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 cré
+l.42 cré
           dito bancario. De estos 1285, 610 también estarían de acuerdo ...
 
 Your command was ignored.
@@ -592,7 +627,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...dito bancario. De estos 1285, 610 tambié
+l.42 ...dito bancario. De estos 1285, 610 tambié
                                                   n estarían de acuerdo co...
 
 Your command was ignored.
@@ -606,7 +641,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...rio. De estos 1285, 610 también estarí
+l.42 ...rio. De estos 1285, 610 también estarí
                                                   an de acuerdo con una emis...
 
 Your command was ignored.
@@ -620,7 +655,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...́n estarían de acuerdo con una emisió
+l.42 ...́n estarían de acuerdo con una emisió
                                                   n de acciones; y de los 61...
 
 Your command was ignored.
@@ -634,7 +669,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ... 610, son 200 los accionistas que tambié
+l.42 ... 610, son 200 los accionistas que tambié
                                                   n estarían de acuerdo co...
 
 Your command was ignored.
@@ -648,7 +683,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...200 los accionistas que también estarí
+l.42 ...200 los accionistas que también estarí
                                                   an de acuerdo con utilizar...
 
 Your command was ignored.
@@ -662,7 +697,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ...m De los 1285 accionistas que financiarí
+l.43 ...m De los 1285 accionistas que financiarí
                                                   an la alternativa B con un...
 
 Your command was ignored.
@@ -676,7 +711,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ...nanciarían la alternativa B con un cré
+l.43 ...nanciarían la alternativa B con un cré
                                                   dito bancario, hay 315 que...
 
 Your command was ignored.
@@ -690,7 +725,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ...n crédito bancario, hay 315 que estarí
+l.43 ...n crédito bancario, hay 315 que estarí
                                                   an también de acuerdo co...
 
 Your command was ignored.
@@ -704,7 +739,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ... bancario, hay 315 que estarían tambié
+l.43 ... bancario, hay 315 que estarían tambié
                                                   n de acuerdo con utilizar ...
 
 Your command was ignored.
@@ -718,7 +753,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ...tilizar el exceso de caja pero no estarí
+l.43 ...tilizar el exceso de caja pero no estarí
                                                   an de acuerdo con una emis...
 
 Your command was ignored.
@@ -732,7 +767,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ... no estarían de acuerdo con una emisió
+l.43 ... no estarían de acuerdo con una emisió
                                                   n de acciones.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -745,7 +780,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 ...inguno de ellos considera que una emisió
+l.44 ...inguno de ellos considera que una emisió
                                                   n de acciones es un méto...
 
 Your command was ignored.
@@ -759,7 +794,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 ...a que una emisión de acciones es un mé
+l.44 ...a que una emisión de acciones es un mé
                                                   todo viable de financiacio...
 
 Your command was ignored.
@@ -773,7 +808,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 ...nes es un método viable de financiació
+l.44 ...nes es un método viable de financiació
                                                   n.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -786,7 +821,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 Con base en la informació
+l.48 Con base en la informació
                                 n anterior, de respuesta a los siguientes li...
 
 Your command was ignored.
@@ -800,7 +835,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \item Con base en la informació
+l.52 \item Con base en la informació
                                       n anterior, mencione los eventos que s...
 
 Your command was ignored.
@@ -814,29 +849,29 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 ... eventos que se presentan en la situació
+l.52 ... eventos que se presentan en la situació
                                                   n expuesta.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 <venn_diagram.png, id=14, 1239.63126pt x 736.7525pt>
 File: venn_diagram.png Graphic file (type png)
  <use venn_diagram.png>
-Package pdftex.def Info: venn_diagram.png used on input line 56.
+Package pdftex.def Info: venn_diagram.png used on input line 65.
 (pdftex.def)             Requested size: 371.89224pt x 221.02745pt.
 
-Overfull \hbox (11.89224pt too wide) in paragraph at lines 56--57
+Overfull \hbox (11.89224pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
@@ -847,7 +882,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \item Cuá
+l.73 \item Cuá
                 l es la relación entre los eventos, financiarse vía emis...
 
 Your command was ignored.
@@ -861,7 +896,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \item Cuál es la relació
+l.73 \item Cuál es la relació
                                  n entre los eventos, financiarse vía emis...
 
 Your command was ignored.
@@ -875,7 +910,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 ...ción entre los eventos, financiarse ví
+l.73 ...ción entre los eventos, financiarse ví
                                                   a emisión de acciones e ...
 
 Your command was ignored.
@@ -889,7 +924,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 ...re los eventos, financiarse vía emisió
+l.73 ...re los eventos, financiarse vía emisió
                                                   n de acciones e invertir e...
 
 Your command was ignored.
@@ -897,12 +932,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 
-Overfull \hbox (4.9712pt too wide) in paragraph at lines 66--67
+Overfull \hbox (4.9712pt too wide) in paragraph at lines 75--76
 []\OT1/cmr/m/n/10.95 Los even-tos no son mu-tua-men-te ex-clu-yen-tes, la pro-b
 a-bi-li-dad de su intrsec-
  []
@@ -915,7 +950,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78 ... relacionados con que un accionista esté
+l.87 ... relacionados con que un accionista esté
                                                    de acuerdo en invertir en...
 
 Your command was ignored.
@@ -929,7 +964,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78 ...rtir en la alternativa A o B, ¿se podrí
+l.87 ...rtir en la alternativa A o B, ¿se podrí
                                                   a afirmar que estos evento...
 
 Your command was ignored.
@@ -937,7 +972,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
@@ -948,7 +983,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.92 ...a probabilidad de que el accionista esté
+l.101 ... probabilidad de que el accionista esté
                                                    de acuerdo con invertir e...
 
 Your command was ignored.
@@ -956,7 +991,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
@@ -967,7 +1002,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96 ...a probabilidad de que el accionista esté
+l.105 ... probabilidad de que el accionista esté
                                                    de acuerdo con invertir e...
 
 Your command was ignored.
@@ -975,7 +1010,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
@@ -986,7 +1021,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.100 ... probabilidad de que el accionista esté
+l.109 ... probabilidad de que el accionista esté
                                                    de acuerdo con financiars...
 
 Your command was ignored.
@@ -1000,7 +1035,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.100 ...ta esté de acuerdo con financiarse ví
+l.109 ...ta esté de acuerdo con financiarse ví
                                                   a préstamo bancario.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1013,14 +1048,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.100 ...́ de acuerdo con financiarse vía pré
+l.109 ...́ de acuerdo con financiarse vía pré
                                                   stamo bancario.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
@@ -1032,7 +1067,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ... probabilidad de que el accionista esté
+l.113 ... probabilidad de que el accionista esté
                                                    de acuerdo con invertir e...
 
 Your command was ignored.
@@ -1046,7 +1081,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ...e tenga preferencias por obtener un cré
+l.113 ...e tenga preferencias por obtener un cré
                                                   dito bancario y usar el ex...
 
 Your command was ignored.
@@ -1060,7 +1095,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ...usar el exceso de caja como posibles mé
+l.113 ...usar el exceso de caja como posibles mé
                                                   todos de financiación.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1073,14 +1108,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ... como posibles métodos de financiació
+l.113 ... como posibles métodos de financiació
                                                   n.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
@@ -1091,7 +1126,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 ... probabilidad de que el accionista esté
+l.117 ... probabilidad de que el accionista esté
                                                    de acuerdo con financiars...
 
 Your command was ignored.
@@ -1105,7 +1140,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 ...sta esté de acuerdo con financiarse ú
+l.117 ...sta esté de acuerdo con financiarse ú
                                                   nicamente con una emisió...
 
 Your command was ignored.
@@ -1119,164 +1154,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 ...financiarse únicamente con una emisió
+l.117 ...financiarse únicamente con una emisió
                                                   n de acciones.\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ... probabilidad de que el accionista esté
-                                                   de acuerdo invertir en la...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ...la alternativa B y tenga preferencias ú
-                                                  nicamente por dos de los t...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ...ias únicamente por dos de los tres mé
-                                                  todos de financiación.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 ...os de los tres métodos de financiació
-                                                  n.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ... que el accionista prefiere la inversió
-                                                  n en la alternativa B, ¿c...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ... inversión en la alternativa B, ¿cuá
-                                                  l es la probabilidad de qu...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ... que el accionista tenga preferencias ú
-                                                  nicamente por las opciones...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...camente por las opciones de financiació
-                                                  n vía emisión de accio...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...e por las opciones de financiación ví
-                                                  a emisión de acciones y ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...opciones de financiación vía emisió
-                                                  n de acciones y préstamo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...ión vía emisión de acciones y pré
-                                                  stamo bancario?\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1293,8 +1172,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 ...nista prefiere financiar el proyecto ví
-                                                  a préstamo bancario, ¿c...
+l.123 ... probabilidad de que el accionista esté
+                                                   de acuerdo invertir en la...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1307,8 +1186,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 ...refiere financiar el proyecto vía pré
-                                                  stamo bancario, ¿cuál e...
+l.123 ...la alternativa B y tenga preferencias ú
+                                                  nicamente por dos de los t...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1321,7 +1200,47 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 ...oyecto vía préstamo bancario, ¿cuá
+l.123 ...ias únicamente por dos de los tres mé
+                                                  todos de financiación.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...os de los tres métodos de financiació
+                                                  n.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ... que el accionista prefiere la inversió
+                                                  n en la alternativa B, ¿c...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ... inversión en la alternativa B, ¿cuá
                                                   l es la probabilidad de qu...
 
 Your command was ignored.
@@ -1335,7 +1254,123 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 ... probabilidad de que el accionista esté
+l.126 ... que el accionista tenga preferencias ú
+                                                  nicamente por las opciones...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...camente por las opciones de financiació
+                                                  n vía emisión de accio...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...e por las opciones de financiación ví
+                                                  a emisión de acciones y ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...opciones de financiación vía emisió
+                                                  n de acciones y préstamo...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 ...ión vía emisión de acciones y pré
+                                                  stamo bancario?\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 ...nista prefiere financiar el proyecto ví
+                                                  a préstamo bancario, ¿c...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 ...refiere financiar el proyecto vía pré
+                                                  stamo bancario, ¿cuál e...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 ...oyecto vía préstamo bancario, ¿cuá
+                                                  l es la probabilidad de qu...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 ... probabilidad de que el accionista esté
                                                    de acuerdo en invertir en...
 
 Your command was ignored.
@@ -1343,7 +1378,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
@@ -1355,7 +1390,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 ...e probabilidades de eventos (Gráficas)}
+l.135 ...e probabilidades de eventos (Gráficas)}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1368,7 +1403,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 ...e probabilidades de eventos (Gráficas)}
+l.135 ...e probabilidades de eventos (Gráficas)}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1381,7 +1416,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 Se dispone de un sistema elé
+l.137 Se dispone de un sistema elé
                                     ctrico que está conformado por 6 compo...
 
 Your command was ignored.
@@ -1395,7 +1430,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 ...pone de un sistema eléctrico que está
+l.137 ...pone de un sistema eléctrico que está
                                                    conformado por 6 componen...
 
 Your command was ignored.
@@ -1409,7 +1444,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 ...piadamente es independiente de los demá
+l.137 ...piadamente es independiente de los demá
                                                   s componentes, y su valor ...
 
 Your command was ignored.
@@ -1423,7 +1458,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 ... la figura que se muestra a continuació
+l.137 ... la figura que se muestra a continuació
                                                   n, entre paréntesis.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1436,7 +1471,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128 ...se muestra a continuación, entre paré
+l.137 ...se muestra a continuación, entre paré
                                                   ntesis.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1445,7 +1480,7 @@ or  <return>  to continue without it.
 <circuit.png, id=26, 437.635pt x 137.51375pt>
 File: circuit.png Graphic file (type png)
  <use circuit.png>
-Package pdftex.def Info: circuit.png used on input line 132.
+Package pdftex.def Info: circuit.png used on input line 141.
 (pdftex.def)             Requested size: 350.10847pt x 110.01114pt.
 
 
@@ -1455,7 +1490,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 	\caption{Sistema eléctrico}
+l.142 	\caption{Sistema eléctrico}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1468,7 +1503,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 ...es, funciona. Con base en la informació
+l.145 ...es, funciona. Con base en la informació
                                                   n anterior, responda la pr...
 
 Your command was ignored.
@@ -1482,7 +1517,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ...e la probabilidad de que el sistema elé
+l.148 ...e la probabilidad de que el sistema elé
                                                   ctrico funcione. Sea expli...
 
 Your command was ignored.
@@ -1496,7 +1531,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ...sistema eléctrico funcione. Sea explí
+l.148 ...sistema eléctrico funcione. Sea explí
                                                   cito con el uso de fórmu...
 
 Your command was ignored.
@@ -1510,7 +1545,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ...cione. Sea explícito con el uso de fó
+l.148 ...cione. Sea explícito con el uso de fó
                                                   rmulas, eventos, uniones e...
 
 Your command was ignored.
@@ -1518,17 +1553,17 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 <subsystems.png, id=28, 468.75125pt x 196.735pt>
 File: subsystems.png Graphic file (type png)
  <use subsystems.png>
-Package pdftex.def Info: subsystems.png used on input line 145.
+Package pdftex.def Info: subsystems.png used on input line 154.
 (pdftex.def)             Requested size: 375.0015pt x 157.38818pt.
 
-Overfull \hbox (15.0015pt too wide) in paragraph at lines 145--146
+Overfull \hbox (15.0015pt too wide) in paragraph at lines 154--155
  [][] 
  []
 
@@ -1539,7 +1574,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 	\caption{Sistema eléctrico}
+l.155 	\caption{Sistema eléctrico}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1549,7 +1584,7 @@ or  <return>  to continue without it.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <./circuit.png>]
-Overfull \hbox (5.96518pt too wide) detected at line 153
+Overfull \hbox (5.96518pt too wide) detected at line 162
 \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 AB \OMS/cmsy/m/n/1
 0.95 [ \OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ) = 1 \OMS/cmsy/m/n/10.95 ^^@ \O
 T1/cmr/m/n/10.95 (1 \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/1
@@ -1561,7 +1596,7 @@ L/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 )
  []
 
 [7 <./subsystems.png>]
-Overfull \hbox (5.26231pt too wide) detected at line 164
+Overfull \hbox (5.26231pt too wide) detected at line 173
 \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
 5 ) = \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 S[] \OMS/cms
 y/m/n/10.95 \ \OML/cmm/m/it/10.95 S[] \OMS/cmsy/m/n/10.95 \ \OML/cmm/m/it/10.95
@@ -1580,7 +1615,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 El próximo torneo de fú
+l.179 El próximo torneo de fú
                                 tbol al que fue invitada la Universidad de l...
 
 Your command was ignored.
@@ -1594,7 +1629,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 ...necientes a las facultades de Ingenierí
+l.179 ...necientes a las facultades de Ingenierí
                                                   a, Administración, Derech...
 
 Your command was ignored.
@@ -1608,7 +1643,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 ...ertenecen a las facultades de Ingenierí
+l.179 ...ertenecen a las facultades de Ingenierí
                                                   a, Comunicación, Psicolog...
 
 Your command was ignored.
@@ -1622,43 +1657,673 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 ... Ingeniería, Comunicación, Psicologí
+l.179 ... Ingeniería, Comunicación, Psicologí
                                                   a y Diseño.\\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-[8] [9] (./my_solution.aux
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 242--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+[10] <tree.png, id=49, 402.50375pt x 515.9275pt>
+File: tree.png Graphic file (type png)
+ <use tree.png>
+Package pdftex.def Info: tree.png used on input line 266.
+(pdftex.def)             Requested size: 201.25137pt x 257.96312pt.
+ [11 <./tree.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337 \[
+         \begin{cases}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.344 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{equation} on input line 335 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.344 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 321 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.345 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.345 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+<pdf_discrete.png, id=57, 578.16pt x 358.33875pt>
+File: pdf_discrete.png Graphic file (type png)
+ <use pdf_discrete.png>
+Package pdftex.def Info: pdf_discrete.png used on input line 349.
+(pdftex.def)             Requested size: 346.89867pt x 215.0049pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.355 \end{enumerate}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.355 \end{enumerate}
+                     
+Things are pretty mixed up, but I think the worst is over.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (b) on input line 357.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 \[
+         \begin{cases}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.373 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{equation} on input line 363 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.373 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.374 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 357 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.374 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.374 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.374 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+<pcf_discrete.png, id=62, 578.16pt x 358.33875pt>
+File: pcf_discrete.png Graphic file (type png)
+ <use pcf_discrete.png>
+Package pdftex.def Info: pcf_discrete.png used on input line 378.
+(pdftex.def)             Requested size: 346.89867pt x 215.0049pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./pdf_discrete.png (PNG copy)>]
+
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 \end{enumerate}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.384 \end{enumerate}
+                     
+Things are pretty mixed up, but I think the worst is over.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (c) on input line 386.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+ []
+
+
+Overfull \hbox (16.34598pt too wide) detected at line 391
+\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.9
+5 ] = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 10)(0[]69) + (0)(0[]0185) + (1
+0)(0[]0925) + (40)(0[]0185) + (70)(0[]0092)
+ []
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (d) on input line 401.
+
+[15 <./pcf_discrete.png (PNG copy)>]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.414 \[
+         \begin{cases}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.420 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{equation} on input line 412 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.421 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.421 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.421 \end{equation}
+                    
+Things are pretty mixed up, but I think the worst is over.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
+
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.447 \[
+         \begin{cases}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.453 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[16]
+
+! LaTeX Error: \begin{equation} on input line 445 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 423 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.454 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.454 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+<pdf_continuous.png, id=74, 361.35pt x 228.855pt>
+File: pdf_continuous.png Graphic file (type png)
+ <use pdf_continuous.png>
+Package pdftex.def Info: pdf_continuous.png used on input line 460.
+(pdftex.def)             Requested size: 216.81168pt x 137.31404pt.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (b) on input line 464.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
+
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.472 \[
+         \begin{cases}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.479 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{equation} on input line 470 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.480 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 464 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.480 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.480 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.480 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+<pcf_continuous.png, id=75, 361.35pt x 233.87375pt>
+File: pcf_continuous.png Graphic file (type png)
+ <use pcf_continuous.png>
+Package pdftex.def Info: pcf_continuous.png used on input line 486.
+(pdftex.def)             Requested size: 180.67456pt x 116.93657pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.491 \end{enumerate}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.491 \end{enumerate}
+                     
+Things are pretty mixed up, but I think the worst is over.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (c) on input line 492.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
+
+ []
+
+[17 <./pdf_continuous.png (PNG copy)>]
+Overfull \hbox (16.89526pt too wide) detected at line 501
+\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 X[]\OT1/cmr/m/n/10
+.95 ] = [] + [] + []
+ []
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (d) on input line 508.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
+
+ []
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (e) on input line 515.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--518
+
+ []
+
+[18 <./pcf_continuous.png (PNG copy)>]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (f) on input line 522.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--526
+
+ []
+
+
+Overfull \hbox (21.3996pt too wide) detected at line 531
+\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (1[]25 \OML/cmm/m/it/10.95 < X < \OT1/c
+mr/m/n/10.95 1[]75 \OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 X > \OT1/cmr/m/n/1
+0.95 1) = [] = []
+ []
+
+[19] (./my_solution.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 ) ) 
 Here is how much of TeX's memory you used:
- 3401 strings out of 493089
- 44033 string characters out of 6134842
- 114111 words of memory out of 5000000
- 6830 multiletter control sequences out of 15000+600000
+ 3557 strings out of 493089
+ 45936 string characters out of 6134842
+ 117195 words of memory out of 5000000
+ 6977 multiletter control sequences out of 15000+600000
  9201 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,30p,1121b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,43p,1121b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on my_solution.pdf (9 pages, 565888 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on my_solution.pdf (19 pages, 660034 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
