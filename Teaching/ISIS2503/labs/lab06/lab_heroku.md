@@ -26,15 +26,15 @@ Para instalar Sublime Text, diríjase a la página oficial de [Sublime](git clon
 
 Acontinuación, instale la herramienta de Heroku [Heroku Toolbelt](https://toolbelt.heroku.com/) para su sistema operativo. Revise el éxito de la instalación con el comando heroku en la linea de comandos de sus sistema operativo.
 
-** IMAGEN1 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN1.png)
 
 También, revise que git se encuentre en el PATH del sistema operativo.
 
-** IMAGEN2 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN2.png)
 
 Por último, revise la instalación de Maven en su máquina.
 
-** IMAGEN3 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN3.png)
 
 ----
 Descargue y descomprima el archivo ubicado en : (https://github.com/ISIS2503-2015-02/Labs/blob/master/lab-cloudHeroku.zip). El proyecto contiene el código de una aplicación REST muy sencilla, la idea, es desplegar el código en los servidores de Heroku, de manera que la base de datos y la configuración del dominio sea remóta. Sobre la carpeta descomprimida, ejecute el comando ``git init```, el cual sirve para crear un repositorio en el directorio actual de trabajo. Ahora, es necesario crear el proyecto en Heroku. Para esto, ejecute e interactúe con Heroku:
@@ -43,17 +43,56 @@ Descargue y descomprima el archivo ubicado en : (https://github.com/ISIS2503-201
 ```heroku create```para crear la aplicación. El nombre de la aplicación debe ser labheroku<codigo>.
 ```heroku open```para revisar que su aplicación se halla desplegado debidamente. Si así fue, debe ver en la ventana de su navegador el siquiente mensaje.
 
-** IMAGEN4 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN4.png)
+
+Dentro de la carpeta del proyecto, cree un archivo llamado ```system.properties```el cual contenga la siguiente linea.
+
+```
+java.runtime.version=1.8
+```
 
 Ahora, suba los cambios al repositorio. (```git add```, ```git commit```, ```git push```desde la linea de comandos). Para subir los cambios a Heroku, ejecute el comando ```git push heroku master```. Nuevamente, revise el despliegue de la aplicación. 
 
 Para conectarse con la base de datos, seleccione la aplicación en su dashboad de Heroku.
 
-** IMAGEN5 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN5.png)
 
+Seleccione la opción para agregar más adiciones. Seleccione la de PostgreSQL. Instale el plug-in a la aplicación en progreso.
 
+** IMAGEN6 **
+** IMAGEN7 **
 
-### 
+Al seleccionar la base de datos en la aplicación actual, se pueden ver los valores para la configuración de la conexión. Los valores relevantes son: host, database, user, port, password. Ahora, llene los valores del persistence.xml con los siguientes valores:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="AplicacionMundialPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://<host>:<port>/<database>"/>
+      <property name="javax.persistence.jdbc.user" value="<user>"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="<password>"/>
+      <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+```
+
+Al subir las modificaciones y subir el código, debe revisarse el éxito del despliegue.
+
+** IMAGEN8 **
+
+Los dos únicos servicios de la aplicacón son un GET y un POST sobre el modelo Competitors. Los dos servicios, se deben probar manualmente.
+
+** IMAGEN9 **
+** IMAGEN10 **
+
+ 
 
 
 
