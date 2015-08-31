@@ -59,8 +59,8 @@ Para conectarse con la base de datos, seleccione la aplicación en su dashboad d
 
 Seleccione la opción para agregar más adiciones. Seleccione la de PostgreSQL. Instale el plug-in a la aplicación en progreso.
 
-** IMAGEN6 **
-** IMAGEN7 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN6.png)
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN7.png)
 
 Al seleccionar la base de datos en la aplicación actual, se pueden ver los valores para la configuración de la conexión. Los valores relevantes son: host, database, user, port, password. Ahora, llene los valores del persistence.xml con los siguientes valores:
 
@@ -85,11 +85,11 @@ Al seleccionar la base de datos en la aplicación actual, se pueden ver los valo
 
 Al subir las modificaciones y subir el código, debe revisarse el éxito del despliegue.
 
-** IMAGEN8 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN8.png)
 
 Los dos únicos servicios de la aplicacón son un GET y un POST sobre el modelo Competitors. Los dos servicios, se deben probar manualmente.
 
-** IMAGEN9 **
+![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN9.png)
 
  
 
