@@ -90,7 +90,6 @@ Al subir las modificaciones y subir el código, debe revisarse el éxito del des
 Los dos únicos servicios de la aplicacón son un GET y un POST sobre el modelo Competitors. Los dos servicios, se deben probar manualmente.
 
 ** IMAGEN9 **
-** IMAGEN10 **
 
  
 
