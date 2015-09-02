@@ -1,0 +1,174 @@
+
+
+El proceso de control de calidad de una válvula se realiza 24 horas después de haber inflado un
+balón de prueba, bajo condiciones controladas de temperatura y de humedad relativa. Luego de
+varios experimentos realizados por el proveedor de las válvulas, este determinó que la presión, en
+psi, que mantienen sus válvulas en un balón 24 horas luego de ser inflado se comporta como una
+variable aleatoria triangular (8.05, 9.17 y 17.06).
+a. (5 puntos) Según estándares FIFA, un balón oficial debe de tener una presión de aire entre
+8.5 y 15.6 psi. Si la empresa Tygol establece que una válvula es defectuosa si no logra
+mantener dicho estándar de presión, calcule la probabilidad de que una válvula fabricada por
+el proveedor sea defectuosa.
+Teniendo en cuenta la probabilidad calculada anteriormente, la empresa ha decidido realizar una
+producción preliminar de 500 balones para realizar un control de calidad previo al inicio de la
+producción total de esta temporada. El control de calidad se diseñó en las dos etapas que se
+describen a continuación:
+Etapa 1: se toma una muestra aleatoria de 50 balones. Si se encuentra un máximo de 2 balones
+que presenten fallas en las válvulas, se decide iniciar la producción sin pasar a la Etapa 2; si se
+encuentran al menos 6 balones que presenten fallas en las válvulas, se pospone la producción; de
+lo contrario, se realiza la Etapa 2 de control de calidad.
+Etapa 2: se toma una segunda muestra aleatoria
+presentan fallas de esta segunda muestra más el
+muestra aleatoria no superan las 6 unidades, se
+decide posponer la producción hasta llegar a un
+válvulas.
+
+de 100 balones. Si el número de balones que
+número de balones defectuosos de la primera
+da inicio a la producción. De lo contrario, se
+acuerdo de garantía con el proveedor de las
+
+Teniendo en cuenta esta información y asumiendo independencia entre las muestras aleatorias
+seleccionadas en cada una de las etapas, responda los siguientes literales. No olvide hacer
+explícita la variable aleatoria, la distribución de probabilidad y los parámetros correspondientes.
+b. (5 puntos) ¿Cuál es la probabilidad de que se decida iniciar la producción de los nuevos
+balones en la Etapa 1, sin pasar a la Etapa 2?
+c. (5 puntos) ¿Cuál es la probabilidad de que se deba posponer la producción en la Etapa 1, sin
+pasar a la Etapa 2?
+
+3	
+  
+	
+  
+
+d. (8 puntos) Si luego de la primera etapa se sabe que es necesario realizar la Etapa 2 de
+control de calidad, ¿cuál es la probabilidad de que se acepte la producción bajo los criterios de
+esta etapa?
+e. (5 puntos) El gerente del área de control de calidad ha decidido recolectar una muestra
+aleatoria de 5 balones que presenten fallas en las válvulas, para inspeccionar los aspectos
+específicos que ocasionan las fallas. Si el gerente inspecciona uno a uno los balones que
+salen de la línea de producción, ¿cuál es la probabilidad de que deban inspeccionar 80
+balones hasta completar la muestra requerida?
+f. (5 puntos) Calcule la probabilidad de que el décimo y el onceavo balón que inspecciona el
+gerente sean los dos primeros balones que presenten fallas.
+g. (5 puntos) Bajo el contexto del literal e ¿cuál es el número esperado de balones que no
+presentan fallas en las válvulas, que el gerente esperaría encontrar antes de completar su
+muestra de 5 balones defectuosos?
+h. (2 puntos) Se envían 100 balones al proveedor de válvulas para que realice otras pruebas
+relacionadas al desgaste de las mismas. Se sabe de antemano que entre los balones
+enviados hay 30 que presentan fallas. Calcule la probabilidad de que, si el proveedor toma
+una muestra aleatoria de 20 de estos 100 balones, encuentre a lo sumo 6 que presenten
+fallas.
+
+Punto 2. Proceso de Poisson y Distribución Exponencial – (48 puntos)
+Los directivos del Hospital Santa Concepción están interesados en analizar el tiempo que
+transcurre entre el ingreso de un paciente a la Central de Urgencias y el ingreso del próximo
+paciente (cada una de estas personas llega al Centro de Urgencias de forma independiente).
+Luego de una evaluación que contó con un grupo de investigadores de una reconocida
+universidad, se determinó que la variable aleatoria que representa el tiempo que transcurre entre la
+llegada de dos pacientes a urgencias se distribuye exponencial con una media de 20 minutos entre
+las 5:00 a.m. y la 1:00 p.m (hora pico de urgencias); mientras que para el resto del día, la media de
+dicha variable es de 45 minutos. Tenga en cuenta que la Central de Urgencias del hospital está
+abierta las 24 horas del día, los 7 días de la semana.
+Con base en la información anterior, de solución a los siguientes literales.
+a. (5 puntos) ¿Cuál es la probabilidad de que en la hora pico de urgencias lleguen a lo sumo 20
+pacientes?
+i.
+
+Defina la variable aleatoria en términos del problema.
+
+ii. Identifique la distribución y los parámetros correspondientes.
+iii. Calcule la probabilidad solicitada.
+b. (2 puntos) ¿Cuál es el valor esperado y la varianza del número de pacientes que son
+atendidos durante la hora pico en urgencias?
+c. (4 puntos) ¿Cuál es la probabilidad de que lleguen exactamente 15 pacientes entre las 7:00
+a.m. y las 10:00 a.m.?
+
+4	
+  
+	
+  
+
+d. (4 puntos) ¿Cuál es la probabilidad de que lleguen por lo menos 6 pacientes entre las 12:00
+a.m. y las 5:00 a.m.?
+
+e. (8 puntos) Si entre las 4:00 a.m. y las 10:00 a.m. llegaron 25 pacientes, ¿cuál es la
+probabilidad de que entre las 10:00 a.m. y las 12:00 p.m. lleguen menos de 3 pacientes? Por
+otro lado ¿cuál es la probabilidad de que lleguen 28 pacientes entre las 4:00 a.m. y las 11:00
+a.m.?
+f. (10 puntos) Si se sabe que llegaron 30 pacientes entre las 10:00 p.m. y las 4:00 a.m., ¿cuál
+es la probabilidad de que 20 pacientes hayan llegado entre la 1:30 a.m. y las 3:15 a.m.?
+Nota: una respuesta suficiente corresponde a la expresión con la que la calcularía la
+probabilidad.
+g. (5 puntos) Si a las 5:15 a.m. llega el primer paciente de la hora pico a urgencias ¿cuál es la
+probabilidad de que el próxima paciente en llegar se demoré más de media hora?
+i.
+
+Defina la variable aleatoria en términos del problema.
+
+ii. Identifique su distribución y sus parámetros.
+iii. Calcule la probabilidad solicitada.
+h. (4 puntos) Si a las 12:30 p.m. llega un paciente ¿cuál es la probabilidad de que el tiempo que
+se demora el siguiente paciente en llegar al centro de urgencias esté entre 15 y 30 minutos?
+i. (2 puntos) Si a las 12:00 p.m. han llegado 5 pacientes ¿cuál es la probabilidad de que el
+próximo paciente llegue exactamente en 20 minutos?
+j. (4 puntos) Si a las 8:00 p.m. se sabe que el último paciente llegó hace media hora, ¿cuál es
+la probabilidad de que el tiempo de llegada del siguiente paciente a urgencias sea mayor a
+una hora?
+
+Punto 3. Distribución Normal – (22 puntos)
+A finales de julio del año pasado, la alcaldía decretó la implementación de un carril exclusivo para
+el transporte público en una de las avenidas más importantes de Bogotá, la carrera séptima.
+Después de casi un año desde la entrada en vigencia de la medida, la Secretaría de Movilidad dio
+a conocer el reporte final de un estudio que inició a principios de enero de 2015, sobre los tiempos
+de recorrido en dicha avenida. En el reporte se establece que el tiempo que un bus híbrido o del
+SITP le toma recorrer el trayecto entre las calles 34 y 100, durante las horas pico (6:00 a.m. – 8:30
+a.m. y 5:00 p.m. – 7:30 p.m.), se comporta como una variable aleatoria con distribución normal
+cuya media y desviación estándar son de 1.25 y 0.2 horas respectivamente.
+Con base en la información anterior, de solución a los siguientes literales.
+a. (4 puntos) Si se aborda un bus híbrido o del SITP al azar durante hora pico ¿cuál es la
+probabilidad de que en un día seleccionado al azar el tiempo de trayecto sea mayor a 1.5
+horas?
+
+5	
+  
+	
+  
+
+b. (4 puntos) Bibiana va tarde a su trabajo y le indicará a su jefe el tiempo máximo que se
+tardará en llegar a la oficina. Ella quiere indicarle un tiempo que, con una probabilidad de 0.9,
+no exceda el tiempo de recorrido del SITP que acaba de abordar.
+c. (4 puntos) Calcule la probabilidad de que un bus seleccionado al azar tenga un tiempo de
+trayecto de exactamente una hora.
+d. (4 puntos) ¿Cuál es la probabilidad de que en un trayecto seleccionado al azar haya tenido
+un tiempo de recorrido entre 45 minutos y 1 hora?
+e. (6 puntos) Calcule el valor de la constante 𝒄 que garantiza que, con probabilidad de 0.90, el
+tiempo de recorrido de un bus seleccionado al azar estará intervalo 1.25 − 𝒄  ; 1.25 + 𝒄 .
+Punto 4. Función Generatriz de Momentos – (10 puntos)
+El gerente de una empresa manufacturera ha realizado un estudio en su planta de producción, ya
+que quiere analizar el comportamiento de la variable aleatoria que representa el número de fallas
+mensuales que tienen las máquinas. De la variable aleatoria se conoce su Función Generatriz de
+Momentos, la cual está dada por:
+!
+𝜓! 𝑡 = 𝑒 !(! !!)
+Con base en la información anterior, de solución a los siguientes literales.
+a. (3 puntos) ¿Cuál es el número esperado de fallas en las máquinas durante un mes?
+b. (3 puntos) ¿Cuál es la varianza del número de fallas en las máquinas durante un mes?
+Se sabe adicionalmente que el tiempo en minutos que se demora una falla en una máquina en ser
+corregida se distribuye según la siguiente función de densidad de probabilidad:
+𝑓! 𝑦 =
+
+1/20
+0
+
+0 < 𝑦 < 20
+𝑑. 𝑙. 𝑐
+
+c. (4 puntos) Halle su función generatriz de momentos. Muestre todo el procedimiento.
+
+6	
+  
+	
+  
+
+
