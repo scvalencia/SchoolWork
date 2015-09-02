@@ -1,0 +1,53 @@
+AUTOMATA M is:
+	Q = {q1, .. , qn}
+	SIGMA = {...}
+	qi = in Q
+	F = {Final states} SUB Q
+	delta = Q x SIGMA -> Q
+
+	(q1 ->{sigma_succ} q2)
+		IFF Exists delta SUCH THAT delta(q1, sigma_succ) = q2
+
+	(q1 ->{omega_succ} q2)
+		IF omega is LAMBDA then q2 = q1
+		ELSE 
+			IFF Existe q' in Q ST delta(q, omega) = q' /\ delta(q', beta) = q2
+
+
+AUTOMATA M is:
+	Q = {q0, ..., q1}
+	SIGMA = {'a', 'b'}
+	qi = q0
+	F = {qm, .., qw}
+
+	delta(q : Q, a : SIGMA) {
+		if PRED1(q, a) then qj
+		...
+		if PREDn(q, a) then qk
+	}
+END
+
+AUTOMATA count(a)_divides _2 IS {
+
+	Q = {0, 1}
+	SIGMA = {'a', 'b'}
+	q0 = 0
+	F = {0}
+
+	delta(q : Q, a : SIGMA) {
+		if q = 0 and a = 'a' then 1
+		if q = 0 and a = 'b' then 0
+		if q = 1 and a = 'a' then 0
+		if q = 1 and a = 'b' then 1
+	}
+
+	delta(i, 'a') = (i + 1) mod 2
+	delta(i, 'b') = i
+}
+
+Description
+REGEX
+Operations
+Draw (drag and drop)
+
+Draw to code
