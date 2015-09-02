@@ -91,6 +91,8 @@ Los dos únicos servicios de la aplicacón son un GET y un POST sobre el modelo 
 
 ![](https://raw.githubusercontent.com/scvalencia/SchoolWork/master/Teaching/ISIS2503/labs/lab06/IMAGEN9.png)
 
+# Revisar Logs, interactuar con la base de datos
+
  
 
 
