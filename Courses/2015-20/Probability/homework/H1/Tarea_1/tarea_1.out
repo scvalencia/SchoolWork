@@ -1,0 +1,43 @@
+\BOOKMARK [1][-]{section.1}{C\341lculo de probabilidades de eventos \(Diagrama de Venn\)}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Eventos expuestos en la situaci\363n}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Diagrama de Venn propuesto para la situaci\363n}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Relaci\363n entre la alternativa B y la opci\363n 3}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Independencia de los eventos A y B}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Probabilidad de escoger la alternativa B}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.6}{Probabilidad de escoger la alternativa B y la alternativa A}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.7}{Probabilidad de elegir la opci\363n de financiamiento 1}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.8}{Probabilidad de escoger la alternativa A y las opciones de financiamiento 1 y 2}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.9}{Probabilidad de elegir exclusivamente la alternativa de financiaci\363n 3}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.10}{Probabilidad de escoger la alternativa B y preferir dos opciones de financiaci\363n}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.11}{Probabilidad de elegir las opciones de financiaci\363n 1 y 3 exclusivamente, si se conoce que la Alternativa B fue escogida}{section.1}% 12
+\BOOKMARK [2][-]{subsection.1.12}{Probabilidad de escoger la alternativa A, si se conoce que la opc\363n de financiaci\363n 1 fue elegida}{section.1}% 13
+\BOOKMARK [1][-]{section.2}{C\341lculo de probabilidades de eventos \(Gr\341ficas\)}{}% 14
+\BOOKMARK [1][-]{section.3}{T\351cnicas de Conteo}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{N\372mero de resultados posibles en t\351rminos de la tabla de posiciones}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Probabilidad de que dos equipos pertenecientes a la Universidad de los Andes ocupen las dos primeras posiciones}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Probabilidad de que los equipos de Comunicaci\363n, Derecho y Administraci\363n ocupen las tres primeras posiciones \(Sin importar el orden\)}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Probabilidad de que las tres primeras posiciones sean ocupadas por los equipos de Ingenier\355a, Matem\341ticas y Dise\361o \(Respectivamente\)}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.5}{N\372mero de formas posibles de ordenar ocho equipos en dos grupos que contienen cuatro elementos cada uno}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Probabilidad de que en un mismo grupo quede \372nicamente un equipo de Ingenier\355a y el equipo de Dise\361o}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.7}{Probabilidad de que los equipos de las facultades de Ingenier\355a queden de primeros en cada grupo}{section.3}% 22
+\BOOKMARK [1][-]{section.4}{Teorema de Bayes y \301rboles de Probabilidad}{}% 23
+\BOOKMARK [2][-]{subsection.4.1}{\301rbol de probabilidad}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.2}{Probabilidad de que Nairo Quintana/Chris Froome gane la Vuelta a Espa\361a}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.3}{Probabilidad de ganar la Vuelta Espa\361a tras ganar dos validas consecutivas}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.4}{Probabilidad de que Chris Froome gane la etapa n\372mero 11, dado que gan\363 la etapa 16}{section.4}% 27
+\BOOKMARK [1][-]{section.5}{Variables Aleatorias Discretas}{}% 28
+\BOOKMARK [2][-]{subsection.5.1}{Funci\363n de probabilidad discreta}{section.5}% 29
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Gr\341fica gX\(x\)}{subsection.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.2}{Funci\363n de probabilidad acumulada}{section.5}% 31
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Gr\341fica GX\(x\)}{subsection.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.3}{Valor esperado y desviaci\363n est\341ndar}{section.5}% 33
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Valor esperado}{subsection.5.3}% 34
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Desviaci\363n est\341ndar}{subsection.5.3}% 35
+\BOOKMARK [2][-]{subsection.5.4}{Acerca de generar lucro por parte de los jugadores}{section.5}% 36
+\BOOKMARK [1][-]{section.6}{Variables Aleatorias Continuas}{}% 37
+\BOOKMARK [2][-]{subsection.6.1}{Definci\363n Funci\363n de densidad de Probabilidad}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.2}{Funci\363n distribuci\363n acumulada}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.3}{Valor esperado y Desviaci\363n est\341ndar}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.4}{Probabilidad de ser atendido en exactamente una hora}{section.6}% 41
+\BOOKMARK [2][-]{subsection.6.5}{Probabilidad de ser atendido entre 1.25 y 1.75 horas}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.6}{Probabilidad de esperar entre entre 1.25 y 1.75 horas, dado que m\341s de una hora ya transcurri\363}{section.6}% 43
