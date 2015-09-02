@@ -7,3 +7,6 @@
 * Indagar si el procesos que los llevó ahí fue un procesos iterativo de haber tenido resultados insatisfactorios, ver que hicieron, que pensaron y cómo resolvieron las cosas.
 
 * Hacer checkout hasta el commit inmediatamente anterior al deadline, ser flexible en la calificación
+
+* Thread Count: 4500, Ramp-UP = 5, sin errores y con average en 5.
+O si no TG : 900, Ramp-up: 1, loop count 5
