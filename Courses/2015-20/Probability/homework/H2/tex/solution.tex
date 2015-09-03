@@ -47,7 +47,7 @@ balones hasta completar la muestra requerida?
 \item Calcule la probabilidad de que el décimo y el onceavo balón que inspecciona el
 gerente sean los dos primeros balones que presenten fallas.
 
-\item Bajo el contexto del literal e ¿cuál es el número esperado de balones que no
+\item Bajo el contexto del literal $e)$ ¿cuál es el número esperado de balones que no
 presentan fallas en las válvulas, que el gerente esperaría encontrar antes de completar su
 muestra de 5 balones defectuosos?
 
@@ -129,7 +129,7 @@ La probabilidad que se halló, estaba acumulada en:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{fig3-2.png}
-    \caption{Función de probabilidad normal, horas contra probabilidad}
+    \caption{Función de probabilidad normal, horas contra probabilidad.}
     \label{fig:prob_dist2}
 \end{figure}
 
@@ -195,14 +195,36 @@ La probabilidad que se halló, estaba acumulada en:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{fig3-3.png}
-    \caption{Gráfica de probabilidad de que se llege con un timepo entre 45 minutos y 1 hora}
+    \caption{Gráfica de probabilidad de que se llege con un timepo entre 45 minutos y 1 hora.}
     \label{fig:prob_dist2}
 \end{figure} 
 
 \item Calcule el valor de la constante $c$ que garantiza que, con probabilidad de 0.90, el
 tiempo de recorrido de un bus seleccionado al azar estará intervalo $\left[ 1.25 - c,\ 1.25 + c\right]$.\\
 
-$$\mathbb{P}\left(Z < \frac{0.75 - \mu}{\sigma} \right)$$
+El valor pedido, es un $c$ tal que para algún $X$, la probabilidad de que esté entre $1.25 - c$ y $1.25 + c$ sea $0.90$. Por principios básicos de probabilidad y de distribuciones de probabilidad:
+
+\begin{equation}
+    \begin{aligned}
+   \mathbb{P}\left(1.25 - c < X < 1.25 + c \right) = 0.9 \Rightarrow   \\
+  \mathbb{P}\left(X < 1.25 + c\right) -   \mathbb{P}\left(X < 1.25 - c\right) = 0.9 \Rightarrow\\
+  \mbox{Al estandarizar se obtiene:} \\
+  \mathbb{P}\left(Z < \frac{1.25 + c - \mu}{\sigma} \right) - \mathbb{P}\left(Z < \frac{1.25 - c - \mu}{\sigma} \right) = 0.9 \Rightarrow \\
+  \mathbb{P}\left(Z < \frac{1.25 + c - 1.25}{0.2} \right) - \mathbb{P}\left(Z < \frac{1.25 - c - 1.25}{0.2} \right) = 0.9 \Rightarrow  \\
+  \mathbb{P}\left(Z < \frac{c}{0.2} \right) - \mathbb{P}\left(Z < \frac{- c}{0.2} \right) = 0.9 \\
+\end{aligned}
+\end{equation}
+
+\pagebreak
+Por propiedades de las distribuciones normales
+
+$$  \mathbb{P}\left(Z < \frac{c}{0.2} \right) - \left[ 1 - \mathbb{P}\left(Z < \frac{c}{0.2} \right) = 0.9 \right] $$
+$$  \mathbb{P}\left(Z < \frac{c}{0.2} \right) - 1 + \mathbb{P}\left(Z < \frac{c}{0.2} \right) = 0.9 $$
+$$  2\left(\mathbb{P}\left(Z < \frac{c}{0.2} \right)\right) - 1  = 0.9 \Rightarrow \mathbb{P}\left(Z < \frac{c}{0.2} \right) = \frac{1.9}{2} = 0.95$$
+
+Según la tabla de distribución normal estándar, el primer valor $z$ para el cual $\mathbb{P}\left(Z < z \right) = 0.9$ es $1.65$. Luego, $\frac{c}{2} = 1.65 \Rightarrow c = 0.33$.
+
+
 
 \end{enumerate}
 
@@ -211,11 +233,51 @@ $$\mathbb{P}\left(Z < \frac{0.75 - \mu}{\sigma} \right)$$
 
 \begin{enumerate}[(a)]
 
-\item ¿Cuál es el número esperado de fallas en las máquinas durante un mes?
+\item ¿Cuál es el número esperado de fallas en las máquinas durante un mes?\\
 
-\item ¿Cuál es la varianza del número de fallas en las máquinas durante un mes?
+Como $\Psi_{X}(t) = e^{6 \times \left( e ^{t} - 1 \right)}$ es la función generatriz de momentos para la variable aleatoria que representa el número de fallas mensuales que tiene la máquina, y por la teoría se sabe que $\Psi_{X}^r(t = 0) = \mathbb{E}(X^r)$; entonces el primer momento central equivale a $\mathbb{E}(X^1) = \mathbb{E}(X)$.
 
-\item Halle su función generatriz de momentos. Muestre todo el procedimiento.
+$$\Psi'_{X}(t) = 6 \times e ^{6 \times (-1 + e^t) + t}$$
+$$\Psi'_{X}(0) = 6 \times e ^{6 \times (-1 + e^0) + 0} = 6 \times e ^{6 \times (-1 + 1)} = 6 \times e ^{0} = 1$$
+
+\item ¿Cuál es la varianza del número de fallas en las máquinas durante un mes?\\
+
+Como $\Psi_{X}(t) = e^{6 \times \left( e ^{t} - 1 \right)}$ es la función generatriz de momentos para la variable aleatoria que representa el número de fallas mensuales que tiene la máquina, y por la teoría se sabe que $\Psi_{X}^r(t = 0) = \mathbb{E}(X^r)$; entonces el segundo momento central equivale a $\mathbb{E}(X^2)$.
+
+$$\Psi'_{X}(t) = 6 \times e ^{6 \times (-1 + e^t) + t}$$
+$$\Psi''_{X}(t) = 6 \times e^{6 \times \left(e^t-1\right)+t} \times \left(6 \times e^t+1\right)$$
+$$\Psi''_{X}(0) = 6 \times e^{6 \times \left(e^0-1\right)+0} \times \left(6 \times e^0+1\right) = 6 \times e^{6 \times \left(1-1\right)+0} \times \left(6 \times 1+1\right)$$
+$$\Psi''_{X}(0) = 6 \times e^{0} \times 7 = 6 \times 7 = 42 = \mathbb{E}(X^2)$$
+\begin{center}
+	\line(1,0){300}
+\end{center}
+$$\mathbb{V}(X) = \mathbb{E}[X^2] - \mathbb{E}[X]^2 = \Psi''_{X}(0) - (\Psi'_{X}(0))^2 $$
+$$\mathbb{V}(X) = 42 - 6^" = 42 - 36 = 6 $$
+
+\item Halle su función generatriz de momentos. Muestre todo el procedimiento.\\
+
+Sea $f_{Y}(y) : \mathbb{R} \mapsto \mathbb{R}$, una función definida por la expresión $f_{Y}(y) = 1/20 \iff y \in (1, 20) \subset \mathbb{R} \wedge f_{Y}(y) = 0 \iff y \notin (1, 20) \subset \mathbb{R}$. Sea $g(t) = e^{t \times y}$, definida sobre $\mathbb{R}$ para todo intervalo de definición de la variable $y$. El producto funcional de ambas funciones, se define através de la variable $y$, por lo que las porciones donde $y$ valfa cero sobre algun intervalo de por lo menos una de las funciones, entonces en el mismo intervalo, el producto funcional es cero. Acontinuación se ilustra el producto funcional de las funciones definidas en este párrafo sobre un intervalo de interés.
+
+\[ f_{Y}(y) = \begin{cases} 
+      \frac{1}{20} & 0 < x < 20 \\
+      0 & d.l.c
+   \end{cases}
+\]
+
+$$g(t) = e^{t \times y}$$
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{fig4-1.png}
+    \caption{Función de distribución de probabilidad y función para la generación de momentos centrales de una distribución.}
+    \label{fig:prob_dist2}
+\end{figure}
+
+$$\Psi_{Y}(t) = \int_{- \infty}^{\infty} \left( e^{y \times t} \times f_{Y}(y)\right)\ dy = \int_{\mathbb{R}[Y]} \left( e^{y \times t} \times f_{Y}(y)\right)\ dy$$
+$$\Psi_{Y}(t) = \int_{0}^{20} \left( e^{y \times t} \times f_{Y}(y)\right)\ dy = \int_{0}^{20} \left( e^{y \times t} \times \frac{1}{20}\right)\ dy$$
+$$\Psi_{Y}(t) = \frac{1}{20} \int_{0}^{20} e^{y \times t}\ dy = \frac{1}{20} \left[\left.   \frac{e^{t \times y}}{t} \right|_{y=0}^{y = 20}
+ \right] = \frac{1}{20} \left[\frac{e^{20 \times t}}{t} -  \frac{e^{0 \times t}}{t} \right]$$
+$$\Psi_{Y}(t) = \frac{1}{20} \left[\frac{e^{20 \times t} - e^{0 \times t}}{t} \right] = \frac{1}{20} \left[\frac{e^{20t} - 1}{t} \right] = \frac{e^{20t} - 1}{20t} $$
 
 \end{enumerate}
 
