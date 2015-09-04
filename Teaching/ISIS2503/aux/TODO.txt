@@ -1,0 +1,28 @@
+Latencia 1000 usuarios
+Escalabilidad : 4500 - 5 - 0
+
+===================================
+
+Google sheet con horarios y plantilla
+
+MongoDB
+
+AWS
+
+Grupos
+
+
+========
+
+Documento
+Impacto persistencia
+MODELO RELACIONAL Y XQ????
+Conectividad 
+
+Priuebas
+
+Comparación
+
+Prsentación -> Funcional
+
+BONO: Prueba contra nube!!!!!!!! - CUESTIONAR  Y COMPARAR
