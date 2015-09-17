@@ -1,0 +1,182 @@
+====== Laboratorio Desarrollo de Trabajos Cron  ======
+
+====== Objetivos ======
+
+  * Implementar un proceso que se ejecute en background.
+  * Hacer uso de un servidor que no sea web.
+  * Implementar tareas que se realizarán de manera repetitiva en un tiempo dado haciendo uso de un proceso cron.
+  * Hacer que el proceso cron consuma los datos de la base de datos desarrollada en el [[https://sistemas.uniandes.edu.co/~isis2503/dokuwiki/doku.php?id=laboratorios:desplieguerest-cloud|Laboratorio de Despliegue Cloud]].
+  * Envío de correo electrónico de manera asíncrona de un proceso cron.
+
+====== Herramientas ======
+  * [[https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunasr1|Eclipse Luna]]
+  * [[http://heroku.com/|Heroku]]
+  * [[http://quartz-scheduler.org|Quartz]]
+  * [[http://maven.apache.org/download.cgi|Maven 3]]
+  * [[https://code.google.com/p/simple-java-mail/wiki/Manual|Simple-Java-Mail]]
+
+===== Pre-Requisitos =====
+  - Para poder desarrollar este laboratorio es indispensable que tenga instalado [[https://www.eclipse.org/downloads/|eclipse]].
+  - A continuación debe crear una cuenta en [[https://id.heroku.com/signup|Heroku]], para esto basta con registrar su correo.
+  - Luego es necesario instalar el plugin de heroku para eclipse. Este procedimiento se explica claramente en el siguiente [[http://eclipse-plugin.herokuapp.com/|link]]. Hasta el paso "Adding your SSH Key to Heroku" (incluyendo la realización de este último).
+  - [[laboratorios:desplieguerest-cloud|Laboratorio Despliegue de una aplicación REST en la nube]] Completamente desarrollado y desplegado en Heroku.
+
+
+====== Desarrollo ======
+===== Desarrollo Caso de Estudio Aplicación Mundial =====
+
+==== Configuración del Proyecto en Eclipse ====
+  - Debe descargar el código base del siguiente [[https://github.com/maveme/worker-appmundial.git|repositorio]] 
+  - Abra Eclipse y cree un nuevo proyecto en heroku. //File -> New -> Other -> Heroku.//{{ :laboratorios:newproject.png?400 |}}\\
+  - Ahora debe asignarle un nombre a la aplicación (el nombre debe ser único, por ejemplo: lab-cron-<login-uniandes> ) y posteriormente seleccionar el tipo de proyecto que desea crear. En este caso debe seleccionar //Blank Heroku App//.{{ :laboratorios:project-name.png?400 |}}\\
+  - Ahora debe copiar todo el código y las carpetas que descargó en el paso 1, y copiarlos en el directorio que haya seleccionado para crear la aplicación de Heroku.
+  - Debe refrescar la vista de la aplicación en heroku. 
+  - Luego debe configurar el proyecto para que sea un proyecto maven, para esto, debe darle click derecho a la aplicación (//configure -> Convert to Maven Project )//. {{ :laboratorios:convert-project.png?400 |}}\\
+
+==== Cambiar el tipo de Máquina en Heroku ====
+El proveedor cloud que vamos a usar será el mismo que usamos en el desarrollo del laboratorio de[[laboratorios:desplieguerest-cloud|Despliegue de una aplicación REST en la nube]]. Este proveedor nos ofrece dos tipos de máquinas: //web// y //workers//. En el laboratorio pasado usamos un tipo de máquina web, el cual usaba un contenedor de aplicaciones embebido jetty.
+
+Para el desarrollo de este laboratorio vamos a usar una máquina de tipo //worker//. Este tipo de máquinas son comúnmente usadas para realizar trabajos pesados en background o realizar trabajos de tipo cron. Para usar una máquina de este tipo deberán modificar el archivo Procfile.{{ :laboratorios:worker_1.png?300 |}}
+  * Debe modificar este archivo y en vez de //web// debe colocar //worker//.
+  * El archivo debe quedar de la siguiente manera:
+<code> worker: java -cp target/classes:target/dependency/* com.example.Main </code>
+
+==== Agregar la Librería del Proceso Cron ====
+Para realizar la implementación de un proceso que se ejecutará cada x cantidad de tiempo, se hará uso de un proceso cron a nivel de sistema operativo. Para lograr este objetivo usaremos la librería [[http://quartz-scheduler.org|Quartz]].
+  - Lo primero que debemos hacer es agregar la dependencia de la librería [[http://quartz-scheduler.org|Quartz]] a nuestro archivo pom.xml \\ <code xml> 		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.1.5</version>
+		</dependency></code>
+
+
+==== Implementación del Proceso Cron ====
+Para la implementación del proceso cron, vamos a realizar la configuración en el archivo Main.java dentro del método main. En este método debemos definir la periodicidad que queremos para nuestro trabajo, y adicionalmente se le debe definir qué trabajo debe realizar, es decir las instrucciones que queremos ejecute cada cierto tiempo.
+  - El método main, deberá quedar como se muestra a continuación: <code java> import static org.quartz.JobBuilder.newJob;
+import org.quartz.JobDetail;
+import org.quartz.Scheduler;
+import static org.quartz.SimpleScheduleBuilder.repeatHourlyForever;
+import org.quartz.Trigger;
+import static org.quartz.TriggerBuilder.newTrigger;
+import org.quartz.impl.StdSchedulerFactory;
+public static void main(String[] args) throws Exception {
+		Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+		scheduler.start();
+		JobDetail jobDetail = newJob(JobExample.class).build();
+
+		Trigger trigger = newTrigger()
+				.startNow()
+				.withSchedule(repeatHourlyForever(1))
+				.build();
+
+		scheduler.scheduleJob(jobDetail, trigger);
+	}</code>
+  - Cabe mencionar que si nos fijamos en la periodicidad (//withSchedule(repeatHourlyForever(1))//), este parámetro lo podemos cambiar como deseemos, si queremos que el proceso se ejecute de manera más continua, es decir cada x segundos, podemos usar el método .withSchedule(//repeatSecondlyForever(1)//). Este método lo que nos dice es que la tarea se ejecutará cada segundo.
+
+
+ ==== Implementación de un Trabajo Cron ====
+  - Debe crear una clase la cual debe implementar de la clase //job// que nos provee la librería //Quartz//. <code java> public class JobExample implements Job {
+
+}</code>
+  - Es importante verificar que el nombre de la clase que definió en el punto anterior sea el mismo que definió en el método main: <code java> JobDetail jobDetail = newJob(HelloJob.class).build(); </code>
+  - Ahora vamos a definir el método donde implementaremos la lógica de nuestro trabajo en background. Para este fin debemos crear un método con la siguiente firma: <code java> public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException  </code>
+  - Para verificar que todo está configurado correctamente vamos a crear un trabajo cron, en donde se imprima por consola la fecha en la que se ejecutó el trabajo, para este fin vamos a escribir el cuerpo del método que definimos en el paso anterior: <code java> 	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+		System.out.println("Job example executed");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println(dateFormat.format(date));
+	} </code>  
+  - En el método main, vamos a cambiar la periodicidad para que se ejecute el trabajo cada 2 segundos: <code java> 	public static void main(String[] args) throws Exception {
+		Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+		scheduler.start();
+		JobDetail jobDetail = newJob(JobExample.class).build();
+
+		Trigger trigger = newTrigger()
+				.startNow()
+				.withSchedule(repeatSecondlyForever(2))
+				.build();
+
+		scheduler.scheduleJob(jobDetail, trigger);
+	} </code>
+  - Para verificar que está bien configurado nuestro trabajo cron y que se ejecuta de manera asíncrona, vamos a la clase Main.java y le damos click derecho y seleccionamos la opción //run as// -> //Java Application//.
+  - Si todo se ha desarrollado correctamente debería aparecerles algo similar a lo siguiente: {{ :laboratorios:worker_2.png?400 |}}
+
+
+==== Configuración de la Unidad de Persistencia ====
+  - Deben modificar el archivo persistence.xml y agregar las credenciales de la base de datos que usaron en el [[laboratorios:desplieguerest-cloud|laboratorio cloud]]. <code xml> <?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="CronPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>.
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://…"/>
+      <property name="javax.persistence.jdbc.user" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="-"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+ </code>
+
+
+==== Conexión a la Base de Datos desde el Proceso Cron ====
+Para realizar la conexión a la base de datos relacional, debemos tener previamente configurada la unidad de persistencia. Adicionalmente debemos crear el **EntityManagerFactory** y el EntityManager para acceder a los datos a través de JPA. 
+  - Esto lo haremos dentro de la clase JobExample.java y crearemos un nuevo método que se encargará de esto y de hacer una consulta en la base de datos y retornar dicho resultado, como se muestra a continuación: <code java> public int getNumberCompetitors(){
+		int numberCompetitors=0;
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("CronPU", System.getProperties());
+		EntityManager entityManager = emf.createEntityManager();
+		List<Competitor> competitors;
+        try {
+            Query q = entityManager.createQuery("select u from Competitor u order by u.surname ASC");
+            competitors = q.getResultList();
+            numberCompetitors=competitors.size();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.clear();
+            entityManager.close();
+        }
+		emf.close();
+		return numberCompetitors;
+	} </code>
+  - Ahora vamos a invocar el método que creamos en el punto anterior al final del método //execute//: <code java> 	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+		int numberCompetitors=getNumberCompetitors();
+	} </code>
+
+
+==== Envío de Correo Electrónico con la Cantidad de Competidores ====
+En este punto del laboratorio nos centraremos en la notificación al administrador cada 24 horas de la cantidad de usuarios registrados en la aplicación, para esto usaremos todo lo que hemos desarrollado hasta el momento y haremos uso de la librería [[https://code.google.com/p/simple-java-mail/wiki/Manual||Simple-Java-Mail]].
+  - Crear un método llamado //sendMail(int numberCompetitors)// y procedemos a configurar el correo que será enviado a través de SMTP: <code java> 	public void sendMail(int numberCompetitors){
+		final Email email = new Email();
+		email.setFromAddress("Admin", "example@example.com");
+		email.setSubject("Numero de Concursantes");
+		email.addRecipient("Nombre Apellido", "email", RecipientType.TO);
+		email.setText("La cantidad de concursantes inscritos son: "+numberCompetitors);
+		new Mailer("smtp.gmail.com", 587, "username", "password",TransportStrategy.SMTP_TLS).sendMail(email);
+	} </code>
+  - Luego de configurar la libreria para el envío de correos, modificaremos el método //execute// para que después de consultar la cantidad de usuarios registrados, envié un correo con el número de concursantes: <code java> 	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+		int numberCompetitors=getNumberCompetitors();
+		sendMail(numberCompetitors);
+	} </code>
+  - Para verificar que hemos desarrollado todo correctamente vamos a la clase Main.java y le damos click derecho y seleccionamos la opción run as → Java Application y debería aparecerles algo similar a lo siguiente en la consola de eclipse {{ :laboratorios:worker_3.png?400 |}}
+  - Adicionalmente el destinatario __deberá__ recibir el correo, si no lo recibe algo no quedo bien configurado. 
+
+
+==== Despliegue de la aplicación en Heroku ====
+
+Luego de esto, vamos a subir los cambios que hemos realizado de manera local para que estos pasen al ambiente de producción que tenemos desplegado en heroku. Primero debemos agregar los archivos a nuestro repositorio Git (ya viene por defecto en las aplicaciones de heroku). Para esto le damos click derecho al proyecto -> Team -> Add to index. {{ :laboratorios:index.png?400 |}}\\
+  - Ahora es necesario hacer commit de los cambios, para esto debe darle click derecho al proyecto -> Team -> Commit {{ :laboratorios:commit.png?400 |}}.
+  - Deben agregar un mensaje a esta versión y luego dar click en el botón //Commit and Push// {{ :laboratorios:commit2.png?400 |}}\\
+
+====== Actividad ======
+  - Debe crear un proceso cron que se encarga de seleccionar un ganador de manera aleatoria entre todos los participantes inscritos que no hayan ganado antes. 
+  - Para esto debería sacar de manera aleatoria un concursante y cambiar el atributo winner a true.
+  - Se debe enviar un correo al usuario ganador y al administrador (pueden ser Uds. mismos) notificando que ganó.
+  - El proceso se deberá ejecutar cada 24 horas.
+  - Debe desplegar el proceso cron en Heroku.
+
+====== Entregas ======
+  * Pantallazo de la vista de Heroku donde se muestre el uso de una máquina de tipo //worker//. Se debe evidenciar que está corriendo una instancia.
+  * Captura de pantalla del correo que configuraron.
+  * La entrega del laboratorio se debe hacer por Sicua+ y consiste en un archivo .zip (login.zip) con el proyecto (los archivos fuentes) y las dos capturas de pantalla.

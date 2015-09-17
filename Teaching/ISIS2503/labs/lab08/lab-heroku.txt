@@ -1,0 +1,33 @@
+descargr código
+
+
+git init
+git add .
+git commit -m "First commit"
+
+heroku login
+heroku create lab-worker<code>
+heroku open y aseurarse en el dashboard
+
+
+Procfile
+system.properties
+
+git add, commit , push heroku master
+
+asegurarse de que todo marcha bien
+
+crear base de datos
+persistence.xml  ->>> Perisstence Unit
+
+
+cron
+
+otra clase
+intellij -> Maven
+
+
+
+
+git add, commit , push heroku master
+scale [web | worker]
