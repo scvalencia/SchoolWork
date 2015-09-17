@@ -281,7 +281,7 @@
     <object type="LMREQUEST" id="z122">
         <attribute name="body" type="string">[{"data":{"json":"{\\"name\\":\\"Carlos\\",\\"surname\\":\\"Ramirez\\",\\"address\\":\\"Calle 43 #56\\",\\"age\\":\\"20\\",\\"telephone\\":\\"7653874\\",\\"cellphone\\":\\"3124563468\\",\\"city\\":\\"London\\",\\"country\\":\\"UK\\"}"},"identifier":"com.luckymarmot.JSONDynamicValue"}]</attribute>
         <attribute name="uuid" type="string">E43F7977-88BD-47E1-9BA1-9C025A456398</attribute>
-        <attribute name="url" type="string">https://dry-hamlet-8937.herokuapp.com/competitors</attribute>
+        <attribute name="url" type="string">https://infinite-ridge-8493.herokuapp.com/competitors</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
