@@ -1,7 +1,4 @@
 Ash
-Bertserkas
 Canavos
-DeGroot
 Devore
-Dobrow
 Walpole
