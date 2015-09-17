@@ -1,0 +1,80 @@
+// -----------------------
+// Sebastián Valencia
+// UNIVERSIDAD DE LOS ANDES
+// -----------------------
+using gold.**
+procedure main(args:String[]) begin
+	//GAutomataFrame.show(createTransducer())
+	testTransducer(createTransducer())
+end
+
+procedure testTransducer(M:ITransducer) begin
+	var sc:java.util.Scanner(System.$in)
+	while true do
+		print "----------------------------"
+		print "Digite la cadena de entrada:"
+		string:=sc.nextLine()
+		result:=M.acceptsString(string)
+		print "La cadena fue "+(result?"aceptada":"rechazada")+". Resultado:"
+		print M.getOutputString()
+	end
+end
+
+function createTransducer():ITransducer begin
+	Q:={'I'} ∪ ({'a', 'b', 'c'} × {'a', 'b', 'c', '*'} × (0 ‥ 3))
+	Σ:={'a', 'b', 'c', '*'}
+	Σ´:={'a', 'b', 'c'}
+	q₀:='I'
+	F:={'I'}
+	return 	GDeterministicTransducer(Q,Σ,Σ´,q₀,F,δ,g,h)
+end
+
+function δ(q,σ) begin
+	if q='I' then
+		return ⟨σ, σ, 0⟩
+	end
+end
+
+function δ(⟨x, y, i⟩, σ) begin
+	if i = 3 or y = '*' then
+		return 'I'
+	elseif σ = '*' and i = 2 then
+		return ⟨y, σ, (i + 1) % 3⟩
+	else return ⟨y, σ, (i + 1) % 3⟩	
+	end
+end
+
+function g(q) begin // Respuesta en estado
+	return λ
+end
+
+function g(⟨x, y, i⟩) begin // Respuesta en estado
+	if i = 0 then
+		if x = 'b' then return 'a'
+		elseif x = 'c' then return 'b'			
+		else return 'c'			
+	end
+	elseif i = 1 then return λ		
+	elseif i = 2 then
+		if x = y then
+			return x
+		else return λ			
+		end
+	else
+		if y = '*' then
+			if x = 'a' then return "aa"				
+			elseif x = 'b' then return "bb"				
+			else return "cc"				
+			end
+			
+		else
+			return y
+			
+		end
+		
+	end
+end
+
+function h(q,σ) begin // Respuesta en transición
+	return λ
+end
