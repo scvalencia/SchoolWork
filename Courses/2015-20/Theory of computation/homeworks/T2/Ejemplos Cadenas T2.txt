@@ -1,0 +1,40 @@
+Ejemplos cadenas aceptadas punto 1:
+00
+010100
+00110100
+
+Ejemplos cadenas no aceptadas punto 1:
+101010
+000
+0011000
+10000111
+10000001
+010010011001000
+
+Ejemplos cadenas aceptadas punto 2:
+abababcc
+ababacabc
+abbbbbba
+cccccccc
+baaaaaab
+
+Ejemplos cadenas no aceptadas punto 2:
+abababc
+cccccca
+aaaaaab
+
+Ejemplos cadenas aceptadas punto 3:
+aaaabbbbcc
+aabbcccc
+cccccccc
+aabbbbcccccc
+
+Ejemplos cadenas no aceptadas punto 3:
+abababa
+cccccaa
+aaaaaab
+
+
+Subcadenas de longitud uno, el case del punto 2 q no pasa
+
+
