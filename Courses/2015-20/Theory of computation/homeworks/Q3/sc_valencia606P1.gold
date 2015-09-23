@@ -17,11 +17,12 @@ procedure testTransducer(M:ITransducer) begin
 		result:=M.acceptsString(string)
 		print "La cadena fue "+(result?"aceptada":"rechazada")+". Resultado:"
 		print M.getOutputString()
+		
 	end
 end
 
 function createTransducer():ITransducer begin
-	Q:={'I'} ∪ ({'a', 'b', 'c'} × {'a', 'b', 'c', '*'} × (0 ‥ 3))
+	Q:={'I'} ∪ (1‥7)
 	Σ:={'a', 'b', 'c', '*'}
 	Σ´:={'a', 'b', 'c'}
 	q₀:='I'
@@ -30,17 +31,15 @@ function createTransducer():ITransducer begin
 end
 
 function δ(q,σ) begin
-	if q='I' then
-		return ⟨σ, σ, 0⟩
-	end
-end
-
-function δ(⟨x, y, i⟩, σ) begin
-	if i = 3 or y = '*' then
-		return 'I'
-	elseif σ = '*' and i = 2 then
-		return ⟨y, σ, (i + 1) % 3⟩
-	else return ⟨y, σ, (i + 1) % 3⟩	
+	if q in {'I', 1, 2, 3, 4} and σ = '*' then return q
+	elseif q = 'I' and σ ≠ '*' then return 1
+	elseif q = 1 then
+		if σ = 'a' then return 2
+		elseif σ = 'b' then return 3
+		elseif σ = 'c' then return 4			
+	end	
+	elseif q in {2, 3, 4} and σ ≠ '*' then return q + 3
+	elseif q in {5, 6, 7} then return 'I'
 	end
 end
 
@@ -48,33 +47,26 @@ function g(q) begin // Respuesta en estado
 	return λ
 end
 
-function g(⟨x, y, i⟩) begin // Respuesta en estado
-	if i = 0 then
-		if x = 'b' then return 'a'
-		elseif x = 'c' then return 'b'			
-		else return 'c'			
-	end
-	elseif i = 1 then return λ		
-	elseif i = 2 then
-		if x = y then
-			return x
-		else return λ			
-		end
-	else
-		if y = '*' then
-			if x = 'a' then return "aa"				
-			elseif x = 'b' then return "bb"				
-			else return "cc"				
-			end
-			
-		else
-			return y
-			
-		end
-		
-	end
-end
-
 function h(q,σ) begin // Respuesta en transición
-	return λ
+	if q in {'I', 1, 2, 3, 4} and σ = '*' then return λ
+	elseif q = 'I' and σ ≠ '*' then
+		if σ = 'b' then return 'a'
+		elseif σ = 'c' then return 'b'
+		elseif σ = 'a' then return 'c'			
+	end
+	elseif q = 1 then return λ
+	elseif q in {2, 3, 4} then return σ 
+	elseif q = 5 then
+		if σ = '*' then return 'a'
+		else return σ
+		end
+	elseif q = 6 then
+		if σ = '*' then return 'b'
+		else return σ
+		end
+	elseif q = 7 then
+		if σ = '*' then return 'c'
+		else return σ
+		end
+	end
 end
