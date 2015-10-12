@@ -1,0 +1,130 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\begin{enumerate}[(a)]
+
+\item Establezca la función de distribución de probabilidad conjunta de X y Y.
+
+Primero se encuentra $F(X|Y) \sim Bin(p = 0.7; n = X, k = Y)$.
+
+\begin{center}
+
+\begin{tabular}{l*{3}{c}r}
+$F(X|Y)$         & 1 & 2 & 3 & 4 \\
+\hline
+1              & 0.7 & 0 & 0 & 0  \\
+2              & 0.42 & 0.49 & 0 & 0  \\
+3              & 0.189 & 0.441 & 0.343 & 0  \\
+4              & 0.0756 & 0.2646 & 0.4116 & 0.2401
+\end{tabular}
+
+\end{center}
+
+\[ g_{X}(x) = \begin{cases} 
+      \frac{\binom{8}{1} \times \binom{4}{3}}{\binom{12}{4}} = 0.065 & x = 1\\
+      \frac{\binom{8}{2} \times \binom{4}{2}}{\binom{12}{4}} = 0.340 & x = 2\\
+      \frac{\binom{8}{3} \times \binom{4}{1}}{\binom{12}{4}} = 0.450 & x = 3\\
+      \frac{\binom{8}{4} \times \binom{4}{0}}{\binom{12}{4}} = 0.140 & x = 4
+   \end{cases}
+\]
+
+$$f_{XY}(x, y) = f(Y | X) \times g_{X}(x)$$
+
+\begin{center}
+
+\begin{tabular}{l*{3}{c}r}
+$f(y, x)$         & 1 & 2 & 3 & 4 \\
+\hline
+1              & 0.0455 & 0 & 0 & 0  \\
+2              & 0.1428 & 0.1666 & 0 & 0  \\
+3              & 0.08505 & 0.198 & 0.1543 & 0  \\
+4              & 0.0105 & 0.037 & 0.057 & 0.0336
+\end{tabular}
+
+\end{center}
+
+\item Calcule las funciones de probabilidad marginal para las variables
+aleatorias X y Y.
+
+\[ g_{X}(x) = \begin{cases} 
+      0.065 & x = 1\\
+      0.340 & x = 2\\
+      0.450 & x = 3\\
+      = 0.140 & x = 4
+   \end{cases}
+\]
+
+De manera análoga: 
+
+\[ h_{Y}(y) = \begin{cases} 
+      0.284 & x = 1\\
+      0.402 & x = 2\\
+      0.211 & x = 3\\
+      0.033 & x = 4
+   \end{cases}
+\]
+
+\pagebreak
+
+\item Calcule el valor esperado para cada una de las variables aleatorias e
+interprete sus resultados en términos de la situación descrita.
+
+$$\mathbb{E}[X] = \sum_{R[X]} x \times g_{X}(x) = 2.655$$
+
+$$\mathbb{E}[Y] = \sum_{R[Y]} y \times h_{Y}(y) = 1.855$$
+
+\item Determine si las variables aleatorias X y Y son independientes.
+
+$$f(x, y) \stackrel{?}{=} g_{X}(x) \times h_{Y}(y) \Rightarrow $$
+$$0.0455 \stackrel{?}{=} 0.065 \times 0.0284 \Rightarrow  0.0455 \neq 0.065 \times 0.0284 \ \text{Corporación 1}$$
+$$0.1543 \stackrel{?}{=} 0.45 \times 0.2113 \Rightarrow  0.1543 \neq 0.45 \times 0.2113 \ \text{Corporación 2}$$
+
+Las variables $X$ y $Y$ no son independientes.
+
+\item Calcule el coeficiente de correlación entre el número de marcadores
+usados que Juan selecciona de la caja de doce y el número de marcadores usados
+que dejan de funcionar durante la clase complementaria. Interprete este resultado.
+
+$$\rho_{XY} = \frac{Cov(X, Y)}{\sigma_{X} \times \sigma_{Y}}$$
+
+Covarianza: 
+
+$$Cov(X, Y) = \mathbb{E}(XY) -  \mathbb{E}(X) \mathbb{E}(Y)$$
+
+$$\mathbb{E}(XY) = \sum_{R[Y]}\sum_{R[X]} xy \times f_{XY}(x, y) = 5.388$$
+
+$$Cov(X, Y) = 5.388 -  (2.655)(1.855) = 0.46$$
+
+Varianzas:
+
+$$ \mathbb{V}ar(X)= \mathbb{E}(X^2) - [\mathbb{E}(X)]^2 = \sum_{R[X]}x^2 \times g_{X}(x) - 2.655^2 = 7.715 - 2.655^2 = 0.666$$
+
+$$ \mathbb{V}ar(Y)= \mathbb{E}(Y^2) - [\mathbb{E}(Y)]^2 = \sum_{R[Y]}y^2 \times h_{Y}(y) - 1.855^2 = 4.33 - 2.655^2 = 0.888$$
+
+Coeficiente de correlación:
+
+$$\rho_{XY} = \frac{0.46}{\sqrt{0.666} \times \sqrt{0.888}} = 0.59$$
+
+\item Si se sabe que Juan escogió 3 marcadores viejos entre los cuatro
+escogidos para dictar la clase, ¿cuántos marcadores se esperaría que fallen durante
+la clase complementaria?
+
+$$f(Y | X = 3) = \sum_{R[Y]} y \times f(Y | X = 3) = 2.1$$
+
+Se espera que fallen 2.1 marcadores.
+
+\item Calcule la probabilidad de que el número de marcadores que fallan
+durante la clase complementaria sea inferior al número de marcadores usados que
+Juan toma de la caja de doce.
+$$\mathbb{P}(Y < X) = \ \text{Sumatoria de los valores de } f_{XY}(x, y) \ \text{tales que } Y < X$$
+$$ = f_{XY}(1, 2) + f_{XY}(2, 3) + f_{XY}(3, 4) + f_{XY}(1, 3) + f_{XY}(1, 4) + f_{XY}(2, 4) $$
+$$ = 0.1428 + 0.08505 + 0.0105 + 0.198 + 0.037 + 0.057 = 0.53 $$
+
+\item Si se sabe que el número de marcadores que fallaron era igual al número
+de marcadores usados que Juan tomó de la caja de doce, determine la probabilidad
+de que el número de marcadores usados que tomó juan de la caja sea igual a 2.
+
+$$f_{XY}(Y = 2 | X = 2) = 0.49$$
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\begin{enumerate}[(a)]
+
+\item ¿Cuál es la probabilidad de que el número de piezas procesadas en 1
+hora por la estación de trabajo 1 sea menor a 7?
+
+Las variables aleatorias son:
+
+$$T_o: \ \text{Piezas rpocesadas en la estación}$$
+$$M_1: \ \text{Número de piezas procesadas con la máquina 1 en una hora}$$
+$$M_2: \ \text{Número de piezas procesadas con la máquina21 en una hora}$$
+
+$$M_1 \sim Poisson(x; \lambda = \lambda_1 = 5, t = 1) \wedge M_2 \sim Poisson(x; \lambda = \lambda_2 = 3, t = 1)$$
+$$T_0 = M_1 + M_2 \Rightarrow M_{T_{0}}(t) = M_{M_{1}}(t) + M_{M_{2}}(t)$$
+$$M_{T_{0}}(t) = M_{M_{1}}(t) + M_{M_{2}}(t) = e^{(\lambda_1 + \lambda_2) \times (e^t - 1)}$$
+
+$$\Rightarrow T_o \sim Poisson(x; \lambda = \lambda_1 + \lambda_2; t = 1) = \frac{e^{-t(\lambda_1 + \lambda_2)}(t(\lambda_1 + \lambda_2)^x)}{x!}$$
+
+$$\mathbb{P}(X < 7) = \sum_{x = 0}^{6} \left( \frac{e^{-t(\lambda_1 + \lambda_2)}(t(\lambda_1 + \lambda_2)^x)}{x!}\right) = 0.31337$$
+
+\item Si cada operario verificó una pieza en la estación 2, para un total de 3
+piezas revisadas ¿cuál es la probabilidad de que a lo sumo dos de dichas piezas
+analizadas tengan que ser desechadas?
+
+Las variables aleatorias son:
+
+$$R: \ \text{Número de piezas defectuosas halladas por uno de los tres operadores}$$
+$$E: \ \text{Número de piezas defectuosas halladas en 2 horas}$$
+
+$$R \sim B(x; p) = p^x(1-p)^{1-x} \wedge E \sim Binom(x; k, p) = \binom{k}{x}p^xq^{k - x}$$
+
+Funciones generadoras de momento:
+
+$$M_{x}(t) = 1 - p + pe^t \wedge M_{x}(t) = (1 - p + pe^t)^x$$
+
+Probabilidad de una pieza defectuosa:
+
+$$p = 1 - 0.85 = 0.15 \Rightarrow R_{i}(x; p = 0.15) \wedge E = \sum_{i = 1}^{3}R_{i} \Rightarrow M_{E}(t) = \prod_{i  = 1}^{3} M_{R_{i}}(t)$$
+$$M_{E}(t) = (1 - p + pe^t)^3 \Rightarrow E \sim Binom(x; n = 3, p = 0.15) = \binom{k}{x}p^xq^{k - x}$$
+
+$$\mathbb{P}(E < 2) = \sum_{x = 0}^{2} \left[ Binom(x; n = 3, p = 0.15) \right] = 0.99662$$
+
+La probabilidad de que máximo dos piezas deban ser desechadas es $0.99662$.
+
+\item Si se sabe que cada operario realiza el proceso de control de calidad
+revisando una a una las piezas hasta encontrar la primera pieza defectuosa ¿Cuál
+es la probabilidad de que la quinceava pieza revisada de forma independiente por
+cualquiera de los tres operarios sea la tercera pieza no defectuosa que se encuentra
+en la producción?
+
+Las variables aleatorias son:
+
+$N: $ Número de piezas defectuosas revisadas hasta encontrar la tercera defectuosa.\\
+$N_{i}: $ Número de piezas revisadas por el operario i, hasta encontrar la primera pieza defectuosa.
+
+$$N \sim Bin^*(x; p) = \binom{x - 1}{k - 1}q^{x - k}p^k \wedge N_{i} \sim Geom(x; p) = pq^{1 - x}$$
+
+$$M_{N}(t) = \left( \frac{p}{-qe^t + 1} \right) ^ k \wedge M_{N_i}(t) = \frac{p}{1-qe^t}$$
+
+Se busca la distribución de la variable aleatoria $E$.
+
+$$E = \sum_{i = 1}^{3} N_{i} \Rightarrow M_{E}(t) = \prod_{i = 1}^{3} M_{N_i}(t) = \left( \frac{0.15}{1-0.85e^t} \right)^3$$
+
+$$\Rightarrow E \sim Bin^*(x; k = 3, p = 0.15) = \binom{x - 1}{2}0.85^{x - 3}0.15^3$$
+
+$$\mathbb{P}(X = 15) = \binom{14}{2}0.85^{x - 3}0.15^3 = 0.175$$
+
+La probabilidad de que la tercera pieza no defectuosa sea la número 15 en ser revisada es: $7.2509 \times 10^{-9}$
+
+\end{enumerate}
+\end{document}
