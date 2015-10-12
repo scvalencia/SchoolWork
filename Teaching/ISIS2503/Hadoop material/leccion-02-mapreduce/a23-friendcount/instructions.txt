@@ -1,0 +1,24 @@
+Consider a simple social network dataset consisting of key-value pairs where each key is a person and each value is a friend of that person. Describe a MapReduce algorithm to count he number of friends each person has.
+
+Map Input
+The input is a 2 element list: [personA, personB]
+
+
+personA: Name of a person formatted as a string
+
+personB: Name of one of personA’s friends formatted as a string
+
+
+This implies that personB is a friend of personA, but it does not imply that personA is a friend of personB.
+
+Reduce Output
+The output should be a (person,  friend count) tuple.
+
+
+person is a string and friend count is an integer describing the number of friends ‘person’ has.
+
+
+You can test your solution to this problem using friends.json:
+
+
+        python friend_count.py friends.json
