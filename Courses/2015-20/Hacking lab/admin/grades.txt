@@ -1,3 +1,3 @@
-s.ramirez34,3
-jc.bages10,3
-m.vanegas10,3
+s.ramirez34,0
+jc.bages10,0
+m.vanegas10,9
