@@ -1,0 +1,114 @@
+// -----------------------
+// Sebastián Valencia
+// UNIVERSIDAD DE LOS ANDES
+// -----------------------
+@SuppressWarnings("types")
+using gold.**
+procedure main(args:String[]) begin
+	//GAutomataFrame.show(createTransducer())
+	testTransducer(createTransducer())
+end
+
+procedure testTransducer(M:ITransducer) begin
+	var sc:java.util.Scanner(System.$in)
+	while true do
+		print "----------------------------"
+		print "Digite la cadena de entrada:"
+		string:=sc.nextLine()
+		result:=M.acceptsString(string)
+		print "La cadena fue "+(result?"aceptada":"rechazada")+". Resultado:"
+		print M.getOutputString()
+		
+	end
+end
+
+function createTransducer():ITransducer begin
+	Q := {'I'} ∪ {⟨x⟩ | x ∈ ('a'‥'z')} ∪ { ⟨0,z⟩ | z ∈ ('a'‥'z')} ∪ {⟨x,y⟩ | x ∈ ('a'‥'z'), y ∈ ('a'‥'z')}  ∪ {⟨x,y,z⟩ | x ∈ ('a'‥'z'), y ∈ ('a'‥'z'),0≤z≤1} 
+	Σ := ('a'‥'z') ∪ {' '}
+	Σ´ := ('a'‥'z') ∪ {'*', '-'} ∪ {' '}
+	q₀ := 'I'
+	F := {'I'}
+	return GDeterministicTransducer(Q,Σ,Σ´,q₀,F,δ,g,h)
+end
+
+function δ(q,σ) begin
+	if σ = ' ' then return 'I' end
+	if q = 'I' then return ⟨0,σ⟩
+	elseif |q| = 1 then
+		x := q[0]
+		if σ = x then return ⟨σ,σ⟩
+		else return ⟨x⟩			
+		end
+	elseif |q| = 2 then
+		x, y := q[0], q[1]
+		if x = y then
+			if σ = x then return ⟨x,x⟩
+			else return ⟨x⟩			
+			end
+		else			
+			if x = 0 then return ⟨y,σ⟩			
+			else
+				if σ = x then return ⟨x,y,0⟩
+				elseif σ = y then	return ⟨x,y,1⟩			
+				else return ⟨x,y⟩					
+				end
+			end
+		end
+	elseif |q| = 3 then
+		x, y, z := q[0], q[1], q[2]
+		if z = 0 then
+			if σ = x then return ⟨x,y,z⟩
+			elseif σ = y then return ⟨x,y,1⟩			
+			else return ⟨x,y⟩			
+			end
+		else
+			if σ = x then return ⟨x,y,0⟩
+			elseif σ = y then return ⟨x,y,z⟩			
+			else return ⟨x,y⟩
+			end
+		end
+	end
+end
+
+function g(q) begin // Respuesta en estado
+	return λ
+end
+
+function h(q,σ) begin // Respuesta en transición
+	if σ = ' ' then return σ end
+	if q = 'I' then return σ
+	elseif |q| = 1 then
+		x := q[0]
+		if σ = x then return '*'
+		else return σ			
+		end
+	elseif |q| = 2 then
+		x, y := q[0], q[1]
+		if x = y then
+			if σ = x then return '*'
+			else return σ			
+			end
+		else			
+			if x = 0 then return σ			
+			else
+				if σ = x then return '*'
+				elseif σ = y then	return '-'			
+				else return σ					
+				end
+			end
+		end
+	elseif |q| = 3 then
+		x, y, z := q[0], q[1], q[2]
+		if z = 0 then
+			if σ = x then return '*' 
+			elseif σ = y then return '-'			
+			else return σ			
+			end
+		else
+			if σ = x then return '*'
+			elseif σ = y then return '-'				
+			else return σ
+			end
+		end
+	end
+end
