@@ -1,0 +1,513 @@
+Universidad de los Andes
+Departamento de Ingeniería Industrial
+Probabilidad y Estadística I (IIND2106)
+Profesores: Mario Castillo, Hernando Mutis, Gonzalo Torres
+Instructores: Astrid Bernal, Carlos Castellanos, Alejandra López y Fabio Lagos.
+Segundo Semestre 2015
+TAREA 3
+Normas para la presentación de la Tarea
+
+
+La tarea puede realizarse en parejas de cualquier sección.
+
+
+
+La presente tarea puede realizarla a computador o a mano. Debe tener en cuenta que la
+presentación del informe puede influir en la calificación final.
+
+
+
+El informe debe ser presentado en hojas blancas, numeradas, impresión por ambos lados y
+en la parte superior de cada hoja se debe especificar el nombre y código de cada estudiante.
+
+
+
+La primera hoja de su tarea debe contener el formato que se presenta en la siguiente
+página. Las tareas que no tengan este formato tendrán una penalización de cero punto cinco
+(0.5) sobre la nota final de la tarea.
+
+
+
+Será responsabilidad de los integrantes del grupo verificar el contenido de la tarea antes de
+la entrega. Luego de entregado el documento, no se recibirán adiciones por motivos de
+problemas de impresión en fórmulas o ecuaciones.
+
+
+
+Debe respetar el horario y el lugar de entrega de las tareas. Las tareas entregadas
+después de este plazo no serán recibidas y su calificación será de cero (0).
+
+
+
+Por ningún motivo la tarea será recibida por correo electrónico.
+
+
+
+El incumplimiento de alguna de las anteriores instrucciones tendrá un impacto negativo en
+la nota de la tarea.
+
+
+
+Cualquier sospecha de fraude será tratada de acuerdo con el reglamento de la Universidad.
+
+
+
+Si usted encuentra algún GAZAPO1 en la solución correspondiente a esta tarea por favor
+comuníquelo a ma.galvis138. Si su observación es válida, se verá recompensado con
+un incremento del 5% en la nota de la tarea.
+
+Forma de entrega
+
+
+El informe de la tarea debe ser entregado en los casilleros de Ingeniería Industrial, en el
+séptimo piso del ML, antes de la fecha límite de entrega. El casillero será habilitado el día
+anterior a la entrega de la tarea.
+
+
+
+Adicionalmente, el informe de la tarea junto a sus archivos de soporte deberán ser
+colgados en el link habilitado en Sicua Plus, antes de la fecha límite de entrega. Por lo
+tanto, si usted realizó su tarea a mano, debe escanear el documento y subirlo al link
+correspondiente.
+
+Fecha de entrega
+La fecha límite de entrega es el miércoles 7 de octubre de 2015, antes de las 5:00 p.m.
+1
+
+Yerro que por inadvertencia deja escapar quien escribe o habla. (Definición según La Real Academia de la Lengua Española)
+
+1
+
+Integrante 1:
+Integrante 2:
+
+Código:
+Código:
+
+Numeral
+
+1
+
+2
+
+3
+
+Puntaje
+a)
+
+/5
+
+b)
+
+/10
+
+c)
+
+/2
+
+d)
+
+Sección:
+Sección:
+
+Numeral
+
+Puntaje
+a)
+
+/2
+
+b)
+
+/5
+
+c)
+
+/5
+
+/2
+
+d)
+
+/3
+
+e)
+
+/3
+
+a)
+
+/5
+
+f)
+
+/2
+
+b)
+
+/5
+
+g)
+
+/3
+
+c)
+
+/5
+
+h)
+
+/3
+
+a)
+
+/6
+
+b)
+
+/2
+
+c)
+
+/3
+
+d)
+
+/2
+
+e)
+
+/5
+
+f)
+
+/2
+
+g)
+
+/2
+
+h)
+
+/3
+
+a)
+
+/2
+
+b)
+
+/2
+
+c)
+
+/4
+
+d)
+
+/4
+
+e)
+
+/6
+
+f)
+
+/2
+
+g)
+
+/3
+
+h)
+
+/4
+
+i)
+
+/5
+
+j)
+
+/2
+
+k)
+
+/6
+
+4
+
+5
+
+TOTAL
+
+/125
+
+NOTA
+
+/5
+
+2
+
+Punto 1. (30 puntos)
+La compañía Plásticos de Colombia S.A, se dedica a la fabricación de productos plásticos
+y de telas vinílicas. En la actualidad, se está analizando la posibilidad de lanzar al mercado
+un nuevo tipo de impermeable plástico. Este producto puede ser utilizado como protector
+solar y/o como recubrimiento para la lluvia en condiciones climatológicas adversas.
+Teniendo en cuenta que es un producto nuevo, para su fabricación se requiere de una
+máquina especializada, con la que no se cuenta en la fábrica de la compañía; y en
+consecuencia se tomó la decisión de alquilarla. Existen dos modelos de máquinas que se
+ajustan a las necesidades actuales de producción. La primera es la máquina TX-1 que sólo
+genera impermeable plástico de color negro, ya que no tiene la posibilidad de adicionar
+pigmentos en su operación.
+La segunda máquina es la TX-2, que permite la adición de pigmentos. Sin embargo, con el
+propósito de evitar grandes periodos de inactividad por la limpieza de la máquina al cambiar
+de color, esta máquina se utilizaría únicamente para producir impermeable plástico de color
+negro y de color amarillo.
+Para estimar el comportamiento de la demanda del nuevo producto, la compañía ha
+analizado la información sobre la demanda diaria del impermeable plástico. Se determinó
+que si sólo produce impermeable plástico de color negro, las ventas de este producto se
+pueden modelar como una variable aleatoria con distribución uniforme, con un mínimo de
+4000 y un máximo de 5000 metros demandados por día; si la empresa cuenta en su
+portafolio con dos opciones de color, se espera que los metros demandados del
+impermeable de color negro por día se comporten como una variable aleatoria triangular,
+con valor mínimo 1.200, moda de 1.800 y valor máximo de 2.100, y los del impermeable de
+color amarillo se comporten de acuerdo con una variable aleatoria con distribución normal
+de media de 2000 y de desviación estándar de 100 metros demandados por día.
+Por otro lado, se sabe que el precio de venta por metro de impermeable negro es de $1.400,
+y que el precio de venta por metro de impermeable amarillo es de $2.300. También se sabe,
+por información histórica, que el costo de producción por metro de impermeable negro se
+puede modelar como una variable aleatoria con distribución normal, de media $750 y
+desviación estándar $90; y, el costo de producción por metro de impermeable amarillo se
+puede modelar con una variable aleatoria uniforme entre $1.100 y $1.350. Los costos de
+producción son independientes de la máquina que lo fabrique.
+La compañía es consciente de que la producción de impermeable negro genera costos
+mensuales asociados a arriendo y servicios públicos, los cuales se presentan en la
+siguiente tabla:
+
+3
+
+Ítem
+
+Máquina TX-1
+
+Máquina TX-2
+
+Arriendo
+Servicios
+
+$ 2.100.000
+$ 300.000
+
+$ 2.500.000
+$ 450.000
+
+La compañía Plásticos de Colombia S.A desea determinar cuál de las dos máquinas se
+debe alquilar, si la TX-1 o la TX-2, de acuerdo a las ganancias mensuales que genera cada
+alternativa. A partir de lo anterior dé respuesta a las siguientes preguntas:
+a. (5 puntos) Identifique las variables aleatorias y la variable de desempeño utilizadas
+para evaluar la decisión.
+b. (10 puntos) Presente un esquema del modelo determinístico construido para
+representar la situación descrita. Utilice los valores esperados de las variables
+aleatorias para establecer el valor de la variable de desempeño.
+Nota: se espera como respuesta de este literal, una formulación en Excel
+acompañada de una explicación de la misma.
+Construya un modelo probabilístico en Crystal Ball que le permita simular un mes de
+producción de los impermeables para cada una de las alternativas. Asuma que un mes
+consta de 30 días. A partir de los resultados del modelo, responda las siguientes preguntas:
+c. (2 puntos) ¿Cuál es el valor esperado y el coeficiente de variabilidad de la variable
+de desempeño en cada alternativa?
+d. (2 puntos) Calcule un intervalo de confianza con un nivel de confiabilidad del 90%,
+para la variable de desempeño en cada alternativa.
+Nota: se recomienda utilizar la gráfica de previsión que genera Crystall Ball, en la
+que se muestre el intervalo de confianza solicitado.
+e. (3 puntos) Encuentre el percentil del 50% y 90% para la variable de desempeño de
+cada alternativa. Realice una interpretación de cada uno de los percentiles, en cada
+una de las variables de desempeño.
+f.
+
+(2 puntos) ¿Cuál es la probabilidad de obtener utilidades si la compañía decide
+arrendar la máquina TX-1? y ¿Cuál es la probabilidad de obtener utilidades si la
+compañía decide arrendar la máquina TX-2?
+Nota: se recomienda utilizar las gráficas de previsión que genera Crystall Ball para
+dar respuesta a este literal.
+
+g. (3 puntos) Realice un análisis de sensibilidad para determinar la variable que más
+incide en la variable de desempeño de cada alternativa.
+Nota: se recomienda utilizar la gráfica de sensibilidad que genera Crystall Ball, y una
+explicación de la misma.
+4
+
+h. (3 puntos) Realice un gráfico de superposición de los resultados de las alternativas
+evaluadas y de acuerdo con este resultado y el de los puntos anteriores, determine
+¿cuál es para usted la mejor alternativa? Justifique claramente su respuesta.
+Importante: debe mostrar todo el procedimiento que realiza para obtener sus resultados y
+dar una breve explicación de éste. Su informe debe ser autocontenido. Gráfica sin
+explicación no se considera como una respuesta válida.
+Punto 2. (25 puntos)
+En la sala de asistentes graduados de Probabilidad y Estadística I hay una caja de
+marcadores con 4 nuevos y 8 usados, que son utilizados para dictar las sesiones
+complementarias del día lunes. Se sabe que un marcador usado puede fallar durante la
+clase con una probabilidad de 0.7, y que un marcador nuevo no falla. Para la
+complementaria que dicta Juan, él toma 4 de los 12 marcadores de manera aleatoria sin
+saber cuál es nuevo y cuál no lo es. Para analizar el número de marcadores que fallan,
+Juan define las siguientes variables aleatorias:
+X: número de marcadores usados que Juan toma de la caja de 12 marcadores, y que
+contiene 8 usados.
+Y: número de marcadores que fallan durante la complementaria, de la cantidad de
+marcadores x que eran usados.
+Con base en la información anterior, desarrolle los literales que se presentan a
+continuación.
+a. (6 puntos) Establezca la función de distribución de probabilidad conjunta de X y Y.
+b. (2 puntos) Calcule las funciones de probabilidad marginal para las variables
+aleatorias X y Y.
+c. (3 puntos) Calcule el valor esperado para cada una de las variables aleatorias e
+interprete sus resultados en términos de la situación descrita.
+d. (2 puntos) Determine si las variables aleatorias X y Y son independientes.
+e. (5 puntos) Calcule el coeficiente de correlación entre el número de marcadores
+usados que Juan selecciona de la caja de doce y el número de marcadores usados
+que dejan de funcionar durante la clase complementaria. Interprete este resultado.
+f.
+
+(2 puntos) Si se sabe que Juan escogió 3 marcadores viejos entre los cuatro
+escogidos para dictar la clase, ¿cuántos marcadores se esperaría que fallen durante
+la clase complementaria?
+
+5
+
+g. (2 puntos) Calcule la probabilidad de que el número de marcadores que fallan
+durante la clase complementaria sea inferior al número de marcadores usados que
+Juan toma de la caja de doce.
+h. (3 puntos) Si se sabe que el número de marcadores que fallaron era igual al número
+de marcadores usados que Juan tomó de la caja de doce, determine la probabilidad
+de que el número de marcadores usados que tomó juan de la caja sea igual a 2.
+
+Punto 3. (40 puntos)
+La utilidad obtenida por las ventas de computadores portátiles, durante la temporada de
+regreso escolar en una sucursal de una empresa de electrónicos, se puede representar por
+medio de una variable aleatoria X (medida en miles de dólares) con la siguiente función de
+densidad de probabilidad:
+𝑥2
+𝑥
+𝑓𝑋 (𝑥) = {50 − 15 + 𝑘𝑥
+0
+
+0≤𝑥≤5
+𝑑. 𝑙. 𝑐
+
+Por otro lado, la utilidad obtenida por la venta de accesorios para dichos portátiles (maletas,
+mouse, baterías y cargadores, entre otros) se puede modelar como una variable aleatoria
+Y (medida en miles de dólares) la cual tiene una distribución uniforme entre la mitad y el
+doble de la utilidad obtenida por las ventas de computadores portátiles.
+Con base en la información anterior, de solución a los siguientes literales:
+a. (2 puntos) Halle el valor de la constante 𝑘 que permite que la función de densidad
+de probabilidad de la variable aleatoria X esté correctamente definida.
+b. (2 puntos) A partir del enunciado, establezca la función de probabilidad de Y dado
+X.
+c. (4 puntos) Encuentre la función de densidad de probabilidad conjunta y grafique la
+región en la cual se encuentra definida.
+d. (4 puntos) Calcule la probabilidad de que la utilidad obtenida por la venta de
+accesorios más la utilidad obtenida por la venta de computadores portátiles durante
+la temporada escolar sea menor a $4000 USD. Para esto especifique los siguientes
+pasos:
+i. Grafique la región donde se encuentra definida la probabilidad solicitada.
+ii. Calcule la probabilidad requerida.
+e. (6 puntos) Halle la función de densidad de probabilidad marginal de la variable
+que representa la utilidad obtenida por la venta de accesorios.
+6
+
+f.
+
+(2 puntos) Calcule la probabilidad de que la utilidad obtenida por las ventas de
+accesorios sea menor a $4000 USD.
+
+g. (3 puntos) Calcule el valor esperado de la utilidad de la venta de accesorios.
+Interprete el resultado en términos del problema.
+h. (4 puntos) Si se sabe que la utilidad obtenida por la venta de computadores
+portátiles fue de $4000 USD, calcule el valor esperado de la utilidad obtenida por
+las ventas de accesorios. Interprete el resultado en términos del problema.
+i.
+
+(5 puntos) Si se sabe que la utilidad de portátiles está entre 2000 y 4000. ¿Cuál es
+el valor esperado de la utilidad de los accesorios?
+
+j.
+
+(2 puntos) Determine si las variables aleatorias son independientes entre sí.
+
+k. (6 puntos) Calcule el coeficiente de correlación e interprete este valor en términos
+del problema.
+
+Punto 4. (15 puntos)
+La cadena de supermercados D2 se ha posicionado en Colombia por ofrecer productos de
+primera necesidad a un bajo costo. Su estructura de negocio se basa en la reducción de
+costos operacionales y logísticos como el costo de transporte y gastos de publicidad, entre
+otros. Este modelo de comercio traduce el ahorro y la reducción de costos en un menor
+precio para el consumidor final. Actualmente, D2 tiene 300 sucursales repartidas en cinco
+departamentos del país. Dentro de las marcas de productos que se ofrecen en los diferentes
+supermercados de la empresa predominan varias marcas propias. En especial se destaca
+la marca Detergente2 que representa casi el 15% de las ventas anuales de la empresa en
+el segmento de productos de aseo. De acuerdo con información histórica se determinó que
+la demanda mensual de Detergente2 en una sucursal seleccionada al azar se comporta
+como una variable aleatoria X con distribución triangular (6, 15, 40) en miles de unidades.
+Teniendo en cuenta que la demanda mensual de este producto es una variable
+independiente en cada sucursal, responda los siguientes literales:
+a. (2 puntos) ¿Cuál es la probabilidad de que la demanda mensual de Detergente2
+en una sucursal en particular esté entre 12000 y 18000 unidades?
+b. (5 puntos) La empresa ha decidido examinar la demanda promedio mensual del
+producto Detergente2, de 70 sucursales seleccionadas al azar. Calcule la
+probabilidad de que la demanda mensual promedio en dichas sucursales sea
+mayor a 21000 unidades.
+c. (5 puntos) Si se eligen 35 sucursales al azar, calcule la probabilidad de que la
+demanda mensual total del Detergente2 en estas sea menor a 650000 unidades.
+7
+
+d. (3 puntos) Si se sabe que el precio unitario del producto Detergente2 es de $1200
+pesos y que el costo logístico mensual, asociado únicamente a este producto, en
+cada una de las sucursales se comporta como una variable aleatoria Normal (𝜇 =
+20.5, 𝜎 = 5.6) en millones de pesos, ¿se esperaría que las ventas promedio
+mensuales del producto en todas las sucursales del país sean suficientes para
+solventar dicho costo para la empresa?
+
+Punto 5. (15 puntos)
+Cierto proceso de fabricación consta de dos estaciones de trabajo. La estación de trabajo
+1 está compuesta por dos máquinas que trabajan en paralelo cuyo funcionamiento es
+independiente entre sí. La máquina 1 procesa en promedio 5 piezas por hora y la máquina
+2 procesa en promedio 3 piezas por hora. Luego, las piezas pasan a la estación de trabajo
+2, donde se les realiza un control de calidad. En esta estación, hay tres operarios los cuales
+inician la actividad de revisión hasta que cada uno tenga 15 piezas disponibles para ser
+analizadas. Además, se conoce que la probabilidad de que se produzca una pieza no
+defectuosa es de 0.85. Si una pieza es defectuosa es desechada inmediatamente.
+Teniendo en cuenta que la distribución del número de piezas procesadas por cada máquina
+es Poisson y que la inspección de cada una de las piezas es independiente, responda los
+siguientes numerales utilizando la función generatriz de momentos.
+Para cada uno de los literales siga los pasos que se presentan a continuación:
+i.
+ii.
+iii.
+iv.
+v.
+
+Defina las variables aleatorias de interés en términos del problema, identifique
+su distribución de probabilidad y su función generatriz de momentos.
+Escriba una expresión que relacione estas variables, la cual le permita encontrar
+la probabilidad solicitada en dicho literal.
+Encuentre la función generatriz de momentos asociada a dicha expresión.
+Identifique cuál es la distribución de la expresión de acuerdo a la función
+generatriz de momentos encontrada.
+Calcule la probabilidad solicitada teniendo en cuenta dicha distribución.
+
+a. (5 puntos) ¿Cuál es la probabilidad de que el número de piezas procesadas en 1
+hora por la estación de trabajo 1 sea menor a 7?
+b. (5 puntos) Si cada operario verificó una pieza en la estación 2, para un total de 3
+piezas revisadas ¿cuál es la probabilidad de que a lo sumo dos de dichas piezas
+analizadas tengan que ser desechadas?
+c. (5 puntos) Si se sabe que cada operario realiza el proceso de control de calidad
+revisando una a una las piezas hasta encontrar la primera pieza defectuosa ¿Cuál
+es la probabilidad de que la quinceava pieza revisada de forma independiente por
+cualquiera de los tres operarios sea la tercera pieza no defectuosa que se encuentra
+en la producción?
+
+8
+
+
