@@ -1,0 +1,21 @@
+using gold.structures.automaton.*
+using gold.visualization.automaton.*
+procedure main(args:String[]) begin
+	GAutomataFrame.show(createAutomaton())
+end
+function createAutomaton():IPushdownAutomaton begin
+	Q:={1,2,3,4}
+	Σ:={'a','b','c','d'}
+	Γ:=Σ
+	q₀:=1
+	F:={4}
+	M:=GPushdownAutomaton(Q,Σ,Γ,q₀,F)
+	M.delta(1,1,"a").push("a")
+	M.delta(1,2,"b").push("b")
+	M.delta(2,2,"b").push("b")
+	M.delta(2,3,"c").pop("b")
+	M.delta(3,3,"c").pop("b")
+	M.delta(3,4,"d").pop("a")
+	M.delta(4,4,"d").pop("a")
+	return M
+end

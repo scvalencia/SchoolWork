@@ -1,0 +1,57 @@
+using gold.structures.automaton.*
+using gold.visualization.automaton.*
+procedure main(args:String[]) begin
+	GAutomataFrame.show(createAutomaton())
+end
+function createAutomaton():IPushdownAutomaton begin
+	Q:={0,1, 2, "r_", "ra_", "rat", 'a', 't', 'F', 'e'}
+	Σ:={'0', '1', 'r', 'a', 't'}
+	Γ:={'|'}
+	q₀:=0
+	F:={"rat"}
+	M:=GPushdownAutomaton(Q,Σ,Γ,q₀,F)
+	
+	M.delta(0,1,"1").push("||||")
+	M.delta(0,1,"0").ignore()
+	
+	M.delta(1,2,"1").push("||")
+	M.delta(1,2,"0").ignore()
+	
+	M.delta(2,'e',"1").push("|")
+	M.delta(2,'e',"0").ignore()
+	
+	M.delta('e',"r_","r").ignore()
+	M.delta('e','a',"a").ignore()
+	M.delta('e','t',"t").ignore()
+	
+	M.delta("r_","ra_","a").ignore()
+	M.delta("r_",'t',"t").ignore()
+	M.delta("r_","r_","r").ignore()
+	M.delta("r_","ra_","a").ignore()
+	M.delta("r_","ra_","a").ignore()
+	
+	M.delta("ra_","r_","r").ignore()
+	M.delta("ra_",'a',"a").ignore()
+	M.delta("ra_","rat","t").pop("|")
+	
+	M.delta('a','t',"t").ignore()
+	M.delta('a',"r_","r").ignore()
+	M.delta('a','a',"a").ignore()
+	
+	M.delta('t','t',"t").ignore()
+	M.delta('t',"r_","r").ignore()
+	M.delta('t','a',"a").ignore()
+	
+	M.delta("rat",'e',λ).ignore()
+	
+	
+	M.delta(2,'t',"t").ignore()
+	M.delta(2,'t',"t").ignore()
+	
+	M.delta(2,'F',"1").push("|")
+	M.delta(2,'F',"0").ignore()
+	
+	M.delta('F','F',λ).pop("|")
+	
+	return M
+end
