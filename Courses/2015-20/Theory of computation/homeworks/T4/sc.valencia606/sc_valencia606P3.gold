@@ -1,0 +1,63 @@
+using gold.structures.automaton.*
+using gold.visualization.automaton.*
+
+procedure main(args:String[]) begin
+	GAutomataFrame.show(createAutomaton())
+end
+
+function createAutomaton():IPushdownAutomaton begin
+	Q := {"I", "T", "s_", "sa_", "sad", "m", "T2", "T3", "F"}
+	Σ := {'$', 'm', 'a', 'd', 's', 'a'}
+	Γ := {'1', '$', '0'}
+	q₀ := "I"
+	F := {"F"}
+	M := GPushdownAutomaton(Q, Σ, Γ, q₀, F)
+
+	M.delta("I", "T", λ).push("$")
+	
+	M.delta("T", "T", "a").ignore()
+	M.delta("T", "T", "d").ignore()
+	M.delta("T", "m", "m").ignore()	
+	M.delta("T", "s_", "s").ignore()
+	
+	M.delta("s_", "s_", "s").ignore()
+	M.delta("s_", "T", "d").ignore()
+	M.delta("s_", "sa_", "a").ignore()
+	M.delta("s_", "m", "m").ignore()
+	
+	M.delta("sa_", "s_", "s").ignore()
+	M.delta("sa_", "T", "a").ignore()
+	M.delta("sa_", "m", "m").ignore()
+	M.delta("sa_", "sad", "d").pop("1")
+	M.delta("sa_", "sad", "d").pushOn("$", "0")
+	
+	M.delta("sad", "T", "a").ignore()
+	M.delta("sad", "T", "d").ignore()
+	M.delta("sad", "s_", "s").ignore()
+	M.delta("sad", "m", "m").ignore()	
+	
+	M.delta("m", "T", "d").ignore()
+	M.delta("m", "s_", "s").ignore()
+	M.delta("m", "m", "m").ignore()
+	M.delta("m", "T2", "a").ignore()	
+	
+	M.delta("T3", "T", "a").ignore()
+	M.delta("T3", "T", "d").ignore()
+	M.delta("T3", "s_", "s").ignore()
+	M.delta("T3", "m", "m").ignore()
+	
+	M.delta("T2", "T", "a").ignore()
+	M.delta("T2", "s_", "s").ignore()
+	M.delta("T2", "m", "m").ignore()
+	M.delta("T2", "T3", "d").pushOn("$", "11")
+	M.delta("T2", "T3", "d").pushOn("1", "11")
+	M.delta("T2", "T3", "d").pop("00")
+	M.delta("T2", "T3", "d").changeTop("0", "1")
+	
+	for each x in {"s_", "sa_", "sad", "m", "T2", "T3"} do
+		M.delta(x, "F", λ).pop("$")
+	end
+	
+	return M
+	
+end

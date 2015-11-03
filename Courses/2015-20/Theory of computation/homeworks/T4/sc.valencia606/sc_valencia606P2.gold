@@ -1,0 +1,43 @@
+using gold.structures.automaton.*
+using gold.visualization.automaton.*
+
+procedure main(args:String[]) begin
+	GAutomataFrame.show(createAutomaton())
+end
+
+function createAutomaton():IPushdownAutomaton begin
+	
+	Σ := ('a'‥'z') ∪ {'$'}
+	Q := ('a'‥'z') ∪ {"I", "T", "S", "F"}
+	Γ := ('a'‥'z') ∪ {'$'}
+	q₀ := "I"
+	F := {"F"}
+	M:=GPushdownAutomaton(Q, Σ, Γ, q₀, F)
+	
+	M.delta("I", "T", λ).push("$")
+	
+	// Estado actual,  estado siguiente,  caractér leido,  y operación sobre la pila
+	
+	for each ch1 in ('a'‥'z') do
+		
+		alpha = String.valueOf(ch1)
+		M.delta("T", ch1, alpha).push(alpha)
+		M.delta(ch1, "S", "$").ignore()
+		M.delta(ch1, ch1, alpha).ignore()
+		
+		set := ('a'‥'z') \ {ch1} // El abecedario diferencia simétrica singleton de la letra actual
+		
+		for each ch2 in set do
+			alpha2 = String.valueOf(ch2)
+			M.delta(ch1, ch2, alpha2).push(alpha2)
+		end
+		
+		M.delta("S", "S", alpha).pop(alpha)
+		
+	end
+
+	M.delta("S", "F", λ).pop("$")
+	
+	return M
+	
+end
