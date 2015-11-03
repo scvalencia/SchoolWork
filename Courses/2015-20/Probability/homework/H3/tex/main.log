@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 OCT 2015 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 OCT 2015 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -792,6 +792,45 @@ LaTeX Warning: Label `fig:img1' multiply defined.
 
 LaTeX Warning: Label `fig:img1' multiply defined.
 
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
+
+LaTeX Warning: Label `fig:img1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1086,7 +1125,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  14011 strings out of 493089
  264871 string characters out of 6134842
- 317969 words of memory out of 5000000
+ 317970 words of memory out of 5000000
  17175 multiletter control sequences out of 15000+600000
  6257 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
