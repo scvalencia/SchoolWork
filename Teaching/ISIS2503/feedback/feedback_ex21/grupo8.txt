@@ -1,0 +1,13 @@
+mapa : ok
+listas emergencias : ok
+standalone - server : ok
+frontend : Falta reporte, de resto ok
+
+
+dISPONIBILIDAD
+
+Cloudfare
+Vultr - Relaible site
+
+
+VER logs

@@ -1,0 +1,31 @@
+Grupo 1:
+
+
+Token desnudo sin encriptar + HTTPS
+Redirigir a https
+Token en cokkies error prone
+Interfaz hecha
+Pruebas OK
+HTTPS
+
+Bono parcial 0.25 -> Doc 
+
+
+Grupo 2:
+
+No HTTPS
+
+Token viaja desnuda
+Se manda el token en el header pero la primera vez en el body
+Integridad sólo sobre datos de login
+
+Base de datos info desnuda
+Burp intuder y paila
+
+rOLS BIEN DEIFINIDOS CON PERISOSO
+Saben de SSL
+
+
+
+
+ROLES
