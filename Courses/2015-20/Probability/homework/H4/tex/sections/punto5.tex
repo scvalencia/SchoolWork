@@ -5,12 +5,36 @@
 
 \item \textbf{(4 puntos)} Calcule un intervalo de confianza del 98\% para la proporción de automóviles diésel que no cumplen con los estándares de emisiones durante revisión técnico-mecánica.
 
+Para el desarrollo de los siguientes literales, sea $A$ la cantidad de vehículos.
+
+$X \sim Bernoulli(p), p = 1\ \text{if no presentan daño}\;\ p = 0\ \text{if presentan daño}$, $P_A = 23 / 75 = 0.307$. Dado el 98\% de confiabilidad, $\mathcal{Z}_{0.99} = 2.32$, entonces:
+
+$$0.307 - 2.32 \times \sqrt{\frac{0.307(1-0.307)}{75}} \leq p \leq 0.307 + 2.32 \times \sqrt{\frac{0.307(1-0.307)}{75}}$$
+$$0.183 \leq p \leq 0.43$$
+
 \item \textbf{(4 puntos)} Calcule un intervalo de confianza del 98\% para la proporción de automóviles diésel que cumplen con los estándares de emisiones en condiciones normales de uso.
+
+$P_B = (83-17) / 83 = 0.79$. Dado el 98\% de confiabilidad, $\mathcal{Z}_{0.99} = 2.32$, entonces:
+
+$$0.79 - 2.32 \times \sqrt{\frac{0.79(1-0.79)}{81}} \leq p \leq 0.79 + 2.32 \times \sqrt{\frac{0.79(1-0.79)}{81}}$$
+$$0.68 \leq p \leq 0.89$$
 
 \item \textbf{(4 puntos)} Interprete los dos intervalos de confianza construidos en los puntos anteriores e indique si estos son comparables. Justifique su respuesta.
 
+De acuerdo a los intervalos de confianza, se afirma que 98 de cada 100 carros presentan la característica relacionada a su estudio en el intervalo relacionado. Dado que el segundo está contenido en el primero de forma parcial, si son comparables.
+
 \item \textbf{(4 puntos)} Calcule un intervalo de confianza del 95\% que le permita establecer si existe diferencia entre la proporción de vehículos que cumplen con las emisiones mínimas de gases en condiciones normales de uso y la proporción de vehículos que cumplen durante revisión
 técnico-mecánica. ¿Qué puede concluir?
+
+El estadístico relacionado es:
+
+$$\frac{\hat{p}_y - \hat{p}_x - (\hat{p}_x - \hat{p}_y)}{\sqrt{\frac{\hat{p}_x(1 - \hat{p}_x)}{n_x}} + \frac{\hat{p}_y(1 - \hat{p}_y)}{n_y}} \sim \mathcal{N}(0, 1)$$
+
+El intervalo de confianza es generado por:
+
+$$\left[ \hat{p}_x - \hat{p}_x \pm  \sqrt{\frac{\hat{p}_x(1 - \hat{p}_x)}{n_x} + \frac{\hat{p}_y(1 - \hat{p}_y)}{n_y}}\right] \Rightarrow \textbf{IC} = [-0.03, 0.23]$$
+
+Como el intervalo incluye el número cero, no es posible afirmar que ambas proporciones son distintas.
 
 \end{enumerate}
 \end{document}
