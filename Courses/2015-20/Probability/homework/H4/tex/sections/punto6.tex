@@ -5,9 +5,31 @@
 
 \item \textbf{(4 puntos)} Halle el Error Tipo I, el Error Tipo II y la potencia de la prueba 1. Utilice como hipótesis alterna $\mu$ = 7.8 metros.
 
+$$\textbf{Error tipo I, Prueba I: } \hat{\alpha} =  \mathbb{P}(\bar{X} \leq 7.77\ |\ \mu = 8)$$
+$\mu = 8 \wedge \sigma = 1.6 \Rightarrow \sigma ^ 2 = 4.56$
+$\alpha = \mathbb{P}(z \leq \frac{7.77 - 8}{2.56 / 80}) = 1 - \mathbb{P}(z \leq 7.18) = 0.099$
+
+$$\textbf{Error tipo II, Prueba I: } \hat{\beta} =  \mathbb{P}(\bar{X} > 7.77\ |\ \mu = 7.8)$$
+$\mu = 7.8 \wedge \sigma = 1.6 \Rightarrow \sigma ^ 2 = 4.56$
+$\beta =1 -  \mathbb{P}(z \leq \frac{7.77 - 7.8}{\sqrt{2.56 / 80}}) = 0.57$
+
+$$\textbf{Potencia de la prueba I:\ } 1 - \beta_1 = 0.43$$
+
 \item \textbf{(4 puntos)} Halle el Error Tipo I, el Error Tipo II y la potencia de la prueba 2. Utilice como hipótesis alterna $\mu$ = 7.8 metros.
 
+$$\textbf{Error tipo I, Prueba II: } \hat{\alpha} =  \mathbb{P}(\bar{X} \leq 7.75\ |\ \mu = 8)$$
+$\mu = 8 \wedge \sigma = 1.6 \Rightarrow \sigma ^ 2 = 4.56$
+$\alpha = \mathbb{P}(z \leq \frac{7.75 - 8}{2.56 / 80}) = 1 - \mathbb{P}(z \leq 1.39) = 0.081$
+
+$$\textbf{Error tipo II, Prueba II: } \hat{\beta} =  \mathbb{P}(\bar{X} > 7.75\ |\ \mu = 7.8)$$
+$\mu = 7.8 \wedge \sigma = 1.6 \Rightarrow \sigma ^ 2 = 4.56$
+$\beta =1 -  \mathbb{P}(z \leq \frac{7.75 - 7.8}{\sqrt{2.56 / 80}}) = 0.61$
+
+$$\textbf{Potencia de la prueba II:\ } 1 - \beta_2 = 0.39$$
+
 \item \textbf{(2 puntos)} Si la compañía desea evaluar la hipótesis planteada con un nivel de significancia máximo del 0.1, ¿cuál de los dos pruebas establecidas, le recomendaría usar a la compañía?
+
+Dado que la probabilidad de obtener errores tipo I en ambas pruebas es menor a la tolerancia o nivel de significancia, se elije la prueba de mayor potencia, por lo tanto debe ser seleccionada la prueba 1.
 
 \end{enumerate}
 \end{document}
