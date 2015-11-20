@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 NOV 2015 00:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 NOV 2015 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,22 +866,30 @@ LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 
 ABD: EveryShipout initializing macros (./sections/punto1.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+<images/histo.png, id=4, 602.25pt x 471.7625pt>
+File: images/histo.png Graphic file (type png)
+ <use images/histo.png>
+Package pdftex.def Info: images/histo.png used on input line 11.
+(pdftex.def)             Requested size: 284.52756pt x 222.88736pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (19.32808pt too wide) in paragraph at lines 17--20
-[]\OT1/cmr/bx/n/10 (3 pun-tos) \OT1/cmr/m/n/10 Ob-ten-ga las es-tad^^S^^Psti-ca
-s des-crip-ti-vas de la va-ria-ble pre-cio/dividendo.
- []
+<images/box.png, id=6, 552.0625pt x 388.45125pt>
+File: images/box.png Graphic file (type png)
+ <use images/box.png>
+Package pdftex.def Info: images/box.png used on input line 21.
+(pdftex.def)             Requested size: 284.52756pt x 200.21169pt.
 
-)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.54448pt.
@@ -890,35 +898,88 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-(./sections/punto2.tex) [2] (./sections/punto3.tex) [3] (./sections/punto4.tex)
-[4] (./sections/punto5.tex) [5] (./sections/punto6.tex) [6]
-(./sections/punto7.tex) [7] (./sections/punto8.tex) [8] (./sections/punto9.tex)
-[9] (./main.aux
+ <./images/histo.png>] <images/hist2.png, id=16, 556.0775pt x 359.3425pt>
+File: images/hist2.png Graphic file (type png)
+
+<use images/hist2.png>
+Package pdftex.def Info: images/hist2.png used on input line 33.
+(pdftex.def)             Requested size: 227.62204pt x 147.09012pt.
+ [2 <./images/box.png> <./images/hist2.png>]
+<images/spss.png, id=23, 271.0125pt x 285.065pt>
+File: images/spss.png Graphic file (type png)
+ <use images/spss.png>
+Package pdftex.def Info: images/spss.png used on input line 43.
+(pdftex.def)             Requested size: 170.71652pt x 179.5745pt.
+
+Overfull \hbox (19.32808pt too wide) in paragraph at lines 49--52
+[]\OT1/cmr/bx/n/10 (3 pun-tos) \OT1/cmr/m/n/10 Ob-ten-ga las es-tad^^S^^Psti-ca
+s des-crip-ti-vas de la va-ria-ble pre-cio/dividendo.
+ []
+
+<images/percent.png, id=24, 176.66pt x 481.8pt>
+File: images/percent.png Graphic file (type png)
+ <use images/percent.png>
+Package pdftex.def Info: images/percent.png used on input line 58.
+(pdftex.def)             Requested size: 170.71652pt x 465.59573pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./images/spss.png>]) [4] (./sections/punto2.tex
+Overfull \hbox (5.79022pt too wide) detected at line 17
+[] \OMS/cmsy/m/n/10 ) \U/msb/m/n/10 E\OT1/cmr/m/n/10 ([]) = \U/msb/m/n/10 E [] 
+\OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 (\U/msb/m/n/10 E\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) + \U/msb/m/n/10 E\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) + \U/msb/m/n/10 E\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 )) = []
+ []
+
+[5] [6]) [7] (./sections/punto3.tex
+Overfull \hbox (33.7598pt too wide) detected at line 19
+[] []
+ []
+
+
+Overfull \hbox (45.55565pt too wide) detected at line 29
+[]
+ []
+
+[8]) [9] (./sections/punto4.tex [10]) [11] (./sections/punto5.tex [12])
+[13] (./sections/punto6.tex) [14] (./sections/punto7.tex [15] [16]) [17]
+(./sections/punto8.tex) [18] (./sections/punto9.tex [19]) [20] [21 <./images/pe
+rcent.png>] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
-) ) 
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13937 strings out of 493089
- 263397 string characters out of 6134842
- 314920 words of memory out of 5000000
- 17106 multiletter control sequences out of 15000+600000
- 6565 words of font info for 26 fonts, out of 8000000 for 9000
+ 13968 strings out of 493089
+ 263908 string characters out of 6134842
+ 318922 words of memory out of 5000000
+ 17129 multiletter control sequences out of 15000+600000
+ 7184 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,54p,823b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (9 pages, 85014 bytes).
+ 55i,19n,54p,823b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (21 pages, 388226 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
