@@ -5,11 +5,47 @@
 
 \item \textbf{(2 puntos)} Plantee la hipótesis nula y alterna que le permite al CEO de la compañía probar la afirmación sobre el precio de venta del paquete.
 
+Para el desarrollo de todos los literales, sean:
+
+$X: $ precio en dólares de la tabletas. $Y: $ precio en dólares de los computadores.
+
+$X \sim \mathcal{N}(\mu_t, \sigma ^2 = 1080) \wedge Y \sim \mathcal{N}(\mu_t, \sigma ^2 = 2020)$
+
+Las hipótesis nula y altera según los requerimientos de la compañía (es alto el costo de cinco tabletas y tres computadores) son:
+
+$H_0: 5\mu x + 3 \mu y = 5500 \wedge H_1: 5\mu x + 3 \mu y < 5500$
+
 \item \textbf{7 puntos)} Construya y calcule el estadístico de prueba apropiado que le permita evaluar la hipótesis definida en el numeral anterior. Defina paso a paso la construcción del estadístico y no olvide determinar su distribución.
 
-\item \textbf{(2 puntos)} Especifique la región de rechazo y concluya usando un nivel de significancia del 5%.
+\begin{multline}
+ X \sim \mathcal{N}(\mu_t, \sigma ^2 = 1080) \wedge Y \sim \mathcal{N}(\mu_t, \sigma ^2 = 2020) \Rightarrow \\
+  H_0: 5\mu x + 3 \mu y \sim 5 \times (\mathcal{N}(\mu_t, \sigma ^2 = 1080)) + 3 \times (\mathcal{N}(\mu_t, \sigma ^2 = 2020)) \sim \\
+  \mathcal{N}\left(5\mu_t + 3 \mu_c, \frac{25 \times 1080}{|t|} + \frac{9 \times 2020}{|c|} \right)
+\end{multline}
+
+Entonces, el estadístico de prueba será:
+
+$$\textbf{EP} = \frac{5\bar{X} + 3\bar{Y} - 5\mu_t - 3\mu_c}{\sqrt{\frac{25 \times 1080}{|t|} + + \frac{9 \times 2020}{|c|}}} =\frac{5\bar{X} + 3\bar{Y} - 5500}{\sqrt{\frac{25 \times 1080}{|t|} + + \frac{9 \times 2020}{|c|}}} = -1.49$$
+
+\item \textbf{(2 puntos)} Especifique la región de rechazo y concluya usando un nivel de significancia del 5\%.
+
+$$\{\alpha \ | \ \mathcal{Z}(\textbf{EP}) = \alpha \} = \{ -1.645\} \Rightarrow - \mathcal{Z}_{1 - \alpha} = -1.645$$
+$$-1.49 > -1.645 \Rightarrow \textbf{Se debe rechazar la hipótesis nula.}$$
 
 \item \textbf{(6 puntos)} Construya y calcule un intervalo de confianza del 95\% para el precio del paquete promocional a partir de la media de los precios de cada producto por separado.
+
+\begin{equation}
+\begin{split}
+5X + 3Y - \mathcal{N}(5 \bar{X} + 3 \bar{Y}, \frac{25(1080)}{|t|} + \frac{9(2020)}{|c|}) \\
+\textbf{IC}(Q) = \{q \ |\  q_1 < q < q_2\} \Rightarrow q = \frac{5\bar{X} + 3\bar{Y} - 5\mu_t - 3\mu_c}{\sqrt{\frac{25 \times 1080}{|t|} + + \frac{9 \times 2020}{|c|}}} 		\\
+\textbf{A} = \frac{25(1080)}{|t|} + \frac{9(2020)}{|c|} \\
+\mathbb{P} \left( -q1 \sqrt{\textbf{A}} + 5 \bar{X} + 3 \bar{Y} > \mu > 5 \bar{X} +
+3 \bar{Y} - q_2 \sqrt{\textbf{A}} \right) \Rightarrow q \sim \mathcal{N}(0, 1)
+\end{split}
+\end{equation}
+
+$$q_1 = \mathcal{Z}_{(1-\alpha / 2)} \wedge q_1 \approx q_2$$
+
 
 \end{enumerate}
 \end{document}
