@@ -5,10 +5,25 @@
 
 \item \textbf{(4 puntos)} El grupo de analistas asegura que la proporción de estudiantes de la Universidad A con un promedio inferior a 4.0 es menor a 0.65. Construya una prueba de hipótesis que le permita evaluar si la afirmación es verdadera. Concluya a partir del cálculo del p-valor y utilice un nivel de significancia del 5\%.
 
+$$H_0 : P = 0.65 \wedge H_1 : P < 0.65 \wedge \hat{P} = 0.63$$
+$$\textbf{EP} = \frac{0.63 - 0.65}{\sqrt{\frac{0.65(1-0.65)}{105}}} = -0.43$$
+
+La región crítica es: $\mathcal{Z}_{0.95} = 1.64 \Rightarrow pvalue = 0.66$. Con un nivel de confianza del 95\% no se rechaza la hipótesis nula, no existe mucha evidencia.
+
 \item \textbf{(4 puntos)} Así mismo, el grupo de analistas asegura que la proporción de estudiantes de la Universidad B con un promedio superior a 4.0 es mayor a 0.4. Construya una prueba de hipótesis que le permita evaluar si la afirmación es verdadera. Concluya a partir del cálculo del p-valor y utilice un nivel de significancia del 5\%.
+
+$$H_0 : P = 0.4 \wedge H_1 : P > 0.4 \wedge \hat{P} = 0.36$$
+$$\textbf{EP} = \frac{0.36 - 0.4}{\sqrt{\frac{0.4(1-0.4)}{110}}} = -0.86$$
+
+La región crítica es: $\mathcal{Z}_{0.95} = 1.64$. Con un nivel de confianza del 95\% no se rechaza la hipótesis nula, no existe mucha evidencia par afirmar que $P$ es mayor a 0.4.
 
 \item \textbf{(4 puntos)} Históricamente la proporción de alumnos de la universidad A que se gradúan con un promedio superior a 4.0 es mayor que los alumnos que se gradúan de manera similar de la universidad B. Construya una prueba que le permita evaluar si esta promoción cumple con la afirmación planteada. Concluya a partir del cálculo del p-valor y utilice un nivel de
 significancia del 5\%.
+
+$$H_0 : P_A - P_B = 0 \wedge H_1 : P_A - P_B > 0$$
+$$\textbf{EP} = \frac{0.63 - 0.36}{\sqrt{0.49 \times (1 - 0.49)\times \left( \frac{1}{105} + \frac{1}{110}\right)}} = 3.96$$
+
+La región crítica es: $\mathcal{Z}_{0.95} = 1.64$. Con un nivel de confianza del 95\% no se rechaza la hipótesis nula, no existe mucha evidencia par afirmar que $P_A > P_B$.
 
 \end{enumerate}
 \end{document}
