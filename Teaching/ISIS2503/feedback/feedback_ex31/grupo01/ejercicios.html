@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      div.largeBlackText
+      {
+          font-size: 32px;
+          font-weight: 700;
+      }
+      div.blackItalicParagraphText
+      {
+          font-style: italic;
+          margin-bottom: 10px;
+          color: black;
+      }
+      div.blueHiderLinkThing
+      {
+        color: blue;
+        text-decoration:
+        underline;
+        cursor: pointer;
+      }
+      div.note
+      {
+        color: aqua;
+        background: blue;
+        padding: 10px;
+      }
+     </style>
+</head>
+
+<body>
+    <div id="largeBlackText" class="largeBlackText">Ejercicio!</div>
+    <br/>
+    <div id="blackItalicParagraphText1" class="blackItalicParagraphText">
+        Evitar duplicación.
+    </div>
+    <div id="blackItalicParagraphText2" class="blackItalicParagraphText">
+
+  <pre>
+   1. Separar responsabilidades CSS/HTML/JavaScript
+  </pre>
+
+    </div>
+    <br/>
+    <div id="blueHiderLinkThing" onclick="function()">
+    <div id="note" class="note">
+        Un reto interesante
+    </div>
+    <script type="text/javascript" >
+    function function()
+    {
+      if(document.getElementById('list1').style.visibility === 'hidden') {
+          document.getElementById('list1').style.visibility = 'visible';
+      } else {
+          document.getElementById('list1').style.visibility = 'hidden';
+      }
+    }
+    </script>
+</body>
+
+</html>

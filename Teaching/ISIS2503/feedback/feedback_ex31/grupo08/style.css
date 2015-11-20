@@ -1,0 +1,16 @@
+.blackItalicParagraph {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: black;
+}
+.blueHiderLink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.note {
+    color: aqua;
+    background: blue;
+    padding: 10px;
+}

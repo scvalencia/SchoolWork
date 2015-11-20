@@ -1,0 +1,15 @@
+simple_ls <- read.csv('Downloads/data.csv', header=T)
+simple <- simple_ls[c("y", "x1", "x2", "x3", "x4", "x5")]
+#attach(mtcars)
+#par(mfrow=c(2,3))
+plot(simple[c("x1", "y")])
+plot(simple[c("x2", "y")])
+plot(simple[c("x3", "y")])
+plot(simple[c("x4", "y")])
+plot(simple[c("x5", "y")])
+results = lm(y ~ x1 + x2 + x3 + x4 + x5, data = simple)
+summary(results)
+anova(results)
+hist(results$residuals, main="Histogram of Residuals", xlab = "bf residuals")
+plot(results)
+

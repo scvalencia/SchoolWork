@@ -1,0 +1,82 @@
+========================================================================================
+Grupo 3
+========================================================================================
+Tácticas: SonarQube sobre el proyecto
+Las aplicaciones StandAlone
+La aplicación Back-end
+
+Los críticos no dependen de ustedes, es sobre códico generado. Los dependientes, eran para favorecer disponibilidad. Estandarizar políticas de código. Las polñiticas fueron satisfacotrias y plenas. Faltó analizar código JavaScript y código html
+
+========================================================================================
+Grupo1
+========================================================================================
+Tácrticas: SonarQube sobre proyecto
+
+import -> Muchos sin usar -> Quitar
+variables -> Sin utilizar -> Quitar o  atributo
+Excepts -> No eran dicientes -> Play logger
+
+Código duplicado -> Poco 4% -> Tradeoff
+Código generado -> Sin problemas
+Código comentado -> Quitar
+
+Java -> documentación javadoc Y comentarios
+
+
+Js/html/css -> Nada
+
+existe mucho código duplicado
+Estilo en una página
+
+Doc: repo
+Standalone: Sólo docs
+Estandarizar
+
+Carlos: html
+Santiago: ej4
+Daniel: ej1
+Jairo: ej2
+
+========================================================================================
+Grupo8
+========================================================================================
+
+Tácticas: Sonar
+Backend: None
+Fronend: None
+Standalone: Sonar
+
+Código duplicado: Abstraer a variabñes globales
+Excepciones: atrapar y logger
+Código comentado: Quitar
+Complejidad if/for: Reducir
+
+Conviene por timepor trabajo, leginilidad, implemtación
+
+
+Tradeoff _ iF logger
+
+
+Diego -> html
+David -> e4
+Sanimguel -> e1
+Campos -> e3
+
+========================================================================================
+Grupo6
+========================================================================================
+
+Tácticas: RubyMine para sintáxis, expresiones y variables. RubyMine para CSS/HTML/JavaScript
+
+Código duplicado: DONE
+MVC concerns: DONE
+Código no usado: DONE
+Convntion Ruby: DONE
+
+Standalone: None
+
+Modificabilidad x cambio
+Para nuevas personas
+
+
+Logs: Done

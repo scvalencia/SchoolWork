@@ -1,0 +1,30 @@
+http://elegantcode.com/2008/10/06/refactoring-exercise-the-single-responsibility-principle-vs-needless-complexity/
+
+public bool Login(string username, string password)
+{
+    var user = userRepo.GetUserByUsername(username);
+    if(false == IsValid(user, password))
+    {
+        user.FailedToLogin();
+        return false;
+    }
+
+    return true;
+}
+
+
+
+https://elearning.industriallogic.com/gh/submit?Action=PageAction&album=foundations&path=foundations/refactoringExercises/orderGroupMethodRefactoring&devLanguage=Java
+
+public double getPayAmount() {
+  if (isDead){
+    return deadAmount();
+  }
+  if (isSeparated){
+    return separatedAmount();
+  }
+  if (isRetired){
+    return retiredAmount();
+  }
+  return normalPayAmount();
+}
