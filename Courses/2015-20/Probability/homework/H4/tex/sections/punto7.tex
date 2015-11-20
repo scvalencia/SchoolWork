@@ -8,19 +8,64 @@ poblacionales de los tiempos de producción de las dos líneas son diferentes. P
 hipótesis nula y alterna, el estadístico de prueba, la región de rechazo y concluya en términos
 del problema. Utilice un nivel de significancia del 5\%.
 
+Dado que es necesario evaluar si las varianzas son distintas, para esto, en pertnente plantear las siguienets hipótesis:
+
+$$H_0 : \frac{\sigma_X ^2}{\sigma_Y ^2} = 1 \wedge H_1 : \frac{\sigma_X ^2}{\sigma_Y ^2} \neq 1$$
+
+Para la prueba de hipótesis, se dispone un estadístico con distribución $\mathcal{F}$, usando el mejor estimador de las varianzas.
+
+$$\textbf{EP} = \frac{S_X ^2}{S_Y ^2} = \frac{2.35^2}{3.21^2} = 0.536 \Rightarrow \mathcal{F}_{(32, 41)}$$
+
+La región de rechazo para evaluar \textbf{EP} es $\mathcal{F}_{(95\%; 32, 41)} = 1.72$. La región crítica es $\alpha = 0.05$, el p-valor es de 0.008\%. Con un 95\% de confiabilidad no se rechaza la hipótesis nula. Luego, las varianzas son iguales.
+
 \item \textbf{(4 puntos)} Teniendo en cuenta el resultado anterior, plantee una prueba de hipótesis para comprobar si el jefe de producción tiene razón sobre la diferencia del tiempo entre las líneas de producción. Escriba las hipótesis nula y alterna, el estadístico de prueba y concluya en términos del problema. Utilice un nivel del significancia del 10\%, y utilice el criterio del p-valor para evaluar la prueba. Adicionalmente, el jefe de planta desea evaluar la línea de producción de botellas de vidrio únicamente, ya que considera que ésta línea presenta un tiempo de producción mayor a 22 segundos/botella, lo cual representaría una reducción considerable en la cantidad de botellas de vidrio producidas para suplir la demanda del próximo mes.
 
+Para evaluar la diferencia entre tiempos, se plantea la siguiente prueba de hipótesis:
+ $H_0 : \mu_{X} - \mu_{Y} = 10 \wedge H_1 : \mu_{X} - \mu_{Y} \neq 10$. Usando los mejores estimadores, se plantea el estadístico de prueba.
+ 
+ $$\textbf{EP} = \frac{22.45 - 11.98 - 10}{2.86 \times \sqrt{\frac{1}{33} - \frac{1}{42}}} = 0.676 $$. Con los $p$-values, se tiene como criterio de rechazo $2 \times pvalor < 0.1$, para calcular el $pvalor$:
+ 
+\begin{equation}
+\begin{split}
+pvalue = \mathbb{P}(\mathcal{T}_{n_X+n_Y - 2} \geq E_p ) = 1 - \mathbb{P}(\mathcal{T}_{n_X+n_Y - 2} \leq E_p ) \\
+pvalue = \mathbb{P}(\mathcal{T}_{73} \geq 0.676 ) = 1 - 0.4562 = 0.5437 \\
+2 \times pvalue = 1.087 \Rightarrow 2 \times pvalue > \alpha \Rightarrow	\\
+\textbf{No rechazar la hipótesis nula}
+\end{split}
+\end{equation}
+
+No existe evidencia para afirmar que la diferencia de medias de tiempo de procesamiento, sea diferente de 10 segundos/botella.
+
 \item \textbf{(4 puntos)} Suponga que se conoce la varianza poblacional del tiempo que se demora un producto en salir de la línea de producción de botellas de vidrio ($\sigma ^2$ = $2.4^2$ ). Plantee una prueba de hipótesis para comprobar si el jefe de planta tiene razón sobre el tiempo de producción en la línea de botellas de vidrio. Plantee las hipótesis nula y alterna, el estadístico de prueba, la región de rechazo y concluya en términos del problema. Utilice un nivel de significancia del 10\%.
+
+$$H_0 : \mu = 22 \wedge H_1 : \mu > 22$$
+
+ $$\textbf{EP} = \frac{\bar{X} -\mu}{\frac{\sigma}{\sqrt{n}}} = 1.029 \sim \mathcal{N}(0, 1)$$
+ 
+ La región crítica es $\mathcal{Z}_{(0.90)} = 1.28 \Rightarrow$ no hay evidencia estadísitica con un nivel de confianza de 90\% para rechazar la hipótesis nula.
 
 \item \textbf{(4 puntos)}  El jefe de planta tiene dudas sobre la varianza poblacional de la línea de producción de botellas de vidrio ya que considera que es mayor a la establecida en el punto
 anterior. Plantee las hipótesis nula y alterna, el estadístico de prueba, la región de rechazo
 y concluya en términos del problema. Utilice un nivel de significancia del 5\%.
+
+$$H_0 : \sigma ^2 = 2.4^2 \wedge H_1 : \sigma ^2 > 2.4 ^2$$
+
+ $$\textbf{EP} = \frac{(33 - 1) \times (2.35^2)}{2.4^2} = 30.68 \sim \mathcal{X}^2(32)$$
+ 
+ La región crítica es $\mathcal{X}^2_{(0.95; 32)} = 46.19 \Rightarrow$ no hay evidencia estadísitica con un nivel de confianza de 90\% para rechazar la hipótesis nula, es decir, se acepta.
 
 \item \textbf{(4 puntos)} Asuma ahora que la información acerca de la varianza poblacional del tiempo que se demora un producto en salir de la línea de producción de botellas de vidrio es
 descartada. Teniendo esto en cuenta, plantee nuevamente una prueba de hipótesis para
 probar si el jefe de planta tiene razón sobre el tiempo de producción en dicha línea. Escriba
 las hipótesis nula y alterna, el estadístico de prueba, la región de rechazo y concluya en
 términos del problema. Utilice un nivel de significancia del 10\%.
+
+$$H_0 : \mu_X = 22 \wedge H_1 : \mu > 22$$
+
+ $$\bar{X} \sim \mathcal{N}(\mu_X, 	\sigma^2_X / n_X)$$
+ $$E_p = 	\frac{\bar{X} - \mu_X}{\frac{S_X}{\sqrt{n_X}}} \sim t(n_X - 1) \Rightarrow E_p = 1.0511$$
+ 
+ La región crítica: $\alpha  = 0.1 \wedge \Rightarrow v = 1.30 \Rightarrow E_p \leq v \Rightarrow $ no se rechaza la hipótesis nula. Es decir, no hay suficiente evidencia estadística para afirmar que el tiempo de procesamiento de $P_1$ es mayor a 22.
 
 \end{enumerate}
 \end{document}
