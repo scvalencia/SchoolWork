@@ -1,0 +1,474 @@
+\documentclass[11pt,spanish]{article}
+\usepackage[T1]{fontenc}
+\usepackage{selinput}
+\usepackage{amsmath, amsthm, amsfonts, mathtools}
+\usepackage{babel}
+\usepackage{clrscode}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{
+  shapes.multipart,
+  matrix,
+  positioning,
+  shapes.callouts,
+  shapes.arrows,
+  calc,
+  automata,
+  arrows,
+  topaths}
+
+
+\let\oldepsilon\epsilon
+\renewcommand{\epsilon}{\varepsilon}
+
+\SelectInputMappings{%
+  aacute={á},
+  ntilde={ñ},
+  Euro={€}
+}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mypink1}{rgb}{0.858, 0.188, 0.478}
+\definecolor{mypink2}{RGB}{222, 148, 148}
+\definecolor{pastelpink}{rgb}{1.0, 0.82, 0.86}
+\definecolor{myyellow}{RGB}{245,177,0}
+\definecolor{mysalmon}{RGB}{255,145,73}
+
+\newcommand{\tab}[1]{\hspace{.05\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+ 
+\title{Diseño y análisis de algoritmos. Tarea II}
+\author{Sebastián Valencia Calderón\\
+  \small 201111578
+}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+	\item \textbf{Subarreglo de suma máxima}. Se quiere construir un programa 	que reciba un arreglo de números enteros y encuentre la suma más
+grande de un subarreglo de acuerdo con el esquema indicado. 
+
+Para desarrollar el problema, se propone una notación alternativa a la provista por el enunciado. La notación propuesta, ofrece claridad, frescura y legibilidad. Sin embargo, ambas propuestas son equivalentes.
+	
+	$$sumax(i) = \max_{0 \leq j < i}b[0 .. j]$$
+	$$sumaxf(i) = \max_{0 \leq j < i}b[j .. i - 1]$$
+	$$P: 0 \leq i \leq n \wedge p = sumax(i) \wedge q = sumaxf(i)$$
+
+	\begin{enumerate}
+		\item Explique qué técnica pudo haberse utilizado para proponer el invariante $P$. \\	
+			
+		La técnica utilizada, se basa en reducir el espacio de búsqueda de la respuesta a través de ir progresivamente apretando el cerco de búsqueda, es decir, por un lado, se tiene la suma máxima de los subarreglos contenidos en $b[0 .. j], 0 \leq j < i$; por otra parte, se tiene los subarreglos cuyo último índice es $i - 1$, es decir, se tiene acotado el espacio de búsqueda y lo que debe hacer el bucle es reducir éste espacio. \\
+		La solución propuesta, cumple con las especificaciones pedidas, sin embargo, usa una notación completamente distinta a la del enunciado. A continuación, se introduce la notación, se incluye su definición y la equivalencia con la del enunciado. \\
+		Sea $s_{j, k}$ la suma del arreglo entre los índices $j, k, 0 \leq j < n, 0 \leq k < n$, de la misma forma, sea $Q_{k} = \max \left\{ 0, \max_{1 \leq j \leq k} \left\{ s_{j, k} \right\} \right\}$, luego para una arreglo $a$ de tamaño mayor o igual a tres, $Q_{3} = \max \left\{ 0, \max_{1 \leq j \leq 3} \left\{ s_{j, 3} \right\} \right\} = \max \left\{ 0, \max ( s_{0, 3}, s_{1, 3}, s_{2, 3}, s_{3, 3} ) \right\}$. El último resultado es igual a:
+		$$Q_{2} = \max \left\{ 0, \max \left\{\sum_{i = 0}^{2} a_{i}, \sum_{i = 1}^{2} a_{i}, \sum_{i = 2}^{2} a_{i} \right\} \right\}$$
+		
+		$$Q_{3} = \max \left\{ 0, \max \left\{\sum_{i = 0}^{3} a_{i}, \sum_{i = 1}^{3} a_{i}, \sum_{i = 2}^{3} a_{i}, \sum_{i = 3}^{3} a_{i} \right\} \right\}$$\\
+		El cero, descarta las sumas con números negativos. Por lo que la solución no sirve para números negativos, de todas maneras, el enunciado advierte que son números enteros, y la especificación que son naturales. Si son naturales, la respuesta es trivial: todo el arreglo hace la suma máxima. Aquí, se asume que debe haber al menos un positivo en el arreglo por la ambiguedad del enunciado. Si $Q_{k} > 0$, entonces, esto es la suma del máximo subarreglo cuyo último índice es $k$. Por lo tanto, por la definición misma del problema y de $Q_{k}$, lo que se desea hallar, es:		
+		$$\max_{0 \leq k < n}\left\{Q_{k}\right\}$$
+Ahora, es necesario calcular una regla de computación eficiente para $Q_{t}$, para ésto, se sigue la siguiente deducción:
+	$$k \geq 1 \wedge Q_{k} \geq 0 \Rightarrow Q_{k} = a_{[k:k]} \oplus Q_{k} = Q_{k - 1} + a_{k} \oplus Q_{k} = 0$$
+	Ésta última, sirve para crear una tabla de memoización para calcular $Q_{k}$, pues $Q_{k} = \max_{0 \leq k < n}\left\{0, Q_{k - 1} + a_{k}\right\}$.	Las equivalencias con la notación original son: $q = Q_{k}, 0 \leq k < n$, y $p = \max_{0 \leq k < n}\left\{Q_{k}\right\}, 0 \leq k < n$.\\
+	
+
+		\item Desarrolle un algoritmo que satisfaga la especificación indicada (operación básica: suma). \\
+		
+		Para el desarrollo del algoritmo, siguiendo la especificación dada, se sigue la notación introducida en el literal anterior. A continuación se muestra el algoritmo con las anotaciones de la lógica de Floyd-Hoare debidas.
+		\\
+				
+		\begin{codebox}
+  			\Procname{$\proc{Max-Subarray}(b : \textbf{array}[0\ ..\ n - 1]\ \textbf{of}\ \mathbb{Z}) : \mathbb{N}$}
+  				\li $Q : \textbf{array}[-1\ ..\ n - 1]\ \textbf{of}\ \mathbb{Z}$
+  				\li $Q_{-1} \gets 0$
+  				\li \For $k \gets 0$ \To $n - 1\ \textbf{do}$
+  				\li	\tab{$Q_{k} \gets \max_{0 \leq k < n}\left\{0, Q_{k - 1} + b_{k}\right\}$} 
+  				\li $p, q \gets 0, 0$
+  				\li $\left\{Inv: 0 \leq i \leq n \wedge p = \max_{0 \leq i < n}\left\{Q_{i}\right\} \wedge q = Q_{i}\right\}$
+  				\li \For $i \gets 0$ \To $n - 1\ \textbf{do}$
+  				\li	\tab{$q \gets Q_{i}$}
+  				\li	\tab{$p \gets \max(p, q)$}
+  				\li $\left\{p = \max_{0 \leq k < n}\left\{Q_{k}\right\}\right\}$
+  				\li \Return p
+		\end{codebox}
+		
+		\newpage
+	
+		\item Estime las complejidades temporal y espacial de su solución. Explique sus respuestas. \\
+		
+		La complejidad temporal, se estima calculando las frecuancias de ejecución de cada operación y multiplicando éstas frecuancias con el costo de cada operación, luego se suman éstos resultados. Los costos de indexado, asignación, suma, y evaluación del máximo son $\Theta(1)$. De la linea 1 a la linea 2, se tiene un costo de 1, en la linea 3, a 4, se realiza $n$ veces una operación de costo $\Theta(1)$, en la linea cinco, se realizan dos operaciones de costo $\Theta(1)$, de la linea 7 a la nueve, se realiza $n$ veces dos operaciones de costo $\Theta(1)$ cada una. El máximo cuesta $\Theta(1)$, por que se presume que es una comparación únicamente. La complejidad temporal es:
+		
+		$$T_{t}(n) = \Theta(1) + \left(\sum_{k = 0}^{n - 1}{\Theta(1)}\right) + \Theta(1) + \left(\sum_{k = 0}^{n - 1}{\Theta(1)}\right)$$
+		$$T_{t}(n) \sim 1 + \left(\sum_{k = 0}^{n - 1}{1}\right) + 1 + \left(\sum_{k = 0}^{n - 1}{1}\right)$$
+		$$T_{t}(n) \sim 1 + \left[ n - 1 + 1 \right] + 1 + \left[ n - 1 + 1 \right] \sim \Theta(n)$$
+		
+		Para la complejidad espacial, predomina el espacio ocupado por la tabla de memoización, éste tamaño es $n + 1 \sim \Theta(n)$, luego, $T_{s}(n) \sim \Theta(n)$.
+	
+	\end{enumerate}
+	
+	\item \textbf{Orden lexicográfico}. Sea $A$ un alfabeto y $A$*, el conjunto de palabras construidas con letras de $A$. Sobre $A$ se supone
+entendido (y disponible en el lenguaje de programación) un orden $.<.$, determinado por la secuencia en que se nombran sus elementos. Por ejemplo, si $A$ es ASCII, $A$* son palabras con caracteres ASCII en minúsculas, y se entiende –por ejemplo– que $a<b<c…<z$.\\
+Considere el problema de, dadas dos palabras $a,b \in A$*, decidir si $a <_{lex} b$, donde $.<_{lex}.$ es el orden lexicográfico correspondiente a $.<.$. \\
+Para palabras en $A$, use la siguiente notación:
+
+\begin{itemize}
+  \item $\epsilon$, la palabra vacía
+  \item $\left| x \right|$, longitud de $x$
+  \item $x_{i}$, i-ésima letra de $x$ ($1 \leq i \leq \left| x \right|$)
+  \item $esvac(x)$, $x$ es una palabra vacía
+  \item $equals(x, y)$, la palabra $x$ es igual a la palabra $y$
+  \item $x_{p,q}$, la subpalabra de $x$ con las letras desde la posición $p$ hasta la posición $q$. ($1 \leq p \leq q \leq \left| x \right|$)
+\end{itemize}
+
+	\begin{enumerate}
+		\item Especifique el problema (Contexto, Pre-, Poscondición). \\
+		
+		El problema consiste, en determinar si el primer parámetro de una función es menor lexicográficamente al segundo parámetro, ambos, del tipo $A^{*}$, donde $*$, es la estrella de Kleene. Por lo tanto, el contexto está dado por los argumentos de la función. Aparte, se introducen las variables y su respectivo tipo que serán usados para el desarrollo del programa.
+		
+		$$\textbf{Ctx} : a, b \in A^{*}$$
+		$$\textbf{Var} flag \in \mathbb{Z}^2 \cup \left\{-1\right\}, ans \in \mathbb{B}, i \in \mathbb{N}$$
+		$$\textbf{Pre} : True,\ \textbf{Post} : ans \gets (flag = -1)\ ?\ True : False \wedge ans \gets a <_{lex} b$$	
+		\item Proponga un invariante $P$ y una cota $Cot$ para contribuir a desarrollar el programa solución con un ciclo. \\
+		
+		Para el desarrollo del programa, se propone que se maneje un caso base, éste es el de la palabra vacia, si $esvac(a)$, entonces es menor que cualquier $b$ por definición. Ahora, se decide iterar mientras $i$ sea menor al mínimo de las longitudes de ambas cadenas ($0 \leq i < \min(\left| a \right|, \left| b \right|) - 1$), y además $a_{i} = b_{i}$, luego, a través de éste ciclo se sabe hasta que índice $j$ las longitudes son iguales. Ahora, dependiendo del valor del siguiente índice ($j + 1$), se sabe el orden de las palabras. Por lo tanto:
+		
+		$$\textbf{Inv} : a_{0, i} = b_{0, i} \wedge k, i \in \left[0, \max(\left| a \right|, \left| b \right|) \right]$$
+		$$\textbf{Cot} : \min(\left| a \right|, \left| b \right|) - 1$$
+		
+		
+		\item Escriba código que satisfaga lo anotado en $a$ y $b$.
+		
+		\begin{codebox}
+  			\Procname{$\proc{Min-Lex}(a, b : A^{*}) : \mathbb{B}$}
+  				\li $flag, i \gets 0, 0$
+  				\li \If $\proc{esvac}(a)\ \textbf{then}\ flag \gets -1$ 
+  				\End
+  				\li $\left\{ a_{0, i} = b_{0, i} \right\}$
+  				\li \While $i < \min(\left| a \right|, \left| b \right|) - 1 \wedge a_{i} = b_{i}\ \textbf{do}$
+  				\li	\tab{$i \gets i + 1$}
+  				\li $\left\{ flag = 0 \vee flag = -1 \right\}$
+  				\li \Return $flag = -i \vee a_{i} < b_{i}$ \Comment Lazy evaluation
+		\end{codebox}
+	
+		\item Calcule la complejidad temporal de su solución (operación básica: comparación de letras). Explique su respuesta. \\
+
+		Se sigue la estrategia del primer punto, es decir ponderar frecuencias por costos, el costo de indexación, el de comparación de caractéres y asignación básica es $\Theta(1)$. La linea 1, tiene un costo de $\Theta(1)$, pues realiza tres operaciones de éste costo. Asimismo, las lineas 2, y 5 tienen operaciones de costo $\Theta(1)$. Por otra parte, la linea 4, se ejecuta por lo menos 	$\min(\left| a \right|, \left| b \right|) - 1$ veces, luego, se tiene:
+		
+		$$T_{t}(\left| a \right|, \left| b \right|) = \Theta(1) + \sum_{i = 0}^{\min(\left| a \right|, \left| b \right|) - 1}{\Theta(1)} \sim 1 + \sum_{i = 0}^{\min(\left| a \right|, \left| b \right|) - 1}1$$
+		$$T_{t}(\left| a \right|, \left| b \right|) = O(\min(\left| a \right|, \left| b \right|))$$	
+		
+		\item Estime la complejidad espacial de su solución. \\
+		
+		No se hacen consideraciones de espacio distintas a las tres variables de tipo básico usadas, por lo tanto, $T_{s}(\left| a \right|, \left| b \right|) = \Theta(1)$
+	\end{enumerate}
+
+
+	\item \textbf{Búsqueda lexicográfica}. Con la notación del númeral 2, suponga que se tienen un arreglo pal$[0\ ..\ n-1] : A*$, ordenado
+lexicográficamente en orden ascendente y una palabra $x \in A*$, tal que $x \in pal$. Desarrolle un algoritmo para encontrar un $i, 0 \leq i \le n$, tal que $equals(x, pal[i])$. 
+
+Puede suponer conocida una función $menlex(x,y)$ que decide, para palabras $x,y \in A*$, si $x <_{lex} y$.
+	\begin{enumerate}
+		\item Especifique el problema (Contexto, Pre-, Poscondición). \\
+		
+		El problema es el de buscar la posición de la palabra en un arreglo ordenado lexicográficamente de palabras. La estrategia elegida para el desarrollo del programa es dividir, conquistar y combinar. Ya que el arreglo está ordenado ascendentemente, se puede comparar el elemento en la mitad del arreglo con el elemento que se busca, si son iguales, el índice es el correspondiente a la mitad del arreglo. Si el elemento buscado es menor al elemento de la mitad, se busca ahora en la primera mitad del arreglo, de otra forma, se busca en la mitad con elementos mayores al elemento de la mitad. Estos pasos, sugieren una aproximación recursiva al problema. \\
+		A continuación se enuncian el contexto, y la precondición y la postcondición.		
+		$$\textbf{Ctx} : pal : \textbf{array}[0\ ..\ n - 1]\ \textbf{of}\ A^*, x \in A^*$$
+		$$\textbf{Var} : ans \in [0\ ..\ n - 1] = \mathbb{Z}_{n},\ mid,\ high,\ low \in \mathbb{Z}_{n},\ found \in \mathbb{B}\ \wedge$$ $$ \exists i : \ 0 \leq i < n : pal[i] = x$$
+		$$\textbf{Pre} : \forall i, j : 0 \leq i < j \leq n \Rightarrow pal[i] \leq pal[j]$$
+		$$\textbf{Post} : mid = ans \wedge pal[ans] = x$$
+		 
+		\item Proponga un invariante P y una cota $t$ que sirva para resolver el problema. \\		
+		$$\textbf{Inv} : 0 \leq mid < n \wedge mid = \frac{low + high}{2} \wedge 0 \leq low < high < n, ans \in \left\{ -1, mid\right\}$$
+		$$\textbf{Cot} : high - low$$	
+		
+		El cuerpo del método (ya que se sabe que $\exists i, 0 \leq i < n : pal[i] = x$) lleva a que $low = high + 1$, ya que en cada avance del ciclo o se suma uno a la cota mínima o se resta uno a la máxima, cada vez cortando en la mitad el espacio de búsqueda, por lo que una cota más apropiada podría ser, $\log_{2}(high - low)$.
+		
+		\pagebreak 
+		
+		
+		\item Escriba código que satisfaga lo anotado en 3a y 3b. \\
+		
+		Se incluyen las implementaciones recursiva e iterativa de la solución. Es necesario considerar que el código no corre sobre una máquina real, luego, pasar un arreglo como parámetro, no requiere una copia del mismo, es decir, se pasa por referencia. Asimismo, se omiten consideraciones de $overflow$ para el cálculo de la posición de la mitad. Ambas versiones, son equivalentes, el código recursivo es una aproximación natural al problema, mientras el código iterativo es la deducción natural del invariante y la cota. Resulta fácil pasar de la versión recursiva a la iterativa por que el avance recursivo, es determinado por una instrucción condicional.
+		
+		Para el desarrollo del algoritmo, es necesario tener el algoritmo desarrollado en el literal anterior ($\proc{Min-Lex}(a, b)$), y además, saber la complejidad asociada la función $equals$, a continuación, se incluye una implementación de ésta función para una máquina secuencial:
+		
+		\begin{codebox}
+  			\Procname{$\proc{Equals}(a, b : A^{*};\ i\ \in \mathbb{Z}) : \mathbb{B}$}
+  				\li \If $\left| a \right| \leq i \wedge \left| b \right| \leq i\ \textbf{then}$ 
+  				\li \tab{\Return $True$}
+  				\End
+  				\li $\textbf{else if}\left| a \right| \leq i \vee \left| b \right| \leq i\ \textbf{then}$ 
+  				\li \tab{\Return $False$}
+  				\li $\textbf{else}$
+  				\li \tab{\If $a_{i} = b_{i}\ \textbf{then}$} 
+  				\li \tab{\tab{\Return $\proc{Equals}(a, b, i + 1)$}}
+  				\li \tab{$\textbf{else}$ \Return $False$}
+		\end{codebox}
+		
+		Para el cálculo de las complejidades, se asume que la complejidad de obtener la longitd de una palabra es: $\Theta(1)$. La complejidad temporal de $\proc{Equals}$ es:
+		
+		$$T_{t}(\left| a \right|, \left| b \right|) = \Theta(1) + T_{t}(\left| a \right| - 1, \left| b \right| - 1) \sim \Theta(\min{\left| a \right|, \left| b \right|)}$$
+		
+		La función $equals(a,\ b)$ del enunciado es: $\proc{Equals}(a,\ b,\ 0)$. \\
+		
+				
+		Ésto se debe a que el caso base se obtiene cuando $i$ sea mayor a alguna de las longitudes, luego, se llama la recursión hasta que $i$ sea mayor a la menor de las longitudes.
+		
+		\begin{codebox}
+  			\Procname{$\proc{Search-Lex-Iter}(pal : \textbf{array}[0\ ..\ n - 1]\ \textbf{of}\ A^*;\ x : A^*) : \mathbb{N}$}
+  				\li $low,\ high,\ ans,\ mid,\ found \gets 0,\ n - 1,\ -1,\ 0,\ False $
+  				\li \While $low \leq high \wedge \neg{found}\ \textbf{do}$
+  				\li	\tab{$mid \gets (high + low)/2$}
+  				\li 		\tab{$\textbf{if}\ \proc{Equals}(pal[mid],\ x,\ 0)\ \textbf{then}$}
+  				\li     		\tab{\tab{$ans \gets mid;\ found \gets\ True$}}
+  				\li 		\tab{$\textbf{else if}\ \proc{Min-Lex}(x,\ pal[mid])\ \textbf{then}\ high \gets mid - 1$}
+  				\li 		\tab{$\textbf{else}\ low \gets mid + 1$}
+  				\li \Return ans
+		\end{codebox}
+		
+		\pagebreak
+		
+		La versión recursiva es:
+		
+		\begin{codebox}
+  			\Procname{$\proc{Search-Lex-Rec}(pal : \textbf{array}[0\ ..\ n - 1]\ \textbf{of}\ A^*;\ low,\ high : \mathbb{N};\ x : A^*) : \mathbb{N}$}
+  				\li $mid \gets (high + low)/(2)$
+  				\li $\textbf{if}\ \proc{Equals}(pal[mid],\ x,\ 0)\ \textbf{then}$
+  				\li   	\tab{\Return $mid$}
+  				\li $\textbf{else if}\ \proc{Min-Lex}(x,\ pal[mid])\ \textbf{then}$
+  				\li   	\tab{\Return $\proc{Search-Lex-Rec}(pal,\ low,\ mid - 1,\ x)$}
+  				\li 	$\textbf{else}$
+  				\li   	\tab{\Return $\proc{Search-Lex-Rec}(pal,\ mid + 1,\ high,\ x)$}
+  				\li \Return ans
+		\end{codebox}
+		
+		La segunda versión debe llamarse como $\proc{Search-Lex-Rec}(pal,\ 0,\ n - 1,\ x)$. Esta última versión, se utiliza para el análisis del algoritmo. \\				
+		
+		\item Calcule la complejidad temporal de su solución (operación básica: comparación de letras). Explique su respuesta.\\
+					
+		La complejidad de $\proc{Equals}$ y de $\proc{Min-Lex}$, son ambas $\Theta(\min{\left| a \right|, \left| b \right|)}$. Para hallar la complejidad temporal de la solución ($T_{t}(n, \left| x \right|)$), es necesario considerar la complejidad de los procedimientos de los cuales la solución depende. La linea 1, tiene una complejidad de $\Theta(1)$, la linea 2, depende de la llamada a $\proc{Equals}$, la cual tiene una compleidad de $\Theta(\min{\left| a \right|, \left| b \right|)}$, la linea 4, depende de la computación de $\proc{Min-Lex}$, la cual tiene una complejidad de $\Theta(\min{\left| a \right|, \left| b \right|)}$, las lineas 5, 7 cada una, tienen una compleidad de $T_{t}(n / 2, \left| x \right|)$. La ecuación de recurrencia para $n \neq 1$ es:
+		
+		$$T_{t}(n, \left| x \right|) = \Theta(\min{\left| a \right|, \left| b \right|)} + \Theta(1) + \Theta(\min{\left| a \right|, \left| b \right|)} + T_{t}(n / 2, \left| x \right|)$$
+		
+		$$T_{t}(n, \left| x \right|) = 
+			\begin{cases} 
+				1 &\mbox{if } n = 1 \\ 
+				2\Theta(\min{\left| a \right|, \left| b \right|)} + \Theta(1) + T_{t}(n / 2, \left| x \right|) & \mbox{if } n \equiv 1. 
+			\end{cases}
+		$$
+		
+		En ésta última ecuación, los valores de $a$ y $b$, son en éste contexto de: $pal[mid]$ y $x$ respectivamente. Para el análisis, es necesario analizar la distribución de las longitudes de las letras en un alfabeto $A$, una aproximación sencilla es:
+		
+		$$A = \left\{ "a",\ "b",\ "c"\ \right\} \Rightarrow A^* = \left\{\epsilon,\ "a",\ "b",\ "c",\ "ab",\ "aa",\ "ac", ...,\ "aaa", ...  \right\}$$ 
+		
+		Sea $L(A, n)$ el número de letras en $A$ con longitud $n$. Es fácil ver que:
+		
+		$$L(A, 0) = 1,\ L(A, 1) = 3,\ L(A, 2) = 9, ..., L(A, k) = 3^k$$
+		
+		Ésta función crece rápido con respecto a $k$, si $k = 10$, $L(A, k) = 59049$, se deduce que en promedio $\left| x \right| < \left| pal[mid] \right|$, por lo tanto, la ecuación de recurrencia ($n \neq 1$) se puede reescribir como:
+		
+		\pagebreak
+		
+		$$T_{t}(n, \left| x \right|) = 2 \left( O(\left| x \right|) \right) + 1 + T_{t}(n / 2, \left| x \right|) \sim T_{t}(n / 2, \left| x \right|) + 2 \left| x \right| + 1$$
+		$$T_{t}(n, \left| x \right|) =  T_{t}(n / 2, \left| x \right|) + 2 \left| x \right| + 1$$
+		$$T_{t}(n, \left| x \right|) =  T_{t}(n / 4, \left| x \right|) + 2 \left| x \right| + 1+ 2 \left| x \right| + 1$$
+		$$T_{t}(n, \left| x \right|) =  T_{t}(n / 8, \left| x \right|) + 2 \left| x \right| + 1+ 2 \left| x \right| + 1+ 2 \left| x \right| + 1$$
+		$$T_{t}(n, \left| x \right|) =  T_{t}(n / 2^k, \left| x \right|) + k(2\left| x \right| + 1)$$
+		
+		El último paso, se comprueba con inducción. \\En particular $T_{t}(n / 2^k, \left| x \right|) = T_{t}(1, \left| x \right|) \iff 2^k = n \Rightarrow k = \log_{2}(n)$
+		
+		$$T_{t}(n, \left| x \right|) =  T_{t}(1, \left| x \right|) + (2\left| x \right| + 1)\log_{2}(n)$$
+		$$T_{t}(n, \left| x \right|) =  1 + (2\left| x \right| + 1)\log_{2}(n)$$
+		$$T_{t}(n, \left| x \right|) \sim  2\left| x \right|\log_{2}(n) = O(2\left| x \right|\log_{2}(n))$$
+		
+		En particular, si $\left| x \right| \ll n \Rightarrow T_{t}(n, \left| x \right|) = O(\log_{2}(n))$. Si la complejidad de las funciones involucradas co se deben tener en cuenta, ésta es la complejidad. \\En general, $T_{t}(n, \left| x \right|)  = O(\left| x \right|\log_{2}(n))$
+		\\
+		
+		\item Estime la complejidad espacial de su solución. \\
+		
+		Teniendo en cuenta las consideraciones de paso por referencia, ambas soluciones son $T_{s}(n, \left| x \right|) = \Theta(1)$. 
+		
+	\end{enumerate}
+	
+	\item \textbf{Embaldosamientos}. Se desea pavimentar un camino rectangular de dimensiones $1 \times N$ con losas de dimensiones $1 \times k$,
+para $k = 1,2,…,M$. Se quiere determinar de cuántas maneras puede llevarse a cabo la pavimentación. Diseñe un algoritmo de programación dinámica que resuelva el problema.
+	\begin{enumerate}
+		\item Construya su solución de acuerdo con la “receta para programación dinámica” que se vio en
+clase (lenguaje, recurrencia, …) para resolver el problema. \\
+
+Dado que las dimensiones del camino son $1 \times N$, y las de cada losa son $1 \times k,\ 0 < k \leq M$, se desea saber cuántas maneras hay de cubrir $N$ unidades lineales con segmentos de $k$ unidades lineales para $0 < k \leq M$. \\
+
+	\begin{itemize}
+		\item \textbf{Lenguaje}. Sea $C(N, M)$, el número de maneras de pavimentar un camino de dimensiones $1 \times N$, usando losas de hasta $1 \times M$ dimensiones. Las losas, pertenecen a un multi-conjunto de la forma: $L = \left\{ L_{1}, L_{2},\ ...\ , L_{M} \right\}$, donde cada $L_{i},\ 0 < i \leq M$. $C(N, M)$, puede parametrizarse de la siguiente forma:
+		
+		$$C(N,\ M) = 
+			\begin{cases} 
+				\left| A \right| : A \cap \left\{ S_{m} \right\} = \emptyset \\ 
+				\left| A \right| : c(A,\ S_{m}) = 1	 
+			\end{cases}$$
+			
+		Es decir, $C(N,\ M)$, depende de los multiconjuntos que no contengan a $S_{m}$, y a de los que lo exactamente una vez. Es necesario decir que $N, M \in \mathbb{N}$
+		
+		\item \textbf{Recurrencia}. Es claro ver que las ramas de la definición de $C(N, M)$ son cada una $C(N,\ m - 1)$ y $C(N- S_{m}, m)$ respectivamente. Por lo tanto:
+		
+		$$C(0,\ m) = 1$$
+		$$C(N,\ M) = C(N, m - 1) + C(N - S_{m}, m)$$
+		
+		\item \textbf{Diagrama de necesidades}. \\
+		
+		{
+\sffamily
+\begin{tikzpicture}[
+  thick,
+  myrect/.style={
+    draw,
+    fill=myyellow,
+    rectangle split,
+    rectangle split parts=#1,
+    rectangle split part align=left
+    },
+  myrect2/.style={
+    draw,
+    fill=myyellow,
+    rectangle split,
+    rectangle split draw splits=false,
+    rectangle split part align=left
+    },  
+  mycallout/.style={
+    shape=rectangle callout,
+    rounded corners,
+    fill=mysalmon,
+    callout absolute pointer={#1},
+    callout pointer width=1cm
+  }  
+]
+
+ 
+
+\node[myrect=6]
+  (citiesa)
+  {
+  \strut 0
+  \nodepart{two}\strut 1
+  \nodepart{three}\strut ...
+  \nodepart{four}\strut ...
+  \nodepart{five}\strut ...
+  \nodepart{six}\strut N + 1
+  };
+\node[myrect=6,right=4cm of citiesb,text width=1em,align=center]
+  (numbers)
+  {
+  \strut 2
+  \nodepart{two}\strut 1
+  \nodepart{three}\strut ...
+  \nodepart{four}\strut ...
+  \nodepart{five}\strut ...
+  \nodepart{six}\strut M
+  };
+\foreach \Valor [count=\Valori from 0] in {text ,two ,three ,four ,five ,six }
+  \node[anchor=east] at (numbers.\Valor west) {\Valori};
+\node[rotate=90]
+  at ([xshift=-30pt]numbers.three split)
+  {$T\left[j\right] = T\left[j\right] + T\left[j - S \left[ i \right] \right]$};  
+
+\node[single arrow,fill=myyellow]
+  at ( $ (citiesb.three split)!0.5!(numbers.three split) $ )
+  {\rule{1.5cm}{0pt}};
+\draw[->] 
+  (numbers.four east) -- (cities2);
+\end{tikzpicture}
+} \\
+		\item \textbf{Invariante}.		
+		$$\textbf{Inv} : 1 \leq S_{k} \leq M,\ 0 \leq k < M\ \wedge\ T_{j - 1} = C(N,\ j - 1)\ \wedge\ T_{j} = C(N,\ j)$$
+		$$ 0 < j < N + 2$$
+		\item \textbf{Estructura de datos}. La estructura de datos, son dos arreglos, uno con la dimension más grande de las losas para cada $k$, y otro con $C(N,\ j)$.
+	\end{itemize}
+
+ 
+	\item Estime complejidades temporal (operación básica: asignación) y espacial de su solución para 4a. \\
+	
+	Como es necesario tener dos arreglos, la complejidad espacial es:
+	
+	$$T_{s}(N, \M) = \Theta(\max(N,\ M))$$
+	
+	Como se requiere llenar la tabla de las losas, y recorrerla para cada iteración sobre la tabla principal, la complejidad espacial es:
+	
+	$$T_{t}(N,\ M) = \Theta(NM)$$
+	\end{enumerate}
+	\item \textbf{3-Nim}. Suponga 3 montones con $p_{0}, q_{0}, r_{0}$ fichas, respectivamente, $q_{0} \neq r_{0}$, $r_{0} \neq p_{0}$, y dos jugadores, $A$ y $B$. Los jugadores alternan turnos para quitar, de uno cualquiera de los montones, cualquier número de fichas. A es el primero que juega. Gana quien retira la última ficha.
+	\begin{enumerate}
+		\item Modele con un grafo el desarrollo del juego. \\
+		Para el diseño del modelo, se llevo a cabo una aproximación a través de una máquina de estados, los estados, modelan la interacción del juego a través de estados que representan a cada jugador, y estados que representan si el jugador gana o no, finalmente, un estado final que revela el ganador. El desarrollo del juago con ésta máquina de estados, está dado por el siguiente algoritmo:
+		
+		\begin{codebox}
+  			\Procname{$\proc{NIM}(P_{0},\ Q_{0},\ R_{0})$}
+  				\li $a_{1},\ a_{2},\ a_{3},\ b_{1},\ b_{2},\ b_{3} \gets 0,\ 0,\ 0,\ 0,\ 0,\ 0$
+  				\li $winner \gets A$
+  				\li $\textbf{A:}$
+  				\li \tab{$\proc{gets}(a_{1},\ a_{2},\ a_{3})$}
+  				\li  \tab{$\textbf{if}\ P_{0} + Q_{0} + R_{0} = 0\ \textbf{then}$}
+  				\li \tab{\tab{$winner \gets A$}}
+  				\li \tab{\tab{$\textbf{goto}\ winner$}}
+  				\li \tab{$\textbf{else}\ \textbf{goto}\ B$}
+  				\li $\textbf{B:}$
+  				\li \tab{$\proc{gets}(b_{1},\ b_{2},\ b_{3})$}
+  				\li  \tab{$\textbf{if}\ P_{0} + Q_{0} + R_{0} = 0\ \textbf{then}$}
+  				\li \tab{\tab{$winner \gets B$}}
+  				\li \tab{\tab{$\textbf{goto}\ winner$}}
+  				\li \tab{$\textbf{else}\ \textbf{goto}\ A$}
+  				\li $\textbf{WINNER:}$
+  				\li \tab{$\proc{print}\ winner$}
+		\end{codebox}
+		
+		El procedimiento, $\proc{gets}(x,\ y,\ z)$, cambia el estado de las variables $P_{0},\ Q_{0},\ R_{0}$ por $P_{0} - x,\ Q_{0} - y,\ R_{0} - y$. En éste modelo, el perdedor es quien no sea impreso al finalizar el juego. \\
+		
+		El diseño del modelo anterior, da lugar al siguiente grafo:
+		
+		$$G(V,\ E)$$
+		$$V = \left\{ \mathbb{Z}_{P_{0} + 1} \times \mathbb{Z}_{Q_{0} + 1} \times \mathbb{Z}_{R_{0} + 1} \left\}\ \times A \times B$$
+		$$E = \left\{((P_{0},\ Q_{0},\ R_{0}),\ A) (A,\ (\mathbb{Z}_{P_{0} - a_{1}}, \mathbb{Z}_{Q_{0} - a_{2}}, \mathbb{Z}_{R_{0} - a_{3}})), ((\mathbb{Z}_{P_{0} - a_{1}}, \mathbb{Z}_{Q_{0} - a_{2}}, \mathbb{Z}_{R_{0} - a_{3}}),\ B), ... $$
+		$$ (B,\ (\mathbb{Z}_{P_{0} - b_{1}}, \mathbb{Z}_{Q_{0} - b_{2}}, \mathbb{Z}_{R_{0} - b_{3}})), ((\mathbb{Z}_{P_{0} - b_{1}}, \mathbb{Z}_{Q_{0} - b_{2}}, \mathbb{Z}_{R_{0} - b_{3}}),\ A)\}$$
+		
+		En el anterior grafo, los nodos modelan a cada jugador y la jugada del jugador, a partir de una tupla con el estado actual del programa, un nodo sin entradas, es decir sin flechas hacia el, es $(P_{0},\ Q_{0},\ R_{0})$, de él, se va a $A$, quien es el primer jugador, de allí, se va al nodo que representa el esta actual de cada montón dependiendo la jugada de A.		
+		 
+		\item Explique en su modelo cómo se reconoce que un jugador pierde. \\
+		
+		Si partiendo del nodo de cada jugador, se llega al nodo $(0,\ 0,\ 0)$, el perdedor será el nodo contrario del cual se partió.
+	\end{enumerate}
+
+  
+\end{enumerate}
+\iffalse
+\lstinputlisting[language=Pascal]{src/maxSubarray.pas}
+\fi
+
+% Bibliografía.
+%-----------------------------------------------------------------
+
+\end{document}

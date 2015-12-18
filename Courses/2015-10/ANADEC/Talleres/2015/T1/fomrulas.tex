@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{FormulasANADEC}
+\author{sc.valencia606 }
+\date{February 2015}
+
+\begin{document}
+\maketitle
+
+$$ES: TEA \rightarrow TES = ES$$
+$$ES: (1 + TEP)^n = (1 + TEA) \Rightarrow TEP = (1 + TEA)^{\frac{1}{n}} - 1$$
+$$TES = (1 + 5.15\%)^{\frac{1}{2}} - 1 = 2.54\%\ ES$$
+$$NS/TV: TEA \rightarrow TV \rightarrow NS/TV $$
+$$TEA = (1 + x)^n - 1 \Rightarrow x = (1 + TEA)^{\frac{1}{n}} - 1$$
+$$TV: x = (1 + 5.15\%)^{\frac{1}{4}} - 1 = 1.26\%\ TV$$
+$$NS/TV: TV * 2 = 2,52\%\ NS/TV$$
+$$NB/MV: TEA \rightarrow MV \rightarrow NB/MV $$
+$$MV: x = (1 + 5.15\%)^{\frac{1}{12}} - 1 = 0.42\%\ MV$$
+$$NB/MV: MV * 2 = 0.84\%\ NB/MV$$
+\\
+\\
+$$NA/SA: TEA \rightarrow SV \rightarrow SA \rightarrow NA/SA $$
+$$SV: x = (1 + 5.15\%)^{\frac{1}{2}} - 1 = 2.54\%\ SV$$
+$$SA: 1 - \frac{1}{1 + SV} = 1 - \frac{1}{1 +2.54\%\ SV} = 2.48\%\ SA$$
+$$NA/SA: 2 * SA = 2 * 2.48\%\ SA = 4.95\% NA/SA$$\\
+\\
+$$VP' = VP_{U} - VP_{A}$$
+$$VP_{U} = A \left( \frac{(1 + i)^n - 1}{i(1 + i)^n} \right)$$
+$$VP_{A} = \frac{G}{i} \left( \frac{(1+i)^n - 1}{i(i + 1)^n} + \frac{n}{(i+1)^n} \right)$$
+//
+$$VP = D_{1}\left(\frac{1 - \left(\frac{1 + g}{1 + i} \right)^n}{i - g} \right)$$
+$$VP = D_{1}\left(\frac{1 - \left(\frac{1 + g}{1 + i} \right)^n}{i - g} \right)/(1 + i)^5$$
+$$VP = (108000')\left(\frac{1 - \left(\frac{1 + 0.12}{1 + i} \right)^8}{i - 0.12} \right)/(1 + i)^5$$
+$$VP = 764.9601148'/(1 + i)^5 = 430.0124005'$$
+//
+//
+$$D_{14} = D_{13}(1 - 0.08)$$
+$$D_{13} = D_{6}(1 + g')^7;\ g' = 0.12$$
+$$D_{13} = 108000'(1 + 0.12)^7 = 238753.592'$$
+$$D_{14} = 238753.592'(1 - 0.08) = 219653.3046'$$
+$$VP' = D_{14}\left(\frac{1 - \left(\frac{1 - 0.08}{1 + i} \right)^{13}}{i + 0.08} \right)$$
+$$VP = D_{14}\frac{VP'}{(1 + i)^{13}} = 219653.3046'\frac{\left(\frac{1 - \left(\frac{V}{(1 + i)^{13}} = 1187142.005'$$
+//
+$$D_{26} = D_{25}(1 + 0.05)$$
+$$D_{25} = D_{14}(1 - 0.008)^{11} \Rightarrow D_{25} = 219653.3046'(1 - 0.08)^{11} = 87781.67069'$$
+$$D_{26} = 87781.67069'(1 + 0.05) = 92170.75423$$
+$$VP'_{[0, \infty)} = \frac{D_{26}}{i - 0.05}$$
+$$VP_{[0, \infty)} = \frac{\frac{D_{26}}{i - 0.05}}{(1 + i)^{25}} = 5173.73383'$$
+
+//
+$$878992.0636'  = A\left(\frac{(1 + i)^n - 1}{i(1 + i)^n}\right) + A$$
+$$878992.0636'  = A\left(\frac{(1 + i)^n - 1}{i(1 + i)^n} + 1\right); n = 5$$
+$$878992.0636'  = A\left(\frac{(1 + (0.1221))^5 - 1}{(0.1221)(1 + (0.1221))^5} + 1\right)$$
+$$ 878992.0636' = 4.586101381'A \Rightarrow A = 191664.3333'$$
+
+
+\section{Introduction}
+
+\end{document}

@@ -1,0 +1,10 @@
+Elasticidad versus Escalabilidad
+
+Individualmente subir un documento Word en el que:
+
+* Defina elasticidad y escalabilidad
+
+* Establezca la diferencia entre las dos
+
+* Indique las métricas para medir elasticidad y escalabilidad
+

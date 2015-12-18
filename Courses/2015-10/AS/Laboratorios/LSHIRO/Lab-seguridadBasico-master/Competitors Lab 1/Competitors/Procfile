@@ -1,0 +1,1 @@
+web: java -cp target/classes:target/dependency/* co.edu.uniandes.isis2503.competitors.config.Main

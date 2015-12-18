@@ -1,0 +1,31 @@
+Albertson 339
+Hein 279
+Grimaldi 447
+Gosset 313
+Feil 121
+Koshy 265
+Haggard 549
+Rosen 501
+Knuth 1
+NOTES ON DESKTOP
+Bogart 128
+Grossman 119
+Gresting 129
+Fleck 137
+Fasy 35
+Epp 290
+For loop invariance check discrete math books Mnber
+
+Alsuwayei
+Aho-Ullman
+Brassard
+McConell
+Parberry 1, 2
+Purdom
+Sedgewick 
+Wilf
+Berman
+Cormen
+Edmonds
+Goodric
+Mnber
