@@ -1,0 +1,238 @@
+=========================================================================================================
+GRUPO 1
+
+No hay conexión con el servidor de algunos reqs
+
+Usabilidad WEB
+
+	Para ciertas pantallas utilizan escalas de colores para mostrar estados de ocupación
+
+	Paginación
+
+		No sirve. La justificación es buena. Son concientes de los beneficios y desventajas de cada estrategia (paginación del lado del cliente vs. servidor)
+		No debe conocerse el número del vehículo. La información se maneja por debajo.
+
+GOMS
+
+	Tienen un documento en el que explican qué se hizo a nivel general. Se muestran los tiempos iniciales, y las tácticas que se utilizaron para reducirlos.
+	Sin embargo, no se indica en cuánto se redujeron los tiempos.
+
+Encuestas:
+
+	Las encuestas tienen resultados interesantes, hace falta ver qué tanto los aplicaron y qué tanto construyeron con base en eso.
+	Les critican los colores y los cambiaron.
+
+Bono:
+
+	La aplicación del administrador la hicieron con software especializado de Adobe. En teoría debería servir, sin embargo, no le agregaron el log in
+	así que no se pueden realizar consultas, generar reportes, etc. por el componente de seguridad del servidor. Tienen la visualización.
+
+=========================================================================================================
+
+=========================================================================================================
+GRUPO 2
+
+Usabilidad
+
+	La de las Standalone está bien
+	Los reportes están en la WEB, pero no en la app móvil
+
+Encuestas
+
+	Buen trabajo. Analizaron los distintos componentes, y tomaron las medidas correctivas pertinentes.
+
+GOMS
+
+	Hicieron una corrida sobre el formulario del log in por petición de nosotros
+
+=========================================================================================================
+
+=========================================================================================================
+GRUPO 3
+=========================================================================================================
+
+Interoperabilidad => 
+
+Aplicación alquila y devuelve vbcubs (misma cosa con tranvía) -> hay que saber el id del vehículo
+Log in con fb -> API, imagen de usuario
+La aplicación no genera reportes, ni permite consultar las emergencias
+
+Android
+
+Usabilidad => Validación, faltan requermimientos
+
+
+
+	Más amigable con el usuario (llenado y validación de campos de formularios)
+	No hay mensjaes de error
+
+
+
+	No paginaron: 
+
+Desktop usabilidad:
+	
+
+App:
+	No hasy mensajes de eerror
+
+No hicieron encuestas!!!
+
+
+GOMS: el documento muestra pantallazos de los formularios al inicio, y explica que luego de aplicar ciertas tácticas, ciertos tiempos disminuyeron
+
+
+=========================================================================================================
+GRUPO 4
+
+Usabilidad
+
+Utilizaron las críticas constructivas para hacer cambios
+Justifican decisiones
+La aplicación web se puede ver en móviles perfectamente
+
+Interoperabilidad
+
+La aplicación está en Android.
+Identifica el idioma del celular para que ese sea el idioma de la aplicación
+La aplicación recuerda los valores que ya se ingresaron en los campos 
+
+Paginación
+
+No hicieron, pero justifican bien lo que harían
+
+Encuestas:
+
+Hicieron feedback y lo tuvieron en cuenta para los cambis
+
+GOMS:
+
+Hacen antes y depués -> muestran e indican cómo cambiaron y por qué
+
+BONO
+
+Está hecho en FunGap y está bien a nivel de usabilidad. Por el momento la seguridad impide que se realicen transacciones, pero
+sin eso no habría problema
+
+=========================================================================================================
+
+=========================================================================================================
+GRUPO 5
+=========================================================================================================
+
+No hay app mívil
+Ventajas REST, alternativas REST done
+
+__________
+
+KLM-GOMS --> 20 segs promedio [10.6, 36] ==> # campos [2, 6]
+
+Organizaron roles
+Cambiaron interfaz ->> Bootstrap
+
+Paginación -> Desde fonrend
+Filtrado -> Desde frontend
+
+Modificación sobre desktop apps:
+	Más funconalidades
+
+
+Sólo CREAR desde web-app
+
+Campos poco usables (hora)
+
+
+Encuaestas:
+
+Bien, 5 preguntas
+
+
+=========================================================================================================
+GRUPO 6
+=========================================================================================================
+
+Usabilidad
+	
+	Hay paginación
+	Tienen funcionando el requerimiento para cancelar reservas
+
+
+Hicieron todo lo de la móvil
+El bono está
+
+Encuestas:
+
+Los resultados son dicientes y los aplican. Crearon una nueva interfaz más usable-
+
+GOMS
+
+No lo hicieron
+
+=========================================================================================================
+GRUPO 7
+=========================================================================================================
+
+
+Usabilidad:
+	Django -> Web 	
+	Usuario -> Crearon Web
+	La misma interfaz de Django indica cuándo no se puede aceptar lo que se ingresó en cada campo por algún error de validación
+	Booleans -> chulitos
+	Fecha -> muestra un cuadro para elegir
+	Los errores muestran todo el código
+	No hay mapas (Django no lo permite)
+
+
+Interoperabilidad:
+
+La aplicación que tienen pide que se escriba el ID del Vcub. Se puede reservar o devolver. 
+No se tiene claro para quién es que se desarrolló la aplicación, o el uso que se le pretende dar.
+La aplicación no verifica ni informa si se excede el número de préstamos válidos.
+
+
+
+GOMS:
+
+Lo hicieron sólo para uno de los formularios de Django. Entienden cómo y para qué utilizar la herramienta.
+Responden a la pregunta de las ventajas de cada método de evaluación de interfaz.
+
+
+Encuestas:
+
+Las encuestas las hicieron a cinco personas. Graficaron los resultados. No queda claro para qué utilizaron la crítica que 
+recibieron.
+
+
+=========================================================================================================
+GRUPO 8
+=========================================================================================================
+
+
+Appp : Sólo reservas -> DONE, reportes falta
+
+=========================================================================================================
+GRUPO 9
+=========================================================================================================
+
+Interoperabilidad
+
+	La aplicación móvil está muy bien.
+	No consultan reportes, sino que los generan
+
+GOMS
+
+Tomaron en cuenta los resultados y realizaron cambios
+
+Encuestas
+
+4 personas
+Sin cuestionario
+Tomaron los comentarios y cambiaron cosas
+
+Paginación
+
+	No hicieron, pero justifican
+
+Bono
+
+	Lo hicieron. Preguntarle a Gilberto.
