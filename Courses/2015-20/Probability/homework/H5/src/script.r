@@ -1,4 +1,4 @@
-simple_ls <- read.csv('Downloads/data.csv', header=T)
+simple_ls <- read.csv('data.csv', header=T)
 simple <- simple_ls[c("y", "x1", "x2", "x3", "x4", "x5")]
 #attach(mtcars)
 #par(mfrow=c(2,3))
