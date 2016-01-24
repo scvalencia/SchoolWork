@@ -1,0 +1,26 @@
+Coombes-Multivariaate calculus and mathematica (ING)
+Stroyan-Calculus using mathematica (ING)
+Stroyan-Calculus using mathematica, projects (ING)
+Kent-Experiment in undergraduate mathematics (ING)
+Carlson-Multivariate mathematcis with Maple (ING)
+Klimek-Discovering curves and surfaces with Maple (ING)
+
+
+Sloughter-The calculus of functions of several variables 23
+Schey-Div, Grad, Curl, and all that.. (ING)
+Salas-Calculus 686
+Corral-Vector calculus 29
+Hubbard-Vector Calculus, Linear Algebra and Differential Forms 75
+Marsden-Cálculo vectorial 68
+
+Cross product
+Lines, planes, hyperplanes
+Surfaces
+Curvi-linear coordiats
+Operatins with matrices
+=====================
+Linear and affine function
+Curves
+Arc length
+Affine approximations
+Motion along a curve
