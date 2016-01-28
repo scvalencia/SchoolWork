@@ -1,0 +1,31 @@
+Correo: df.duarte578
+Horarios de Atención:Yammer, solicitud de reuniones por correo.
+Calificaciones dentro los 10 días hábiles seguidos a la entrega
+Reclamos dentro los 10 días calendario seguidos a la entrega de las notas
+Entregas Grupales (Dos integrantes por grupo).
+Estructura del informe:
+El informe debe ser tal que una persona al leerlo puede recrear la práctica y comparar sus resultados con lo obtenido por cada estudiante
+	Introducción(10%) (Tema, objetivos y metodología)
+	Procedimiento(30%) El mínimo detalle tal que es posible recrear la práctica y se evidencia que fue desarrollada)
+	Resultados(30%) (Gráficas, estadísticas, análisis)
+	Conclusiones(20%) (Análisis global no trivial, 2 o 3 ideas bien desarrolladas pueden ser suficientes)
+	Bibliografía(10%) (Referenciar correctamente todo elemento teórico usado durante el informe, guía de citas)
+	Se redistribuyen los porcentajes en caso de que algún entregable (código, programas, etc) sea requerido
+
+Cada laboratorio tiene una nota cuyo peso es proporcional a su duración en semanas
+
+Sin Entregable
+Introducción(10%)
+Procedimiento(30%)
+Resultados(30%)
+Conclusiones(20%)
+Bibliografía(10%)
+
+Con Entregable
+Introducción(10%)
+Procedimiento(25%)
+Resultados(25%)
+Conclusiones(15%)
+Bibliografía(5%)
+Entregables(20%)
+
