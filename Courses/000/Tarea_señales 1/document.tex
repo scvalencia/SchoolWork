@@ -1,0 +1,234 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage[margin=4cm]{geometry}
+\usepackage{fancybox}
+% Default margins are too wide all the way around.  I reset them here
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+\newenvironment{wideverbatim}%
+{\vskip\baselineskip\VerbatimEnvironment
+\begin{Sbox}\begin{BVerbatim}}
+{\end{BVerbatim}%
+\end{Sbox}\noindent\centerline{\TheSbox}\vskip\baselineskip}
+\begin{document}
+\title{Tarea 3 se\~nales y sistemas}
+\author{Sebasti\'an Valencia Calder\'on\\
+Universidad de los Andes}
+\renewcommand{\today}{Febrero 15, 2013}
+\maketitle
+
+
+\begin{enumerate}
+\item  Encontrar la convoluci\'on circular discreta de los vectores $
+\boldsymbol{\vec{x}}=[1, -1, 0, 0, 0, 0, 0, 0, 0, 0] $ y $
+\boldsymbol{\vec{y}}=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19] $.
+
+
+
+La convoluci\'on circular de dos se\~nales discretas $x(t)$ y $y(t)$, se
+define como la operaci\'on $ x(t) \oasterisk y(t)$ o de manera m\'as
+espec\'ifica, la convoluci\'on circular de dos se\~nales $x(t)$ y $y(t)$, se
+define como una se\~nal $g(t)$ definida de la siguiente manera: 
+\
+
+$$ g(t) = x(t) \oasterisk y(t) = \sum_{k=0}^{N-1} (x_k)(y_{t-k} \bmod N) $$
+
+\
+
+Donde $N$ es la longitud de los vectores a multiplicar, en \'este caso, las
+se\~nales, poseen longitud $N=10$; la representaci\'on gr\'afica de las
+se\~nales es bastante intuitiva, por lo tanto, se usar\'a un poco de
+abstracci\'on para \'este ejercicio. La estrategia de soluci\'on en este caso,
+depende de una propiedad importante de la concoluci\'on circular, la
+conmutatividad (%nota al pie de p‡gina
+               Las propiedades m\'as significativas de la convoluci\'on
+               circular se encuentran en:
+               http://cnx.org/content/m12055/latest/), es decir, para todo par
+               de se\~nales a convolucionar, se tiene:
+$x(t) \oasterisk y(t) = y(t) \oasterisk x(t)$, por lo tanto, al ser pr\'acticos
+se puede tomar como se\~nal variante la que contiene m\'as ceros, en este caso,
+esa se\~nal corresponde a $
+\boldsymbol{\vec{x}}=[1, -1, 0, 0, 0, 0, 0, 0, 0, 0] $, para aplicar la
+convoluci\'on circular a este par de se\~nales $ \boldsymbol{\vec{x}} $ y
+$\boldsymbol{\vec{y}}$, se pueden realizar ($N-1$) reflexiones circulares y el 
+mismo n\'umero de ``shifts'' o corrimentos en el tiempo de la se\~nal no
+est\'atica; lo descrito anteriormente, proporciona gran fuerza y vigor para
+soluciones m\'as gr\'aficas o intuitivas, sin embargo, el enfoque que aqu\'i se
+da es m\'as computacional y algor\'itmica. 
+               %\footnote[number]{text}
+\\
+\\
+La diguiente tabla, proporciona una regal de asignaci\'on para una se–al
+evaluada sobre un m\'odulo $N$, es decir, la regla de asignaci\'on para una
+funci\'on $h[t]_N$ para distintas elecciones de $t$. (%nota al pie de p‡gina
+               Una idea m\'as primitiva de \'este algoritmo, se encuentra en:
+               http://cnx.org/content/m10786/latest/)
+
+\begin{table}[ht]
+% title of Table
+\centering % used for centering table
+\begin{tabular}{c c} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+$t$ & $h[t]_N$  \\ [0.5ex] % inserts table
+%heading
+\hline % inserts single horizontal line
+$\vdots$ & $\vdots$ \\
+$-m$ & $h[N-m]$  \\
+$\vdots$ & $\vdots$ \\
+0 & $h[0]$ \\
+1 & $h[1]$ \\
+2 & $h[2]$ \\
+$\vdots$ & $\vdots$ \\
+$N+m$ & $h[m]$  \\
+$\vdots$ & $\vdots$ \\[1ex] % [1ex] adds vertical space
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\caption{Valores de $h[t]$ de una se\~nal $\bmod N$}
+\end{table}
+\pagebreak
+
+Como puede verse, la tabla 1.1, proporciona una asignaci\'on al valor presente
+de la se\~nal seg\'un sean los valores de la misma en un intervalo $[0,N-1]$,
+intervalo propicio para la evaluaci\'on de $ x(t) \oasterisk y(t)$.
+\\
+\\
+Para \'este caso, se tiene que la convoluci\'on y su computaci\'on son:
+$$ \boldsymbol{\vec{g(t)}} = \boldsymbol{\vec{x}} \oasterisk \boldsymbol{\vec{y}} =
+\sum_{k=0}^{9} (x_k)(y_{t-k} \bmod 10) $$
+$$ \boldsymbol{\vec{g(t)}} = 
+(x_0)(y_{t-0} \bmod 10)+
+(x_1)(y_{t-1} \bmod 10)+
+(x_2)(y_{t-2} \bmod 10)+
+(x_3)(y_{t-3} \bmod 10)+
+ $$
+ $$
+(x_4)(y_{t-4} \bmod 10)+
+(x_5)(y_{t-5} \bmod 10)+
+(x_6)(y_{t-6} \bmod 10)+$$
+$$(x_7)(y_{t-7} \bmod 10)+
+(x_8)(y_{t-8} \bmod 10)+
+(x_9)(y_{t-9} \bmod 10)$$
+\
+
+Si la tabla 1.1 se aplica para $N=10$, es f\'acil ver que para todo valor de 
+$m$ en cierto conjunto, el valor de $h[t]$ ser\'a cero, \'este conjunto es
+obviamente $ \mathbb{J}=[-8,-1] \cup [1,8]$, es decir, pata todo n\'umero en
+\'este conjunto, el valor de su evaluaci\'on en $h[t]$ ser\'a cero. Lo anterior
+se explica por la naturaleza c\'iclica de la tabla y de la se\~nal $x[t] =
+h[t]$, pues si $h[t] \neq h[0]$ o $h[t] \neq h[1]$, entonces $ h[t] = 0 $, por
+lo tanto, si se eval\'ua $ \boldsymbol{\vec{g(t)}} $ para $ t \in [0, N-1] $, se puede hacer
+la siguiente simplificaci\'on.
+$$g(0)=x(9)h(1)+x(0)h(0)=19-10=-9$$
+$$g(1)=x(0)h(1)+x(1)h(0)=10-11=1$$
+$$g(2)=x(1)h(1)+x(2)h(0)=11-12=1$$
+$$g(3)=x(2)h(1)+x(3)h(0)=12-13=1$$
+$$g(4)=x(3)h(1)+x(4)h(0)=13-14=1$$
+$$g(5)=x(4)h(1)+x(5)h(0)=14-15=1$$
+$$g(6)=x(5)h(1)+x(6)h(0)=15-16=1$$
+$$g(7)=x(6)h(1)+x(7)h(0)=16-17=1$$
+$$g(8)=x(7)h(1)+x(8)h(0)=17-18=1$$
+$$g(9)=x(8)h(1)+x(9)h(0)=18-19=1$$
+
+La simetr\'ia de la se\~nal resultante, es consecuencia de la naturalea
+peri\'odica de la tabla 1.1 para $N=10$. Finalmente, la se\~nal
+$\boldsymbol{\vec{g(t)}}$, est\'a dada por el siguiente vector
+$$\boldsymbol{\vec{g(t)}}=[-9, 1, 1, 1, 1, 1, 1, 1, 1, 1]$$
+
+Lo \'ultimo puede ser comprobado utilizando la siguiente rutina de MATLAB,
+aplicando la funci\'on cconv(a,b,n). (%nota al pie de p‡gina
+               La documentaci\'on precisa de la
+               funci\'on cconv de MATLAB, se encuentra
+               en:http://www.mathworks.com/help/signal/ref/cconv.html)
+\small{
+\begin{verbatim}
+>> a=[1 -1 0 0 0 0 0 0 0 0];
+>> b=[10:19];
+>> cconv(a,b,10)
+ans =
+     -9.0000    1.0000    1.0000    1.0000      
+      1.0000    1.0000    1.0000    1.0000    
+      1.0000    1.0000
+\end{verbatim}
+}
+\item Calcular y graficar la DFT de la se\~nal 
+$
+\boldsymbol{\vec{x}}=[0, 1, 0] $
+\end{enumerate}
+
+La transformada discreta de Fourier, se define como un endomorfismo biyectivo
+lineal con forma general $\alpha\colon \mathbb{C}^N \to \mathbb{C}^N$. Su
+f\'ormula explicita, est\'a dada por la siguiente expresi\'on, para la cu\'al,
+se tiene que $N$ es la longitud del vector de entrada y salida, por tratarse de
+un endomorfismo.
+
+Sea $\boldsymbol{\vec{x_k}} \in \mathbb{C}^N :
+\alpha(\boldsymbol{\vec{x_k}})=\boldsymbol{\vec{X_k}} = \sum\limits_{n=0}^{N-1}
+x_n e^{{\frac{-i2n\pi}{N}}k}, k \in [0,N-1]$, sea $\boldsymbol{\vec{x_k}}=[0,
+1, 0]$, por lo tanto, el valor correspondiente de $N$ para \'este caso es 3,
+luego, la forma de la transformada DFT, estar\'a dada por la siguiente serie:$$
+\sum\limits_{n=0}^{N-1} x_n e^{{\frac{-i2n\pi}{3}}k} = \sum\limits_{n=0}^{2}
+x_n e^{{\frac{-i2n\pi}{3}}k} = x_0 e^{{\frac{0\pi}{3}}k} + x_1
+e^{{\frac{-i2\pi}{3}}k} +x_2 e^{{\frac{-i4\pi}{3}}k} $$ Reemplazando
+directamente las posiciones de cada $x_n$ en la f\'ormula, se obtiene:
+$ \boldsymbol{\vec{X_k}} = e^{{\frac{-i2\pi}{3}}k} $, por lo tanto,
+$\boldsymbol{\vec{X_k}}$ es un vector cuya posici\'on $k$-\'esima corresponde a
+$e^{{\frac{-i2\pi}{3}}k}$; como el valor de $k$ est\'a acotado, la computaci\'on
+de su resultado no resulta tediosa, de tal manera, el vector transformado
+ser\'a:
+\pagebreak
+
+$$k=0 \Rightarrow \boldsymbol{\vec{X_k}} = \boldsymbol{\vec{X_0}} =
+e^{{\frac{-i2\pi}{3}}(0) = 1}$$
+
+$$k=1 \Rightarrow \boldsymbol{\vec{X_k}} = \boldsymbol{\vec{X_1}} =
+e^{{\frac{-i2\pi}{3}}(1)} = e^{\frac{-i2\pi}{3}} $$
+
+$$k=2 \Rightarrow \boldsymbol{\vec{X_k}} = \boldsymbol{\vec{X_2}} =
+e^{{\frac{-i2\pi}{3}}(2)} = e^{\frac{-i4\pi}{3}}$$
+
+La diversidad, versatilidad y grandeza de las matem\'aticas permiten la
+posibilidad de m\'ultiples representaciones gr\'aficas para \'estos puntos, sin embargo, se
+selecciona por simplicidad una representaci\'on sencilla en el plano complejo
+seg\'un la forma polar y por solidez una representaci\'on amplitud y fase de
+la respuesta o DFT del vector. (Las representaciones se encuentran en la
+\'ultima p\'agina). Para obtener la representaci\'on amplitud fase, se utiliz\'o
+el siguiente c\'odigo:
+
+\small{
+\begin{wideverbatim}
+>> N=3;
+>> a=[0 1 0];
+>> b=zeros(N);
+>> for k=1:N
+     for n=1:N
+         w=exp((-2*pi*i*(k-1)*(n-1))/N);
+         x(n)=w;
+     end
+     c(k,:)=x;
+  end
+>> r=[c]*[a']
+r =   1.0000       -0.5000 - 0.8660i -0.5000 + 0.8660i
+>> subplot(2,1,1)
+>> stem(abs(r));
+>> subplot(2,1,2)
+>> stem(angle(r));
+\end{wideverbatim}
+}
+
+En la representaci\'on polar, los puntos resaltados representan cada componente
+de la DFT, en la segunda representaci\'on, se tiene la amplitud y fase de cada
+componente de la DFT del vector.
+%\footnote{}
+%begin{verbatim}
+%\end{wideverbatim}
+%\pagebreak
+%\begin{wideverbatim}
+%\end{wideverbatim}%
+
+\end{document}

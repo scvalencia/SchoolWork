@@ -1,0 +1,346 @@
+1. (24 Puntos) Las siguientes preguntas tienen como finalidad evaluar su comprensi´on de los conceptos de
+VDT, tasas de inter´es y equivalencias financieras por medio de casos te´oricos y pr´acticos.
+(a) (8 Puntos) Para las siguientes situaciones indique qu´e preferir´ıa. Justifique su respuesta de manera
+te´
+orica :
+i. Prestar dinero a una tasa de inter´es simple del X %, o a una tasa de inter´es compuesto del X %.
+ii. Pedir dinero a una tasa de inter´es X % NA/SV, o a una tasa de X % NA/TV.
+iii. Pedir un pr´estamo en el que le cobran una tasa de inter´es de X % NA/MV, o a una tasa de
+X % NA/MA.
+iv. Prestar dinero a una tasa de inter´es X % NA/AV, o a una tasa de X % EA.
+(b) (3 Puntos) Fernando Mac´ıas es un desarrollador de software que recientemente ha alcanzado alto
+prestigio en el mercado por lo que dos empresas del sector le han ofrecido irse a trabajar con ellos.
+Actualmente Fernando gana $4.459.000 pesos y la empresa A ofrece pagarle $5.200.000 pesos en
+caso que decida trabajar con ellos. An´alogamente, la empresa B ofrece pagarle $4.200.000 pesos.
+¿Cu´
+al es el costo de oportunidad de Fernando Mac´ıas si acepta la oferta A? ¿Si acepta la oferta B?
+¿Si decide quedarse?
+(c) (3 Puntos) Para completar el pago de la matr´ıcula universitaria, a Carlos le hace falta $1.000.000
+´ sabe que dentro de 3 meses tendr´a $2.000.000 pesos. Sin embargo, para poder iniciar las
+pesos. El
+clases ´el debe efectuar el pago de la matr´ıcula hoy. Carlos tiene dos opciones, la primera pedir prestado un mill´
+on de pesos en la Olla S.A. (prestamistas gota a gota) cerca a su casa quienes le cobran
+un inter´es compuesto de 5 % mensual. La segunda opci´on es financiar con la universidad quien le
+cobra un inter´es simple de 5 % mensual. Para cualquiera de las dos opciones, Carlos deber´a pagar
+al t´ermino de los tres meses el capital m´as los intereses respectivos. ¿Cu´al de las dos alternativas
+deber´ıa seleccionar Carlos de tal forma que pague lo menos posible por concepto de inter´es?
+´ le propone
+(d) (3 Puntos) Un amigo de la universidad le est´a ofreciendo una oportunidad de negocio. El
+una rentabilidad del 4,5 % capitalizaci´on continua anual por el dinero que usted le entregue. ¿Cu´
+al
+ser´ıa su rendimiento efectivo en t´erminos porcentuales sobre una inversi´on de $1.000.000 pesos por
+un periodo de 3 a˜
+nos? Bajo las mismas condiciones, ¿Cu´al ser´ıa su rendimiento efectivo en t´erminos
+porcentuales sobre una inversi´
+on de $67.760.000 pesos por un periodo de 3 a˜
+nos?, y ¿Cu´al de las
+dos alternativas genera un mayor rendimiento efectivo en t´erminos porcentuales?
+(e) (2 Puntos) La familia Zeeman solicit´o un pr´estamo por un valor de $X a la cooperativa Cooperando. La entidad prestadora le ofreci´o a la familia una tasa de inter´es de i % SV, con un plazo de 4
+semestres para amortizar el total de la deuda por medio de una cuota uniforme semestral, cada una
+por un monto $Y.
+i. ¿Qu´e pasar´ıa con la cuota uniforme semestral que debe pagar la familia Zeeman si la tasa de inter´es se redujera a la mitad de su valor? ¿Es mayor, menor o igual a la mitad de la cuota original?
+ii. ¿Qu´e pasar´ıa con la cuota uniforme semestral que debe pagar Familia Zeeman (con respecto al
+pago semestral inicial de $Y) si la tasa de inter´es cambia de i % SV a i % NA/SV? ¿El nuevo
+pago uniforme semestral ser´ıa mayor o menor al inicialmente contemplado?
+
+P´agina 3 de 8
+
+(f) (5 Puntos) Keyla Chiapana quiere comprar un televisor de 32”, cuyo precio hoy es $1.375.987 pesos,
+por lo que va al almac´en de cadena ‘Success S.A’ y all´ı tiene las siguientes formas de pago:
+1. Comprar el televisor de contado.
+2. Comprar el televisor a 40 cuotas mensuales de $35.000 pesos.
+3. Comprar el televisor dando una cuota inicial de $500.000 pesos y pagar el resto a 40 cuotas
+mensuales de $22.000 pesos.
+4. Comprar el televisor pidiendo el dinero prestado a un amigo, el cual quiere que se le regrese el
+dinero (que corresponde exactamente al valor del televisor el d´ıa de hoy) dentro de seis meses
+m´
+as una invitaci´
+on a cenar (el d´ıa de la devoluci´on del dinero) la cual tiene valor de $102.599
+pesos.
+Teniendo en cuenta que el costo de oportunidad de Keyla es 2 % EA, ¿cu´al alternativa deber´ıa
+escoger?
+
+P´agina 4 de 8
+
+2. (25 Puntos) El objetivo de este punto es evaluar su capacidad de conversi´on de tasas de inter´es, y su
+competencia para seleccionar aquellas que son m´as convenientes seg´
+un las necesidades particulares expuestas, dependiendo si se tiene el perfil de un prestamista o de quien requiere un cr´edito.
+El Banco “El Buen Pastor” del que usted es el gerente financiero, tiene para este mes siete clientes
+solicitando pr´estamo, todos a un a˜
+no. A cada cliente el Banco le ofrece una diferente tasa debido a
+su calificaci´
+on crediticia, aun cuando los siete postulantes han cumplido siempre con sus obligaciones
+financieras en ocasiones pasadas cuando “El Buen Pastor” ha confiado en ellos y les ha prestado dinero.
+(a) (16 Puntos) Los 7 clientes que solicitan dinero al Banco expresan sus tasas de inter´es en diferente
+denominaci´
+on. Encuentre las tasas equivalentes a cada una de las tasas de inter´es dadas en la tabla
+a continuaci´
+on. Muestre expl´ıcitamente los c´alculos realizados para obtener los resultados de la
+tercera fila.
+Cliente
+1
+2
+3
+4
+5
+6
+7
+
+EA
+
+NS/MA
+
+ES
+
+NS/TV
+
+NB/MV
+
+NA/SA
+
+Cap. Continua
+anual
+9,67 %
+
+13,2 %
+1,16 %
+7,34 %
+5,48 %
+8,2 %
+4,19 %
+NOTA: Utilice para las tasas equivalentes 3 cifras significativas.
+
+(b) (5 Puntos) A continuaci´
+on se muestran los montos de dinero solicitados por cada cliente al Banco
+“El Buen Pastor”. Teniendo en cuenta que el Banco en este momento s´olo tiene una liquidez de
+$239,9 millones de pesos ¿A qu´e clientes prestar´ıa usted dinero? Tenga en cuenta que en caso de
+otorgarle el pr´estamo a un cliente, se le debe entregar todo el dinero que ´este ha solicitado. Construya una tabla en la que se especifique claramente para cada cliente, el monto entregado por el
+Banco y la tasa de inter´es que se le cobrar´ıa (expresadas en tasas efectivas anuales).
+Cliente
+1
+2
+3
+4
+5
+6
+7
+
+Monto solicitado
+(millones de pesos)
+$32,5
+$37,7
+$19,9
+$57,7
+$8,4
+$67,1
+$25,0
+
+(c) (4 Puntos) Para asegurar que usted le pueda prestar el dinero a los clientes que no logr´o satisfacer,
+tiene la posibilidad de pedirle dinero prestado al Banco de la Rep´
+ublica. En este caso, el Banco de la
+Rep´
+ublica lo invitar´
+a a participar en una mesa de dinero, en la cual por medio de una subasta tipo
+martillo, ´este prestar´
+a dinero a aquellos que mejor pago de intereses ofrezcan. ¿Cu´al es la m´
+axima
+tasa de inter´es que usted estar´ıa dispuesto a ofertar en la subasta?
+
+P´agina 5 de 8
+
+3. (26 Puntos) El objetivo de este punto es evaluar sus conocimientos asociados a la utilizaci´on de las
+matem´
+aticas financieras.
+La se˜
+nora Julieta Kinnaj est´
+a interesada en comprarse un apartamento en la ciudad de Bogot´a. Despu´es de una b´
+usqueda exhaustiva de inmuebles, La se˜
+nora Julieta pudo encontrar el apartamento de sus
+sue˜
+nos, el cual tiene hoy un valor de $382 millones de pesos.
+La constructora que est´
+a ofertando el apartamento, le exige a Do˜
+na Julieta que debe pagar hoy el 100 %
+del costo total del inmueble. Sin embargo, dado que ella no tiene dinero ahorrado, ha decidido pedir
+prestado hoy todo el valor del apartamento con el Banco ‘Bancatuya’.
+Bancatuya ha financiado el pr´estamo a 10 a˜
+nos, estipulando la siguiente forma de pago: Cancelar el
+primer 30 % del valor del pr´estamo en los pr´oximos 2 a˜
+nos, abonando todos los meses cuotas iguales, a
+partir del mes 1 y hasta el mes 24 (a˜
+no 2). Para este periodo el Banco le estableci´o como tasa de inter´es
+la tasa actual a la que rinde un Dep´
+osito de T´ermino Fijo (DTF)a 90 d´ıas.1
+El 70 % restante del pr´estamo, deber´
+a ser pagado a partir del a˜
+no 3 hasta el 10, de forma Tipo Bullet,
+esto significa que cada a˜
+no deber´
+a hacerse el pago de los intereses, y en la u
+´ltima cuota se devuelve todo
+el capital m´
+as el u
+´ltimo inter´es. La tasa de inter´es que cobra el banco para estos u
+´ltimos a˜
+nos (3 al 10)
+es de 11 % E.A.
+Teniendo en cuenta toda la informaci´
+on anterior, responda las siguientes preguntas.
+
+(a) (8 Puntos) Calcule:
+i. La cuota igual que pagar´
+a dentro de los pr´oximos 24 meses y las cuotas anuales con la entidad
+bancaria.
+ii. Seguidamente dibuje los flujos de este proyecto que percibe Julieta, especifique la tasa de inter´es
+para cada per´ıodo.
+iii. Cuando se haya pagado el 100 % del apartamento al Banco ¿Cu´anto habr´a pagado la se˜
+nora
+Julieta por ´este?
+
+(b) (7 Puntos) La se˜
+nora Julieta ha manifestado que le gustar´ıa realizar el pago del 70 % restante del
+apartamento en 16 cuotas semestrales, pero manteniendo la tasa de inter´es estipulada inicialmente
+para este segundo periodo. Para esto, ella pagar´a una cuota que aumentar´a de manera semestral,
+en $2 millones de pesos respecto al valor del semestre anterior, iniciando este aumento en la cuota
+2. Bajo este contexto responda ¿cu´al es el valor de la primera cuota semestral?, ¿cu´al es el valor
+de la cuota que se debe pagar en el semestre 14? ¿Cu´al es el valor de la u
+´ltima cuota que se debe
+pagar? Dibuje los flujos de este proyecto
+(c) (8 Puntos) La se˜
+nora Julieta est´
+a considerando buscar un banco diferente a Bancatuya para financiar la totalidad del valor del apartamento. Ella busca que se le ofrezca m´ınimo los primeros 4 a˜
+nos
+como periodo de gracia, ya que est´a segura que en el 5to a˜
+no sus negocios empezar´an a dar grandes
+frutos. Con el dinero prestado, ella piensa pagar de contado el 100 % del valor del apartamento, y
+1 Descargue la serie de tasas de captaci´
+on semanales del Banco de la Republica (http://www.banrep.gov.co/es/dtf) y tome
+la primera tasa del a˜
+no 2016 (Enero 4 2016)
+
+P´agina 6 de 8
+
+pagar la deuda con el banco alternativo.
+Do˜
+na Julieta encuentra entonces el banco ‘Locolombia’, el cual le ofrece el siguiente esquema de
+pagos a una tasa de inter´es del 9 % E.A
+
+Años
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+3%
+
+A partir de la informaci´
+on anterior, responda:
+1. ¿Cu´
+al es el valor de la primera cuota que tendr´ıa que pagar la se˜
+nora Julieta en el a˜
+no 5?
+2. ¿Cu´
+al es el valor de la cuota que tendr´ıa que pagar la se˜
+nora Julieta en el a˜
+no 8?
+(d) (3 Puntos) Suponga que la se˜
+nora Julieta finalmente decide comprar el apartamento junto con el
+Banco ‘Locolombia’. En el a˜
+no 10, cuando haya dado su u
+´ltimo pago al banco, ¿cu´al ser´a el valor
+m´ınimo en que podr´
+a vender el apartamento?
+
+NOTA: Es obligatorio que en el soporte de sus respuestas se haga uso de las f´ormulas de relaciones
+de equivalencia y matem´
+atica financiera. Es decir utilizar las f´ormulas de: Serie Uniforme Constante,
+Gradiente Geom´etrico y, Gradiente Aritm´etico. En caso contrario, su respuesta no ser´a v´alida. Tenga
+en cuenta que usted puede simplemente indicar la ecuaci´on que utiliz´o para llegar a su respuesta,
+junto con los par´
+ametros implementados en cada una de ellas.
+
+P´agina 7 de 8
+
+4. (26 Puntos) El objetivo de este punto es evaluar sus conocimientos asociados a la utilizaci´on de las
+matem´
+aticas financieras.
+Ambientalistas S.A ha notado que la poblaci´on ha adquirido mayor conciencia con el medio ambiente y
+que tienen iniciativa por el reciclaje, por ello la empresa quiere abrir una nueva l´ınea de recolecci´
+on de
+pl´
+astico usado PET por medio de Reverse Vending Machines (RVM). La idea es instalar m´aquinas dispensadoras en puntos estrat´egicos donde las personas introduzcan botellas pl´asticas a ´estas, y a cambio
+reciban un dulce. Posteriormente, la empresa recoge el pl´astico depositado en las m´aquinas y lo procesa
+para vender pl´
+astico reciclado al mercado.
+Para la puesta en marcha de esta l´ınea de negocio, la compa˜
+n´ıa est´a pensando iniciar un proyecto piloto,
+para el cual deber´
+a hacer una inversi´
+on inicial de 8 m´aquinas dispensadoras, cada una con un costo de
+$5.467.000 pesos. Adem´
+as deber´
+a adquirir un cami´on recolector por un valor de $32.900.000 pesos, un
+tanque de inmersi´
+on con agitadores por un valor de $10.090.000 pesos y 3 m´aquinas de extrusi´on, cada
+una por un valor de $68.000.000 pesos.
+Los costos anuales de mantenimiento por todas las m´aquinas (RVM y de extrusi´on), el cami´on y el tanque de inmersi´
+on son de $15.000.000 pesos. Los costos por concepto de salario del personal a contratar
+son de $86.572.500 pesos, y los costos por los dulces que entrega la RVM se estiman en $8.250.000 pesos.
+Todos los anteriores son los costos por el primer a˜
+no. Se espera que a partir del segundo a˜
+no la totalidad
+de los costos tendr´
+an un aumento de $2.700.000 anual.
+La empresa Ambientalistas S.A espera recibir como ingresos por la venta del pl´astico reciclado $72.000.000
+pesos por el primer a˜
+no. Se espera que esta cantidad aumente anualmente 5,6 % a partir del segundo a˜
+no.
+La fase piloto de esta l´ınea de negocio dura 15 a˜
+nos. El costo de oportunidad de Ambientalistas S.A es
+de 8,14 % E.A
+
+(a) (8 Puntos) Dibuje los flujos de efectivo de la situaci´on anterior hasta el a˜
+no 15, especificando el
+ingreso neto, y egreso neto anual.
+(b) (5 Puntos) ¿Cu´
+al es el valor presente de los ingresos y egresos de la l´ınea de negocio en la fase
+piloto? ¿Cu´
+al es la diferencia del valor presente de ingresos y egresos de dicha fase?
+(c) (5 Puntos) Calcule la diferencia entre el ingreso y egreso del a˜
+no 15. Si esta diferencia se estima
+que crezca a perpetuidad un 8,02 % cada a˜
+no, a partir del a˜
+no 16 ¿Cu´al es el valor presente de la
+diferencia entre los ingresos y egresos del proyecto?
+(d) (7 Puntos) ¿C´
+omo cambia el valor presente de la diferencia entre ingresos y egresos del proyecto
+entre el punto b) y c)?, ¿Qu´e puede analizar de estos resultados?
+
+NOTA: Es obligatorio que en el soporte de sus respuestas se haga uso de las f´ormulas de relaciones
+de equivalencia y matem´
+atica financiera. Es decir utilizar las f´ormulas de: Serie Uniforme Constante,
+Gradiente Geom´etrico, Gradiente Aritm´etico. En caso contrario, su respuesta no ser´a v´alida. Tenga
+en cuenta que usted puede simplemente indicar la ecuaci´on que utiliz´o para llegar a su respuesta,
+junto con los par´
+ametros implementados en cada una de ellas.
+
+P´agina 8 de 8
+
+

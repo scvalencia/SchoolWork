@@ -1,0 +1,158 @@
+\documentclass[11pt, spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings} 
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{bigfoot}
+\usepackage{amsmath}
+\usepackage[numbered,framed]{matlab-prettifier}
+\usepackage{caption}
+\usepackage[figurename=Figura, tablename=Tabla, font={small,tt}]{caption}
+
+\makeatletter
+    \setlength\@fptop{0\p@}
+\makeatother
+
+
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=30mm,
+ right=30mm,
+ top=30mm,
+ }
+
+\lstset{
+	style              = Matlab-editor,
+  	basicstyle         = \mlttfamily,
+  	escapechar         = ",
+  	mlshowsectionrules = true,
+	framesep=4.5mm,
+	framexleftmargin=2.5mm,
+	fillcolor=\color{White},
+	rulecolor=\color{Black},
+	numberstyle=\normalfont\tiny\color{Black}
+}
+
+\captionsetup[lstlisting]{font={small,tt}}
+
+\begin{document}
+
+\author{Sebastián Valencia Calderón \\ 201111578}
+\title{Laboratorio 1: Sistema numérico de punto flotante}
+\maketitle
+
+%====================================================================
+\section{Introducción}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \\
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+País & Ciudad \\
+\hline \hline
+España & Madrid \\ \hline
+España & Valencia \\ \hline
+Francia & París \\ \hline
+\end{tabular}
+\caption{Tabla muy sencilla.}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
+%==================================================================
+\section{Procedimiento}
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\\
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+\begin{figure}[htbp]
+\centering
+	\includegraphics[scale=0.8]{data/img/plot1}
+	\caption{Un ejemplo}
+\end{figure}
+%==================================================================
+\section{Resultados}
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+
+\[
+\begin{bmatrix}
+    x_{11}       & x_{12} & x_{13} & \dots & x_{1n} \\
+    x_{21}       & x_{22} & x_{23} & \dots & x_{2n} \\
+    \hdotsfor{5} \\
+    x_{d1}       & x_{d2} & x_{d3} & \dots & x_{dn}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+    x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+\end{bmatrix}
+\]
+
+\begin{figure}[htbp]
+\centering
+	\includegraphics[scale=0.8]{data/img/plot2}
+	\caption{Un ejemplo}
+\end{figure}
+
+%==================================================================
+\section{Conclusiones}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+\begin{figure}[htbp]
+\centering
+	\includegraphics[scale=0.8]{data/img/plot3}
+	\caption{Un ejemplo}
+\end{figure}
+
+\begin{itemize}
+  \item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  
+   \item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \cite{norman}.
+\end{itemize}
+
+
+%==================================================================
+\newpage
+\section{Bibliografía}
+
+\begingroup
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{}
+  \bibitem{notes} John W. Dower {\em Readings compiled for History
+  21.479.}  1991.
+
+  \bibitem{impj}  The Japan Reader {\em Imperial Japan 1800-1945} 1973:
+  Random House, N.Y.
+
+  \bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
+  state} 1940: International Secretariat, Institute of Pacific
+  Relations.
+
+  \bibitem{fo} Bob Tadashi Wakabayashi {\em Anti-Foreignism and Western
+  Learning in Early-Modern Japan} 1986: Harvard University Press.
+\end{thebibliography}
+\endgroup
+
+%==================================================================
+\newpage
+\section{Scripts}
+
+\lstinputlisting[caption = {Sample code from Matlab}]{data/scripts/sample.m}
+
+\bibliography{sample}
+
+\end{document}

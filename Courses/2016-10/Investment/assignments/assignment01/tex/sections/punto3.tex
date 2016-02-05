@@ -1,0 +1,87 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\begin{enumerate}[(a)]
+
+\item \textbf{(6 puntos)} Encuentre el estimador de máxima verosimilitud para dichos parámetros. Para esto siga los siguientes pasos:
+
+\begin{enumerate}[(I)]
+
+\item Plantee la función de verosimilitud:
+
+\begin{equation}
+\begin{aligned}
+L(x_1, \dots, x_p; 	\mu, \sigma ^2) = \prod_{i =  1}^{n} f_X(x_i) \\
+      & = \prod_{i =  1}^{n} \left[ \frac{1}{\sigma \times \sqrt{2 \pi}} \exp{-\frac{1}{2} \left( \frac{x- \mu}{\sigma}\right)^2} \right]  \\
+      & = \left( \frac{1}{\sigma \times \sqrt{2 \pi}} \right) ^n\prod_{i =  1}^{n} \left[  \exp{-\frac{1}{2} \left( \frac{x- \mu}{\sigma}\right)^2} \right]   \\
+      & = \frac{1}{\sigma^n \times \sqrt{(2 \pi)}^n} \times  \exp{-\frac{1}{2} \sum_{i = 2}^{n}\left( \frac{x- \mu}{\sigma}\right)^2}    \\
+\end{aligned}
+\end{equation}
+
+\item Halle el logaritmo natural de la función de verosimilitud.
+
+\begin{equation}
+\begin{split}
+ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2)) = ln \left( \frac{1}{\sigma^n \times \sqrt{(2 \pi)^n}} \times  \exp{-\frac{1}{2} \sum_{i = 2}^{n}\left( \frac{x- \mu}{\sigma}\right)^2}\right) \\
+= \left( 0 - ln(2\pi^{n/2})\right) + \left( 0 - ln((\sigma^2)^{n/2})\right) + \left( -\frac{1}{2} \sum_{i = 2}^{n}\left( \frac{x- \mu}{\sigma}\right)^2\right) \\
+=  - \frac{n \times ln(2\pi)}{2}   -  \frac{n \times ln(\sigma^2)}{2}  -\frac{1}{2} \times \sum_{i = 2}^{n}\left( \frac{x- \mu}{\sigma}\right)^2
+\end{split}
+\end{equation}
+
+\item Derive el resultado anterior respecto al parámetro correspondiente.
+
+$\text{Para } \mu:$
+
+\begin{equation}
+\begin{split}
+\sum_{i = 1}^{n} \left( \frac{x_i - \mu}{\sigma}\right) = 0 \\
+\sum_{i = 1}^{n} x_i - n \mu = 0 \\
+\mu = \frac{\sum_{i = 1}^{n} x_i}{n}
+\end{split}
+\end{equation}
+
+$\text{Para } \sigma:$
+
+\begin{equation}
+\begin{split}
+- \frac{n}{2 \sigma ^2} + \frac{1}{2 (\sigma ^n)^2} \times \sum_{i = 1}^{n} (x_i - \mu)^2 = 0 \\
+\sigma ^2 = \frac{\sum_{i = 1}^{n} (x_i - \mu)^2}{n}
+\end{split}
+\end{equation}
+
+\item Iguale la derivada a cero para encontrar el estimador de máxima verosimilitud para
+cada parámetro.
+$\text{Para } \mu:$
+
+$$\frac{\partial ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2))}{\partial \mu} = \sum_{i = 1}^{n} \left( \frac{x_i - \mu}{\sigma}\right)$$
+
+$\text{Para } \sigma:$
+
+$$\frac{\partial ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2))}{\partial \sigma} = - \frac{n}{2 \sigma ^2} + \frac{1}{2 (\sigma ^n)^2} \times \sum_{i = 1}^{n} (x_i - \mu)^2$$
+
+\end{enumerate}
+
+\item \textbf{(4 puntos)} Determine si el estimador de máxima verosimilitud para el parámetro $\mu$ es eficiente.
+
+Para determinar a eficiencia de un estimador, la varianza de los mismos debe ser igual a la cota de Rao-Cramer.
+
+$$\text{Var}(\bar{X}) = \frac{\sigma ^2}{n}$$
+\begin{equation}
+\begin{split}
+ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2)) = - ln(\sqrt{2 \pi} \sigma) - \frac{1}{2\sigma ^ 2}(x - \mu)^2 \\
+\frac{\partial ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2))}{\partial \mu} = \frac{x}{\sigma ^2} - \frac{\mu}{\sigma} \\
+\frac{\partial ^2 ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2))}{\partial \mu ^2} = -\frac{1}{\sigma ^2}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\text{Var}(\bar{X}) \geq \left( -n \times \mathbb{E} \left[ \frac{\partial ^2 \times ln(L(x_1, \dots, x_p; 	\mu, \sigma ^2))}{\partial \sigma ^2} \right]\right)^{-1} \\
+\frac{\sigma ^2}{n} \geq \left( -n \times \mathbb{E} \left[ -\frac{1}{\sigma ^2} \right]\right)^{-1} =  \left(\frac{n}{\sigma ^2}\right)^{-1} \Rightarrow \frac{\sigma ^2}{n} \geq \frac{\sigma ^2}{n}\\
+\end{split}
+\end{equation}
+
+Por la anterior deducción, el estimador para $\mu$ es eficiente.
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,23 @@
+%{
+    This script, computes dynamically the value of the machine
+epsilon, executed in MATLAB/Octave. For this purpose, we use the
+fact 
+    Este script, calcula de manera din?mica, el valor del epsilon
+    de la m?quina donde este se ejecute sobre Matlab/Octave. Para
+    esto, se apovecha el hecho de que la representaci?n en n?mero
+    flotante 1.0 + eps (el valor a hallar), debe ser mayor a uno.
+%}
+
+format long;
+
+epsilon = 1.0;
+fl = 1.0 + epsilon;
+
+while fl > 1.0
+    epsilon = epsilon / 2.0;
+    fl = 1.0 + epsilon;
+end;
+
+% Correcci?n sobre el exceso del b?cle anterior
+epsilon = 2.0 * epsilon; 
+disp(epsilon);
