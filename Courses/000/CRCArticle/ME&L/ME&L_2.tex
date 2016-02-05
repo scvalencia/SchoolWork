@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage[margin=4cm]{geometry}
+\usepackage{fancybox}
+% Default margins are too wide all the way around.  I reset them here
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+\newenvironment{wideverbatim}%
+{\vskip\baselineskip\VerbatimEnvironment
+\begin{Sbox}\begin{BVerbatim}}
+{\end{BVerbatim}%
+\end{Sbox}\noindent\centerline{\TheSbox}\vskip\baselineskip}
+\begin{document}
+\title{Tarea 2. C\'alculo de predicados}
+\author{Sebasti\'an Valencia Calder\'on\\
+Universidad de los Andes}
+\renewcommand{\today}{Marzo, 2013}
+\maketitle
+
+\bf{Ejercicio 1.}\rm Exprese cada expresi\'on en lenguaje natural usando la
+sint\'axis de la l\'ogica de primer orden. Suponga que el dominio es el conjunto
+de estudiantes de la clase. Considere los siguientes predicados
+\\
+\\
+\bf{G(x):}\rm x tiene un gato. \\
+\bf{P(x):}\rm x tiene un perro.\\
+\bf{C(x):}\rm x tiene una chinchilla.\\ \\
+Para la siguiente soluci\'on, supongase que se representa el universo como
+\bf{U}\rm=$\Omega\setminus(x,y,z)$, donde $\Omega$ es el alfabeto del lenguaje
+natural, entonces, se tiene que el universo es un conjunto igual a $\Omega$
+diferencia sim\'etrica $x$, $y$ y $z$; estas \'ultimas variables ser\'an las
+variables aleatorias o excluidas de \bf{U}\rm, por lo que se tiene $x, y, z=a
+\vee b \vee \ldots \vee w$. Es claro que no necesariamente se establece una diferencia estricta en las variables
+excluidas.
+\begin{enumerate}
+  \item S\'olamente un estudiante en la clase tiene un perro y una chinchilla. 
+$$H(x)=  C(x) \wedge P(x) $$
+$$H(y)=H(x)[x:=y]$$
+$$(\exists x,y \mid H(x) \wedge H(y) \Rightarrow x=y )$$
+ \item Hay estudiantes de la clase que no tiene ni un perro ni un gato.
+$$(\exists x \mid \neg P(x) \wedge \neg G(x) )$$
+ \item Hay estudiantes que no tiene perro ni gato pero si tienen chinchilla.
+$$(\exists x \mid \neg P(x) \wedge \neg G(x) \wedge C(x))$$
+\item Ning\'un estudiante tiene las tres mascotas.
+$$\neg (\exists x \mid P(x) \wedge G(x) \wedge C(x))$$
+\item Para cada uno de los tres tipos de animales hay un estudiante que lo tiene
+como mascota.
+$$((\exists x \mid C(x)) \wedge (\exists y \mid P(y)) \wedge (\exists z \mid
+G(z)))$$
+\end{enumerate}
+
+\bf{Ejercicio 2.}\rm Demuestre el siguiente teorema
+
+$$(\forall x \mid R: Q \vee P)\wedge R[x:=a] \wedge \neg Q[x:=a] \Rightarrow
+P[x:=a]$$ 
+Demostraci\'on:
+$$(\forall x \mid R: Q \vee P)$$
+$$\equiv  \langle \mbox{\bf{Se asume true y el antecedente de la
+implicaci\'on}\rm} \rangle$$ 
+$$\neg(\neg (\forall x \mid R: Q \vee P))$$
+$$\equiv  \langle \mbox{\bf{Doble negaci\'on y asociatividad}\rm} \rangle$$
+$$\neg(\exists x \mid R: \neg (Q \vee P))$$
+$$\equiv  \langle \mbox{\bf{De de Morgan generalizada 3}\rm} \rangle$$
+$$\neg(\exists x \mid R: \neg Q \wedge \neg P))$$
+$$\equiv  \langle \mbox{\bf{De de Morgan sobre $\vee$}\rm} \rangle$$
+$$\neg(\exists x \mid R \wedge \neg Q :\neg P))$$
+$$\equiv  \langle \mbox{\bf{Trading de $\exists$ 1}\rm} \rangle$$
+$$(\forall x \mid R \wedge \neg Q : P)$$
+$$\equiv  \langle \mbox{\bf{De de Morgan generalizada 2}\rm} \rangle$$
+$$(\forall x \mid R(x) \wedge \neg Q(x) : P(x))$$
+$$\equiv  \langle \mbox{\bf{Equivalencia sem\'antica}\rm} \rangle$$
+$$R(a) \wedge \neg Q(a) : P(a)$$
+$$\equiv  \langle \mbox{\bf{a $\in$ x}\rm} \rangle$$
+$$R(a) \wedge \neg Q(a) \Rightarrow P(a)$$
+$$\equiv  \langle \mbox{\bf{Equivalencia sem\'antica}\rm} \rangle$$
+$$(\forall x \mid R: Q \vee P) \wedge R(a) \wedge \neg Q(a) \Rightarrow P(a) $$
+$$\equiv  \langle \mbox{\bf{Hip\'otesis}\rm} \rangle$$
+$$\Rightarrow P(a) $$
+$$\equiv  \langle \mbox{\bf{Modus ponens antecedente supuesto y paso
+anterior}\rm} \rangle$$
+$$\Rightarrow P(a) $$
+\\
+\\
+\\
+
+\bf{Ejercicio 3.}\rm Considere el siguiente enunciado:\\
+Todos los republicanos que pertenecen al Tea party est\'an en contra de un
+programa de amnist\'ia para ilegales. Marco Rubio es republicano pero est\'a a
+favor de un programa de amnist\'ia para ilegales. Por lo tanto Marco Rubio no
+pertenece al Tea Party.
+
+Suponga que el dominio son todos los pol\'iticos norte americanos.
+\begin{enumerate}
+  \item Traduzca a la l\'ogica de predicados
+  \item Es posible comcluir la \'ultima frase de las anteriores, muestre o
+  refute.
+\end{enumerate}
+
+Soluci\'on:
+
+Sea \bf{U}\rm el universo del problema, y la codificaci\'on de predicados se
+muestra a continuaci\'on: \bf{R(x)}\rm para x es republicano, \bf{TP(x)}\rm para
+x es del tea party, \bf{AAI(x)}\rm para x apoya el programa de amnist\'ia para
+ilegales.\\
+Todos los republicanos que pertenecen al Tea party est\'an en contra de un
+programa de amnist\'ia para ilegales, se puede codificar correctamente como 
+$$(\forall x \in U \mid R(x) \wedge TP(x): \neg AAI(x))$$
+Por el primer Trading de la cuantificaci\'on universal, se tiene:
+$$(\forall x \in U \mid R(x): TP(x) \Rightarrow \neg AAI(x))$$
+Por contrapositiva, se tiene:
+$$(\forall x \in U \mid R(x): AAI(x)  \Rightarrow \neg TP(x) )$$
+Nuevamente por el primer Trading de la cuantificaci\'on universal, se tiene:
+$$(\forall x \in U \mid R(x) \wedge AAI(x): \neg TP(x))$$
+Sea $mr$ Marco Rubio, tal que $mr \in U$, luego es cierto por el predicado
+anterior que:
+$$R(mr) \wedge AAI(mr): \neg TP(mr)$$
+La traducci\'on al lenguaje natural da:
+Si Marco Rubio es republicano y est\'a a favor de un
+programa de amnist\'ia para ilegales, entonces, Marco Rubio no pertenece al tea
+party.
+  
+ 
+
+
+
+
+
+\end{document}

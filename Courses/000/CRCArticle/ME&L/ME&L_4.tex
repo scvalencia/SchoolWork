@@ -1,0 +1,112 @@
+ \documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage[margin=4cm]{geometry}
+\usepackage{fancybox}
+% Default margins are too wide all the way around.  I reset them here
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+\newenvironment{wideverbatim}%
+{\vskip\baselineskip\VerbatimEnvironment
+\begin{Sbox}\begin{BVerbatim}}
+{\end{BVerbatim}%
+\end{Sbox}\noindent\centerline{\TheSbox}\vskip\baselineskip}
+\begin{document}
+\title{Tarea 4 matem\'atica estructural y l\'ogica}
+\author{Sebasti\'an Valencia Calder\'on\\
+Universidad de los Andes}
+\renewcommand{\today}{Abril, 2013}
+\maketitle
+
+\bf{Ejercicio 1.}\rm Dadas las relaciones, defina las relaciones pedidas.
+
+ $$VendeF = join (Vende_{ \langle a,p,m,c  \rangle},Fabrica_{
+\langle f,m  \rangle})_{Almacen, Fabrica}$$
+ $$Produce = join (DeMarca_{ \langle p,m \rangle},Fabrica_{
+\langle f,m  \rangle})_{Fabrica, Producto}$$
+\
+Sea $\hat{c}={\langle c \in PRECIO: c<25.00 \rangle}$ y $\hat{p}={\langle p \in
+PRODUCTO: p=manosLibreIphone \rangle}$, la relaci\'on pedida, la llamaremos $L$
+y se define como {\LARGE $$L = join (Vende_{ \langle a,\hat{p},m,\hat{c} 
+\rangle} \circ DeMarca_{ \langle \hat{p},m  \rangle})_{m}$$}
+\
+Sea $\hat{a}={\langle a \in ALMACENES: a = Carulla \rangle}$, la relaci\'on
+pedida, la llamaremos $M$ y se define como {\LARGE $$M = join (Vende_{ \langle
+\hat{a},p,m,c \rangle} \circ Fabrica_{ \langle f,m 
+\rangle})_{m}$$}
+\
+Supongase que: $P_1=P_2 \iff M_1 = M_2$, donde P y M son productos y marcas
+respectivamente, adem\'as, $P_1 = P_2 \rightarrow C_1 =C_2$
+{\LARGE $$X = join (Fabrica \circ DeMarca \circ Vende)_{m}$$}.
+
+La relaci\'on X, es claramente reflexiva, por la falta de deficnici\'on de
+restricciones sobre igualdad de fabrica, por lo tanto, no es irrefelexiva. Es
+sim\'etrica, pues si f produce el mismo producto, y es vendido por los mismos
+almacenes que la fabrica g, g as\'i lo har\'a con f. Como es sim\'etrica, no es
+antisim\'etrica ni asim\'etrica.
+\\
+\\
+Finalmente,  como la relaci—n determina igualdades, por las restricciones y
+suposiciones hechas, puede considerarse como reflexiva, s\'i y s\'olo si, las
+suposiciones son ciertas,
+\pagebreak
+\pagebreak
+\\
+\\
+\bf{Ejercicio 2.}\rm Considere la funci\'on suma entre $\mathbb{A} \subset
+\mathbb{Z} : |\mathbb{A}| \in \mathbb{N}$ y los enteros $Suma:\mathbb{A}
+\to \mathbb{Z}$
+\\
+$Suma(\{a,b,c,d,\ldots, n\}) = a+b+c+d+\ldots+n$, es inyectiva, es sobreyectiva,
+justifique.
+\\
+\\
+No es inyectiva desde que $\forall n \in \mathbb{Z} \to suma(n,-n)=0$, adem\'as,
+$suma(\{4,5\})=9=suma(8,1)$. Para mostrar si es o no sobre, debe tenerse en
+cuenta que el conjunto de salida de la funci\'on, puede verse como el conjunto de todos
+los subconjuntos finitos de $\mathbb{Z}$, por lo tanto, $a,b,c,d,\ldots,n$,
+deben ser distintos, pues $suma(\{n,n\})=suma(\{n\})$.
+\\
+\\
+Para esto, se recurre a la definici\'on se sobreyectividad para la funci\'on en
+cuesti\'on, $Suma(\{a,b,c,d,\ldots, n\})$, es sobreyectiva s\'i y solo si,
+$\forall n \in \mathbb{Z}, \exists S \in \mathbb{A} : suma(S)=n$. Sea $k$, un
+elemento arbitrario de $\mathbb{Z}$, y $S$ un conjunto arbitrario de
+$\mathbb{A}$, debe mostrarse que $Suma\{S\}=k$.Particularmente, se tiene que
+todo \'umero $k$ puede formarse como $Suma\{0,k\}=k$, todo n\'umero $-k$, puede
+formarse como $Suma\{0,-k\}=-k$ y 0 puede formarse con $Suma\{k,-k\}=0$, luego
+la funci\'on es sobreyectiva.
+\\
+\\
+\bf{Ejercicio 3.}\rm Considere la funci\'on $f:\mathbb{Z} \times \mathbb{Z}
+\to \mathbb{Z}$, definida as\'i: $f(m,n)=2m-n$, diga si es biyectiva y
+justifique.
+\\
+\\
+Es sobreyectiva, pues todo $k$ entero puede ser obtenido con $f(k,k)=k$.
+No es inyectiva, pues es f\'acil ver que $f(0,0)=0=f(1,2)=f(2,4)=\ldots=f(k,2k);
+\forall k \in \mathbb{Z}$. Luego no es biyectiva.
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+\end{document}

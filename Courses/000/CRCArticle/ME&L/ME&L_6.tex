@@ -1,0 +1,263 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shapes.multipart}
+\usepackage{alltt}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.00in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\topmargin}{-.50in}
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}  
+\begin{document}
+\title{Matem\'atica estructural y l\'ogica \\ Inducci\'on y estructuras bien
+ordenadas.}
+\author{Sebasti\'an Valencia Calder\'on}
+\date{Mayo 2013}
+\maketitle
+
+\textbf{Ejercicio 1.} Demuestre que para todo n\'umero natural $n$, 5 divide a
+$F_{5n}$.
+$$ ( \forall n: \mathbb{N} \mid : 5 \mid F_{5n} ) $$
+{\raggedright
+La demostraci\'on se realizar\'a usando el principio de inducci\'on 
+matem\'atica, referido desde ahora como PIM. Para esto, se tomar\'a como
+caso base el n\'umero cero, luego se suponr\'a el predicado para un natural
+cualquiera, y posteriormente, se estructura la demostraci\'on con PMI.
+$\text{Caso base:} \quad P(0) :  5 \mid F_{0} = 5 \mid 0 \equiv \text{TRUE}$, 
+$\text{Hip\'otesis inductiva:} \quad ( \forall k: \mathbb{N} \mid : 5 \mid
+F_{5k} )$
+}
+$\textbf{Lema 1:} \quad a \mid b \iff \frac{b}{a} \in \mathbb{Z}$ \\
+$\textbf{L1 proof:} \quad a \mid b \iff b = k_{\mathbb{Z}}a \Rightarrow k \in
+\mathbb{Z}$
+\\
+$\textbf{Lema 2:} \quad a \mid b \Rightarrow a \mid kb$ \\
+$\textbf{L2 proof:} \quad a \mid b \Rightarrow \frac{b}{a} \in \mathbb{Z}, k \in
+\mathbb{Z} \Rightarrow k\frac{b}{a} \in \mathbb{Z} \Rightarrow a \mid kb \vdash
+\textbf{Lema 1 y clausura de $\langle \mathbb{Z},* \rangle$ } $
+\\
+$\textbf{Lema 3:} \quad a \mid b \wedge a \mid c \Rightarrow a \mid b+c$ \\
+$\textbf{L3 proof:} \quad a \mid b \Rightarrow b = ak_{\mathbb{Z}};a \mid c
+\Rightarrow c = am_{\mathbb{Z}}::b+c=a(k_{\mathbb{Z}}+m_{\mathbb{Z}})
+\Rightarrow b+c = al_{\mathbb{Z}} \\ \vdash
+\textbf{Definici\'on de divisibilidad y clausura de $\langle \mathbb{Z},+
+\rangle$ } $
+\\
+\\
+$ F_{5(k+1)} = F_{5(k+1)-1} + F_{5(k+1)-2} \vdash \text{Definici\'on
+                Fibonacci} $\\
+$  = F_{5k+4} + F_{5k+3} \vdash \text{Aritm\'etica} $ \\
+$  = (F_{5k+3} + F_{5k+2}) + (F_{5k+2} + F_{5k+1})\vdash
+    \text{Definici\'on de Fibonacci} $ \\
+$  = F_{5k+3} + 2F_{5k+2} + F_{5k+1} \vdash \text{Aritm\'etica}  $\\
+$  = (F_{5k+2} + F_{5k+1}) + 2(F_{5k+1} + F_{5k}) +F_{5k+1}\vdash 
+    \text{Aritm\'etica y definici\'on de Fibonacci} $ \\
+$  = (F_{5k+1} +F_{5k}+ F_{5k+1}) + 2F_{5k+1} + 2F_{5k}
+     +F_{5k+1}\vdash \text{Aritm\'etica y definici\'on de Fibonacci} $ \\
+$  = 5F_{5k+1} + 3F_{5k} \vdash\text{Aritm\'etica} $  \\
+$ \Rightarrow ((5 \mid 5F_{5k+1}) \wedge (5 \mid 3F_{5k})) \vdash\text{Lema 1
+sobre $5F_{5k+1}$, lema 2 e hip\'otesis inductiva sobre $\mid 3F_{5k}$ } $ \\
+$ \Rightarrow 5 \mid (5F_{5k+1} + 3F_{5k}) \vdash \text{Lema 3 con
+enunciado anterior} $\\
+$ \Rightarrow 5 \mid F_{5(k+1)} \vdash \text{Sustituci\'on de expresi\'on
+equivalente} $\\
+$ \Rightarrow  \vdash \text{Por PMI, $P(n)$ es TRUE} $\\
+
+\textbf{Ejercicio 2.} Demuestre el siguiente predicado.
+$$P(n) : \equiv ( \forall n: \mathbb{N} \mid n \geq
+1:F_{n+1}F_{n-1}-F_{n}^2=(-1)^n ) $$ 
+{\raggedright
+$\text{Caso base:} \quad P(1) : \equiv F_{2}F_{0}-F_{1}^2=(-1)^1  \equiv
+-(1)^2=(-1)^1 \equiv \text{TRUE}$
+} \\
+{\raggedright
+$\text{Hip\'otesis inductiva:} \quad (P(k) : \equiv  \forall k: \mathbb{N} \mid
+k \geq 1:F_{k+1}F_{k-1}-F_{k}^2=(-1)^k $ 
+} \\
+{\raggedright
+$\text{Posible consecuencia:} \quad P(k+1) : \stackrel{?}{\equiv}
+F_{k+2}F_{k}-F_{k+1}^2=(-1)^{k+1} $ } \\
+\\
+$ F_{k+2}F_{k}-F_{k+1}^2 = (F_{k+1}+F_{k})F_{k}-F_{k+1}^2 \vdash
+\text{Definici\'on Fibonacci} $\\
+$  = F_{k}F_{k+1}+F_{k}^2-F_{k+1}^2 \vdash \text{Distributividad} $ \\
+$  = F_{k}F_{k+1}+F_{k}^2-(F_{k}+F_{k-1})^2 \vdash \text{Def Fibonacci} $ \\
+$  = F_{k}F_{k+1}+F_{k}^2-F_{k}^2-2F_{k-1}F_{k}-F_{k-1}^2 \vdash
+     \text{Expansi\'on binomial} $ \\
+$  = F_{k}F_{k+1}-2F_{k-1}F_{k}-F_{k-1}^2 \vdash
+     \text{Inverso aditivo sobre $\langle \mathbb{N},+
+\rangle$} $ \\
+$  = F_{k}(F_{k}+F_{k-1})-2F_{k-1}F_{k}-F_{k-1}^2 \vdash
+     \text{Def Fibonacci} $ \\
+$  = F_{k}^2+F_{k}F_{k-1}-2F_{k-1}F_{k}-F_{k-1}^2 \vdash
+     \text{Distributiva} $ \\
+$  = F_{k}^2-F_{k-1}F_{k}-F_{k-1}^2 \vdash
+     \text{\'Algebra} $ \\
+$  = F_{k}^2-F_{k-1}(F_{k}-F_{k-1}) \vdash
+     \text{\'Algebra, factorizaci\'on} $ \\
+$  = F_{k}^2-F_{k-1}F_{k+1} \vdash
+     \text{Def Fibonacci} $ \\
+$  = (-1)(F_{k-1}F_{k+1}-F_{k}^2) \vdash
+     \text{Inverso aditivo sobre $\langle \mathbb{N},+
+\rangle$} $ \\
+$  = (-1)(-1)^k \vdash
+     \text{Hip\'otesis inductiva} $ \\
+$  = (-1)^{k+1} \vdash
+     \text{Propiedades potenciaci\'on} $ \\
+$  \Rightarrow P(k+1),\text{Por PMI, $P(n)$ es cierto para todo $n$} $ \\
+
+\textbf{Ejercicio 3.} Demuestre la siguiente expresi\'on.
+$$ 	P(n) :\equiv \sum_{i=0}^{n}  (\frac{-1}{2}) ^ i = \frac{2^{n+1}+(-1)^n}{3
+\times 2^n} $$
+{\raggedright
+$$\text{Caso base:} \quad P(0) :\equiv \sum_{i=0}^{0}  (\frac{-1}{2})^i = 1 =
+\frac{2^{1}+1}{3 \times 1} = 1 \equiv \text{TRUE} $$
+} \\
+{\raggedright
+$$\text{Hip\'otesis inductiva:} \quad P(k) :\equiv \sum_{i=0}^{k} 
+(\frac{-1}{2}) ^ i = \frac{2^{k+1}+(-1)^k}{3 \times 2^k} $$
+} \\
+\begin{flalign}
+        \sum_{i=0}^{k+1}  (\frac{-1}{2}) ^ i = (\frac{-1}{2}) ^ 0 +
+        (\frac{-1}{2}) ^ 1 +\ldots+(\frac{-1}{2}) ^ {k-1}+(\frac{-1}{2}) ^
+        {k}+(\frac{-1}{2}) ^ {k+1}\\
+        (\sum_{i=0}^{k} (\frac{-1}{2}) ^ i ) + (\frac{-1}{2}) ^ {k+1} \\
+         \frac{2^{k+1}+(-1)^k}{3 \times 2^k} + (\frac{-1}{2}) ^ {k+1} \vdash
+        \text{Hip\'otesis inductiva}\\
+        \frac{2^{k+1}+(-1)^k}{3 \times 2^k} + \frac{(-1)^{k+1}}{2^{k+1}}
+        \vdash \text{\'Algebra}\\
+        \frac{2^{k+1}(2^{k+1}+(-1)^{k})+(3 \times 2^k)(-1)^{k+1}}{3 \times 2^k
+        \times 2^{k+1}} \vdash \text{\'Algebra}\\
+        \frac{2^{k}  \lbrack  2(2^{k+1}+(-1)^{k})+3(-1)^{k+1}
+        \rbrack }{3 \times 2^k \times 2^{k+1}} \vdash \text{Factorizaci\'on}\\
+        \frac{  2(2^{k+1}+(-1)^{k})+3(-1)^{k+1}
+         }{3 \times 2^{k+1}} \vdash \text{Simplificaci\'on}\\
+         \frac{  2^{k+2}+(-1)^{k}\lbrack 2+3(-1)\rbrack
+         }{3 \times 2^{k+1}} \vdash \text{Factorizaaci\'on}\\
+         \frac{  2^{k+2}+(-1)^{k}(-1)}{3 \times 2^{k+1}} \vdash
+         \text{Aritm\'etica}\\
+         \frac{  2^{k+2}+(-1)^{k+1}}{3 \times 2^{k+1}} \vdash
+         \text{Aritm\'etica}\\
+         \Rightarrow \text{P(n) por PMI}
+\end{flalign}
+\pagebreak
+\\
+\textbf{Ejercicio 4.} Demuestre el siguiente teorema.
+$$ 	dlast(S \rhd x) = S $$
+{\raggedright
+$\text{Caso base:} \quad P(\epsilon) :\equiv (dlast(\epsilon \rhd x)) =
+(dlast(x \triangleleft \epsilon)) = \epsilon \vdash \text{Axioma de anexar
+con cadena vacia} \equiv \text{TRUE} $ }
+{\raggedright
+$\text{Hip\'otesis inductiva:} \quad P(S) :\equiv (\forall S,x \mid dlast(S
+\rhd x) = S)$}
+
+\begin{flalign}
+        dlast((y \lhd S) \rhd x) = dlast(y \lhd (S \rhd x)) \vdash
+        \text{Asociatividad de listas}\\
+        dlast(y \lhd (S \rhd x)) = y \lhd dlast(S \rhd x)  \vdash
+        \text{Definici\'on $dlast(x \lhd S)$} \\  
+        y \lhd dlast(S \rhd x) = y \lhd S \vdash
+        \text{Hip\'otesis inductiva} \\ 
+        \Rightarrow  dlast((y \lhd S) \rhd x) = y \lhd S \Rightarrow P(y \lhd S)
+        \vdash
+        \text{PMI}
+\end{flalign}
+\textbf{Ejercicio 5.} Demuestre el siguiente teorema.
+$$ 	asc(S \lhd x) \equiv asc(S) \wedge (x \leq min_{S}(S)) $$
+{\raggedright
+$\text{Caso base:} \quad P(\epsilon) :\equiv asc(S \lhd \epsilon) =
+asc(\epsilon) \wedge (x \leq min(\epsilon)) = TRUE \wedge (x \leq \infty) \equiv
+( TRUE \wedge TRUE ) \equiv TRUE \vdash \text{Definici\'on de $asc$ y $\infty$,
+propiedades $\wedge$} $
+} \\
+\\
+{\raggedright
+$\text{Hip\'otesis inductiva:} \quad P(S) :\equiv (\forall S,x \mid asc(S \lhd x) \equiv asc(S) \wedge (x \leq min_{S}(S)))$}
+\\
+Por hip\'otesis inductiva, y simplificaci\'on sobre P($n$), $x \leq min_{S}(S)
+$. Por definici\'on, $min_{S}(y \lhd S) = min(y,min_{S}(S))$. Como S es una
+secuencia ascendente por P(n), $min_{S}(S) = car(S)$, y $min_{S}(y \lhd S) =
+min(y,car(S))$, para que $asc(y \lhd S)$, sea cierto, $y \leq car(S)$, es decir
+$y = min_{S}(y \lhd S)$.
+
+\begin{flalign}
+        asc(x \lhd (y \lhd S)) = x \leq y \wedge asc(y \lhd S) \vdash
+        \text{Definici\'on de $asc$}\\
+        = asc(y \lhd S) \wedge x \leq y \vdash
+        \text{Simetr\'ia de $\wedge$}\\
+        = asc(y \lhd S) \wedge x \leq min_{S}(y \lhd S) \vdash
+        \text{Hip\'otesis inductiva y deducci\'on de arriba} \\
+        \Rightarrow P(y \lhd S) \vdash \text{Por PMI, P(n) es cierto}      
+\end{flalign}
+
+\Sigma=\left[
+\begin{array}{ccc}
+   \sigma_{11} & \cdots & \sigma_{1n} \\
+   \vdots & \ddots & \vdots \\
+   \sigma_{n1} & \cdots & \sigma_{nn}
+\end{array}
+\right]
+
+
+
+
+
+
+% Define block styles
+\tikzset{
+decision/.style = {diamond, draw, fill=blue!20, 
+  text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt},
+block/.style = {rectangle, draw, fill=blue!20, 
+  text width=5em, text centered, rounded corners, minimum height=4em},
+line/.style = {draw, -latex'},
+cloud/.style = {draw, ellipse,fill=red!20, node distance=3cm,
+  minimum height=2em},
+subroutine/.style = {draw,rectangle split, rectangle split horizontal,
+  rectangle split parts=3,minimum height=1cm,
+  rectangle split part fill={red!50, green!50, blue!20, yellow!50}},
+connector/.style = {draw,circle,node distance=3cm,fill=yellow!20},
+data/.style = {draw, trapezium,node distance=3cm,fill=olive!20}
+}
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (init) {initialize model};
+    \node [data, left of=init] (expert) {expert};
+    \node [connector, right of=init] (system) {system};
+    \node [block, below of=init] (identify) {identify candidate models};
+    \node [block, below of=identify] (evaluate) {evaluate candidate models};
+    \node [block, left of=evaluate, node distance=3cm] (update) {update     model};
+    \node [decision, below of=evaluate] (decide) {is best candidate     better?};
+    \node [block, below of=decide, node distance=3cm] (test) {test};
+    \node [subroutine, below of=test, node distance=3cm] (sub) {part1\nodepart{two}part2\nodepart{three}part3};
+    % Draw edges
+    \path [line] (init) -- (identify);
+    \path [line] (identify) -- (evaluate);
+    \path [line] (evaluate) -- (decide);
+    \path [line] (decide) -| node [near start] {yes} (update);
+    \path [line] (update) |- (identify);
+    \path [line] (decide) -- node {no}(test);
+    \path [line,dashed] (test) -- (sub);
+    \path [line,dashed] (expert) -- (init);
+    \path [line,dashed] (system) -- (init);
+    \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+
+
+ 
+
+
+
+
+
+
+
+\end{document}
