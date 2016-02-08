@@ -1,0 +1,10 @@
+PENALIZACIONES: Tenga en cuenta que su nota se puede ver afectada en los siguientes casos:
+
+• No imprimir el formato de calificación.
+• No entregar impreso el taller.
+• No escribir el nombre del profesor Magistral. 
+• Entregar en el casillero incorrecto.
+• No utilizar fuentes bibliográficas.
+• Se deben numerar las hojas del taller (Ej. 2 de 7).
+• Sustente todas las respuestas con dos (2) decimales de aproximación.
+• El taller debe ser entregado a computador. Imprima el taller por las dos caras de la hoja.

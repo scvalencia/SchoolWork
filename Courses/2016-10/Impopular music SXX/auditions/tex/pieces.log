@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 FEB 2016 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 FEB 2016 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,7 +940,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 ... d'un Gros Bonhomme en Bois, Españaña}
+l.60 ... d'un Gros Bonhomme en Bois, Españaña}
                                                   . \textsc{ Croquis y caran...
 
 Your command was ignored.
@@ -954,7 +954,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 ... d'un Gros Bonhomme en Bois, Españaña}
+l.60 ... d'un Gros Bonhomme en Bois, Españaña}
                                                   . \textsc{ Croquis y caran...
 
 Your command was ignored.
@@ -968,7 +968,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 ...xtit{Embryons desséchés, D'holothurie}
+l.61 ...xtit{Embryons desséchés, D'holothurie}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -982,7 +982,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 ...xtit{Embryons desséchés, D'holothurie}
+l.61 ...xtit{Embryons desséchés, D'holothurie}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -996,7 +996,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 ...t{Embryons desséchés, De podophthalma}
+l.62 ...t{Embryons desséchés, De podophthalma}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -1010,7 +1010,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 ...t{Embryons desséchés, De podophthalma}
+l.62 ...t{Embryons desséchés, De podophthalma}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -1024,7 +1024,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 ...t{Embryons desséchés, De podophthalma}
+l.63 ...t{Embryons desséchés, De podophthalma}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -1038,7 +1038,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 ...t{Embryons desséchés, De podophthalma}
+l.63 ...t{Embryons desséchés, De podophthalma}
                                                   .\textsc{ Embriones diseca...
 
 Your command was ignored.
@@ -1049,6 +1049,34 @@ or  <return>  to continue without it.
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 ..., (1937), \textit{Scaramouche, Modéré}
+                                                  .\textsc{ Scaramouche - Mo...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 ..., (1937), \textit{Scaramouche, Modéré}
+                                                  .\textsc{ Scaramouche - Mo...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 [2] (./pieces.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
@@ -1067,7 +1095,7 @@ Here is how much of TeX's memory you used:
 texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on pieces.pdf (2 pages, 49176 bytes).
+Output written on pieces.pdf (2 pages, 48938 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
