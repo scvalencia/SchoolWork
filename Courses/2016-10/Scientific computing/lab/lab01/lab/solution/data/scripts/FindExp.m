@@ -1,4 +1,3 @@
-%------------------------------------------- 
 function [estimate, k] = FindExp(tolerance)
     k = 10;
     real = exp(1);

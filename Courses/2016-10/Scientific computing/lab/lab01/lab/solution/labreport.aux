@@ -4,22 +4,38 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Procedimiento}{1}}
 \citation{ieeestd}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Resultados}{2}}
-\citation{dongarra1979linpack}
 \newlabel{lst:plotEpsilon}{{1}{3}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Gr\IeC {\'a}fica de $x$ vs $\epsilon (x)$}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Un ejemplo\relax }}{3}}
-\citation{norman}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusiones}{4}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Gr\IeC {\'a}fica de $x$ vs $\epsilon (x)$. (plotEpsilon.m)}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Gr\IeC {\'a}fica de $x$ vs $\epsilon _M(x)$\relax }}{3}}
+\citation{dongarra1979linpack}
+\citation{ieeestd}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Gr\IeC {\'a}fica de $x$ vs $\epsilon _M(x)$, los distintos trazos, muestran el epsilon de Kahan y el implementado anteriormente.\relax }}{4}}
+\citation{ieeestd}
+\citation{ieeestd}
+\citation{stallins}
+\citation{ieeestd}
+\newlabel{lst:badSummation}{{2}{6}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}C\IeC {\'a}lculo de $\DOTSB \sum@ \slimits@ _{k=1}^{3000} \frac  {1}{k^2}$, usando redondeo en cada etapa intermedia. El resultado de \IeC {\'e}sta computaci\IeC {\'o}n, var\IeC {\'\i }a mucho sobre el deseado. (badSummation.m)}{6}}
+\newlabel{lst:summation}{{3}{6}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}C\IeC {\'a}lculo de $\DOTSB \sum@ \slimits@ _{k=1}^{3000} \frac  {1}{k^2}$, usando redondeo en el resultado final. El resultado de \IeC {\'e}sta computaci\IeC {\'o}n, es parecido al valor anal\IeC {\'\i }tico del mismo. (summation.m)}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusiones}{7}}
 \bibcite{forsythe1977computer}{1}
 \bibcite{ieeestd}{2}
 \bibcite{dongarra1979linpack}{3}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Bibliograf\IeC {\'\i }a}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Scripts}{6}}
-\newlabel{lst:MaqEpsOne}{{2}{6}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}C\IeC {\'a}lculo de $\epsilon _M$}{6}}
-\newlabel{lst:MaqEps}{{3}{6}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}C\IeC {\'a}lculo de $\epsilon _M$ para un $x$ espec\IeC {\'\i }fico}{6}}
-\newlabel{lst:kahanFortran}{{4}{6}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}C\IeC {\'a}lculo de $\epsilon _M(x)$ seg\IeC {\'u}n el algoritmo de Kahan implementado en \textsc  {FORTRAN}}{6}}
+\bibcite{stallins}{4}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Bibliograf\IeC {\'\i }a}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Scripts}{10}}
+\newlabel{lst:MaqEpsOne}{{4}{10}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}C\IeC {\'a}lculo de $\epsilon _M$. (MaqEpsOne.m)}{10}}
+\newlabel{lst:MaqEps}{{5}{10}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}C\IeC {\'a}lculo de $\epsilon _M$ para un $x$ espec\IeC {\'\i }fico. (MaqEps.m)}{10}}
+\newlabel{lst:kahanFortran}{{6}{10}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}C\IeC {\'a}lculo de $\epsilon _M(x)$ seg\IeC {\'u}n el algoritmo de Kahan implementado en \textsc  {FORTRAN}. (kahan.f)}{10}}
+\newlabel{lst:kahanMatlab}{{7}{11}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}C\IeC {\'a}lculo de $\epsilon _M$ para un $x$ espec\IeC {\'\i }fico. (KahanEpsilon.m)}{11}}
+\newlabel{lst:plotEpsilonComp}{{8}{11}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}C\IeC {\'a}lculo de $\epsilon _M$ para un $x$ espec\IeC {\'\i }fico. (plotEpsilonComp.m)}{11}}
 \bibdata{sample}
-\@writefile{toc}{\contentsline {chapter}{Lista de Scripts}{7}}
+\newlabel{lst:plotEpsilonComp}{{9}{12}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Funci\IeC {\'o}n en \textsc  {MATLAB} para encontrar de manera num\IeC {\'e}rica el valor de $e$ con cierta tolerancia o diferencia absoluta con el valor real (el definido en \textsc  {MATLAB}). (FindExp.m)}{12}}
+\@writefile{toc}{\contentsline {chapter}{Lista de Scripts}{12}}

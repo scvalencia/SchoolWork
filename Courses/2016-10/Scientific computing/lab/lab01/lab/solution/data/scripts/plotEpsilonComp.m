@@ -6,7 +6,7 @@ x = x.^100;
 y = MaqEps(x);
 z = KahanEpsilon(x);
 
-plot(x, z);
+plot(x, y, x, z);
 set(gcf, 'Position', [400 400 700 700]);
 saveas(gcf, '../img/plot_epsiloncomp.png');
 
