@@ -1,3 +1,4 @@
+# find SchoolWork/ -size +50M
 Courses/2016-10/Image processing/ImageJ/ImageJ.app
 Courses/2016-10/Image processing/ImageJ/jre
 Courses/2016-10/Image processing/ImageJ/luts
@@ -15,3 +16,4 @@ Courses/2016-10/Image processing/ImageJ/plugins/Filters
 Courses/2016-10/Image processing/ImageJ/plugins/README.txt
 Courses/2016-10/Image processing/ImageJ/plugins/Tools
 Courses/2016-10/Image processing/ImageJ/plugins/DIP/*.class
+Courses/2016-10/Image processing/labs/
