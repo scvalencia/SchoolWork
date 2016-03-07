@@ -1,0 +1,11 @@
+eq1 : vb - va = i1 * r1 + r3 * (i1 - i2);
+eq2 : va = r6 * (i2 - i4) + r5 * (i2 - i3) + r3 * (i2 - i1);
+eq3 : ic = i3 - i5;
+eq4 : 0 = i3 * r2 + r5 * (i3 - i2) + r7 * (i5 - i4) + r4 * i3;
+eq5 : 0 = r6 * (i4 - i2) + r7 * (i4 - i5);
+
+expand(eq1);
+expand(eq2);
+expand(eq3);
+expand(eq4);
+expand(eq5);

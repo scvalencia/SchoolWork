@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\begin{enumerate}[(a)]
+
+\item \textbf{(4 puntos)} Calcule un intervalo de confianza del 95\% para la media del tiempo de procesamiento de cada uno de los tornos. Interprete cada uno de los intervalos de confianza.
+Interprete este resultado.
+
+Es necesario obtener los valores para $S_Y$ y $H$ de manera que sea posible construir el intervalo de confianza.
+
+$$S_X = \sqrt{\frac{\sum(x_i - \bar{X})}{n - 1}} \,\ \bar{X} = \frac{1}{n} \times \sum x_i \Rightarrow$$
+
+$$S_{XA} = 1.1 \wedge \bar{X}_A = 1.413 \wedge S_{XB} = 0.8 \wedge \bar{X}_B = 1.68$$
+$$t_{(9.975)} = 2.086$$
+
+El intervalo para el torno $A$ es:
+
+$$\left( 1.413 - t_{(9.975)} \times \frac{S_{XA}}{\sqrt{21}} \leq 1.413 \leq 1.413 + t_{(9.975)} \times \frac{S_{XA}}{\sqrt{21}}\right)$$
+$$(0.91 \leq 1.413 \leq 1.91)$$
+
+El intervalo para el torno $B$ es:
+
+$$\left( 1.68 - t_{(9.975)} \times \frac{S_{XB}}{\sqrt{21}} \leq 1.68 \leq 1.68 + t_{(9.975)} \times \frac{S_{XB}}{\sqrt{21}}\right)$$
+$$(1.35 \leq 1.68 \leq 2.04)$$
+
+\item \textbf{(4 puntos)} Calcule un intervalo de confianza del 90\% para la varianza del tiempo de procesamiento de cada uno de los tornos. Interprete este resultado.
+
+Dado que la confianza es del 90\%, se tienen los siguientes parámetros:
+
+$$\alpha = 0.1 \Rightarrow \mathcal{X}_{(0.95)} = 31.41 \wedge \mathcal{X}_{(0.05)} = 10.85$$
+
+El intervalo para el torno $A$ es:
+
+$$\left( \frac{(1.1)^2(20)}{(31.41)^2} \leq \sigma^2 \leq \frac{(1.1)^2(20)}{10.85} \right) \Rightarrow \left( 0.77 \leq \sigma ^2 \leq 2.23 \right)$$
+
+El intervalo para el torno $B$ es:
+
+$$\left( \frac{(0.8)^2(20)}{(31.41)^2} \leq \sigma^2 \leq \frac{(0.8)^2(20)}{10.85} \right) \Rightarrow \left( 0.407 \leq \sigma ^2 \leq 1.18 \right)$$
+
+\item \textbf{(4 puntos)} Construya un intervalo de confianza del 90\% que le permita evaluar si las varianzas del tiempo de procesamiento de cada uno de los tornos son estadísticamente
+diferentes. ¿Qué puede concluir?
+
+Para evaluar la diferencia estadística de la diferencia de dos varianzas, se debe construir un intervalo de confianza para su cociente. $\alpha = 0.1 \Rightarrow \mathcal{F}_{((\alpha / 2) = 0.05)} = 0.47 \wedge \mathcal{F}_{((1 - \alpha / 2) = 0.95)} = 2.12 $.
+
+$$\left[ 0.65 \leq \frac{\sigma_A ^2}{\sigma_B ^2} \leq 2.91 \right]$$
+
+Dado que uno no está en el intervalo, con un 95\% de confianza, las varianzas son distintas en el intervalo de confianza.  
+
+\item \textbf{(4 puntos)} Teniendo en cuenta la conclusión obtenida en el literal anterior, construya un intervalo de confianza del 95\% para la diferencia de las medias de procesamiento de ambos tornos ($\mu_X - \mu_Y$ ). ¿Qué puede concluir?
+
+$t_{(1- \alpha / 2) = 0.975} = 2.02$
+
+$$1.68 - 1.413 - \sqrt{\frac{2}{21} \times \left[ \frac{(0.8)^2(20)+(1.1)^2(20)}{21 + 21 - 2}\right]} \leq \mu_B - \mu_A$$
+$$\mu_B - \mu_A \leq 1.68 - 1.413 + \sqrt{\frac{2}{21} \times \left[ \frac{(0.8)^2(20)+(1.1)^2(20)}{21 + 21 - 2}\right]} $$
+$$(-0.33 \leq \mu_B - \mu_A \leq 0.866)$$
+
+Con confianza del 95\%, no es posible afirmar si un tiempo es ayor al otro.
+\end{enumerate}
+\end{document}

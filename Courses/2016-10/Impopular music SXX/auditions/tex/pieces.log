@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 FEB 2016 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 MAR 2016 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,162 +932,22 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 53.
-
-! Package inputenc Error: Unicode char \u8:̃ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ... d'un Gros Bonhomme en Bois, Españaña}
-                                                  . \textsc{ Croquis y caran...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:̃ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ... d'un Gros Bonhomme en Bois, Españaña}
-                                                  . \textsc{ Croquis y caran...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 ...xtit{Embryons desséchés, D'holothurie}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 ...xtit{Embryons desséchés, D'holothurie}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 ...t{Embryons desséchés, De podophthalma}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 ...t{Embryons desséchés, De podophthalma}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 ...t{Embryons desséchés, De podophthalma}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 ...t{Embryons desséchés, De podophthalma}
-                                                  .\textsc{ Embriones diseca...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 54.
 [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ..., (1937), \textit{Scaramouche, Modéré}
-                                                  .\textsc{ Scaramouche - Mo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:́ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ..., (1937), \textit{Scaramouche, Modéré}
-                                                  .\textsc{ Scaramouche - Mo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2] (./pieces.aux
+[2] [3] (./pieces.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 ) ) 
 Here is how much of TeX's memory you used:
- 6394 strings out of 493089
- 90624 string characters out of 6134842
- 305688 words of memory out of 5000000
- 9733 multiletter control sequences out of 15000+600000
+ 6392 strings out of 493089
+ 90614 string characters out of 6134842
+ 306688 words of memory out of 5000000
+ 9731 multiletter control sequences out of 15000+600000
  64055 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,47p,303b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1095,10 +955,10 @@ Here is how much of TeX's memory you used:
 texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on pieces.pdf (2 pages, 48938 bytes).
+Output written on pieces.pdf (3 pages, 56517 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 27 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -127,7 +127,7 @@ def main():
 		music_pieceobject = MusicPiece(author, year, original_name, spanish_name, file_path)
 		music_pieces.append(music_pieceobject)
 
-	random.shuffle(music_pieces)
+	# random.shuffle(music_pieces)
 
 	flag = True
 	correct = 0
