@@ -1,0 +1,119 @@
+@book{suli2003introduction,
+  title={An Introduction to Numerical Analysis},
+  author={Suli, E. and Mayers, D.F.},
+  isbn={9780521007948},
+  lccn={2003273860},
+  url={https://books.google.com.co/books?id=hj9weaqJTbQC},
+  year={2003},
+  publisher={Cambridge University Press},
+  pages={87-93}
+}
+
+@book{yang2005applied,
+  title={Applied Numerical Methods Using MATLAB},
+  author={Yang, W.Y. and Cao, W. and Chung, T.S. and Morris, J.},
+  isbn={9780471705185},
+  url={https://books.google.com.co/books?id=otnFUvp6U3MC},
+  year={2005},
+  publisher={Wiley},
+  pages={111-112}
+}
+
+@book{zalizniak2008essentials,
+  title={Essentials of Scientific Computing: Numerical Methods for Science and Engineering},
+  author={Zalizniak, V.},
+  isbn={9780857099365},
+  url={https://books.google.com.co/books?id=eJmjAgAAQBAJ},
+  year={2008},
+  publisher={Elsevier Science},
+  pages={199}
+}
+
+@book{watkins2004fundamentals,
+  title={Fundamentals of Matrix Computations},
+  author={Watkins, D.S.},
+  isbn={9780471461678},
+  lccn={2002071332},
+  series={Pure and Applied Mathematics: A Wiley Series of Texts, Monographs and Tracts},
+  url={https://books.google.com.co/books?id=xi5omWiQ-3kC},
+  year={2004},
+  publisher={Wiley},
+  pages={32-48}
+}
+
+@book{scott2011numerical,
+  title={Numerical Analysis},
+  author={Scott, L.R.},
+  isbn={9781400838967},
+  url={https://books.google.com.co/books?id=SfCjL\_5AaRQC},
+  year={2011},
+  publisher={Princeton University Press},
+  pages={51-60}
+}
+
+@book{cheney2007numerical,
+  title={Numerical Mathematics and Computing},
+  author={Cheney, E. and Kincaid, D.},
+  isbn={9780495114758},
+  lccn={2007922553},
+  series={International student edition},
+  url={https://books.google.com.co/books?id=ZUfVZELlrMEC},
+  year={2007},
+  publisher={Cengage Learning},
+  pages={305-306}
+}
+
+@book{ipsen2009numerical,
+  title={Numerical Matrix Analysis: Linear Systems and Least Squares},
+  author={Ipsen, I.C.F.},
+  isbn={9780898717686},
+  series={SIAM e-books},
+  url={https://books.google.com.co/books?id=9\_nuNX1WeDAC},
+  year={2009},
+  publisher={Society for Industrial and Applied Mathematics (SIAM, 3600 Market Street, Floor 6, Philadelphia, PA 19104)},
+  pages={63-65}
+}
+
+@book{heath2005scientific,
+  title={Scientific Computing: An Introductory Survey},
+  author={Heath, M.T.},
+  isbn={9780071244893},
+  lccn={2001031265},
+  series={Scientific Computing: An Introductory Survey},
+  url={https://books.google.com.co/books?id=gwBrMAEACAAJ},
+  year={2005},
+  publisher={McGraw-Hill},
+  pages={63-65}
+}
+
+@book{gander2014scientific,
+  title={Scientific Computing - An Introduction using Maple and MATLAB},
+  author={Gander, W. and Gander, M.J. and Kwok, F.},
+  isbn={9783319043265},
+  series={Texts in Computational Science and Engineering},
+  url={https://books.google.com.co/books?id=JcMRswEACAAJ},
+  year={2014},
+  publisher={Springer International Publishing},
+  pages={88-94}
+}
+
+@book{quarteroni2014scientific,
+  title={Scientific Computing with MATLAB and Octave},
+  author={Quarteroni, A. and Saleri, F. and Gervasio, P.},
+  isbn={9783642453670},
+  series={Texts in Computational Science and Engineering},
+  url={https://books.google.com.co/books?id=\_0m9BAAAQBAJ},
+  year={2014},
+  publisher={Springer Berlin Heidelberg},
+  pages={135-151}
+}
+
+@book{ford2014numerical,
+  title={Numerical Linear Algebra with Applications: Using MATLAB},
+  author={Ford, W.},
+  isbn={9780123947840},
+  url={https://books.google.com.co/books?id=OODs2mkOOqAC},
+  year={2014},
+  publisher={Elsevier Science},
+  pages={267-280}
+}

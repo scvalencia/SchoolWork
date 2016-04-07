@@ -1,0 +1,22 @@
+@book{rosloniec2008fundamental,
+  title={Fundamental Numerical Methods for Electrical Engineering},
+  author={Rosloniec, S.},
+  isbn={9783540795193},
+  lccn={2008927874},
+  series={Lecture Notes in Electrical Engineering},
+  url={https://books.google.com.co/books?id=AenHoP9JUFkC},
+  year={2008},
+  publisher={Springer Berlin Heidelberg},
+  pages={30-35}
+}
+
+@book{miller2014numerical,
+  title={Numerical Analysis for Engineers and Scientists},
+  author={Miller, G.},
+  isbn={9781107021082},
+  lccn={2014451484},
+  url={https://books.google.com.co/books?id=qqlkAwAAQBAJ},
+  year={2014},
+  publisher={Cambridge University Press},
+  pages={175-178}
+}

@@ -1,0 +1,9 @@
+@book{burden2010numerical,
+  title={Numerical Analysis},
+  author={Burden, R.L. and Faires, J.D.},
+  isbn={9781133169338},
+  url={https://books.google.com.co/books?id=Dbw8AAAAQBAJ},
+  year={2010},
+  publisher={Cengage Learning},
+  pages={105-160}
+}

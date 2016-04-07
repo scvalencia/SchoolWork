@@ -49,7 +49,7 @@
 
 \pretitle{\vspace{-30pt} \begin{flushleft} \HorRule \fontsize{35}{35} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
 
-\title{Gas ideal} % Your article title
+\title{Dilatación térmica del agua} % Your article title
 
 \posttitle{\par\end{flushleft}\vskip 0.2em} % Whitespace under the title
 
@@ -79,7 +79,7 @@ Universidad de los Andes \\ 201111578
 %----------------------------------------------------------------------------------------
 
 % The first character should be within \initial{}
-\initial{U}\textbf{n gas ideal es un gas teórico compuesto de un conjunto de partículas puntuales con desplazamiento aleatorio que no interactuan entre sí. El concepto de gas ideal es útil porque el mismo se comporta según la ley de los gases ideales, una ecuación de estado simplificada, y que puede ser analizada mediante la mecánica estadística.} Tomado de: \cite{Wikipedia}
+\initial{E}\textbf{l agua, al igual que los sólidos, está sujetos a transformaciones físicas y químicas al experimentar variaciones de temperatura. La dilatación térmica del agua, es un fenómeno físico bien entendido y estudiado. Es necesario confirmar la intuición física haciendo uso de la experimentación. En la practica de laboratorio, se pretende estudiar de manera experimental la dilatación térmica del agua, de esta forma, se confirma la intuición física y se  solidifica el entendimiento del método científico y la importancia de la experimentación}
 
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
@@ -88,63 +88,73 @@ Universidad de los Andes \\ 201111578
 \section*{Objetivos}
 
 \begin{enumerate}
-\item Estudiar la relación entre la presión, el volumen y la temperatura de una muestra de aire.
-\item Estimar el cero absoluto de temperatura.
+\item Estudiar la dilatación térmica del agua.
 \end{enumerate}
 
 
-\section*{Teoría}
+\section*{Marco teórico}
+
+Al igual que los sólidos el agua a una temperatura entre $0º$C y $4º$C, disminuye el volumen al aumentar su temperatura. En este rango, el coeficiente de expansión es negativo. Sobre los $4º$C, el agua se expande al calentarse, por lo tanto, el agua alcanza su densidad máxima a los $4º$C. Asimismo, el agua se expande al ser congelada; de manera distinta a otros materiales que se contraen al congelarse.\\
+
+Este comportamiento anómalo, tiene una importancia fundamental en la vida en los cuerpos acuíferos. Un lago se congela de la superficie hacia abajo; sobre los $4º$C, el agua fria en la superficie fluye hacia abajo por su mayor densidad. Sin embargo, cuando la temperatura cae debajo de los $4º$C, el agua en la superficie es menos densa que el agua mas caliente sobre la misma. Por este fenómeno, el flujo hacia abajo decrece, y el agua cercana a la superficie, permanece mas fría que el agua en la parte de abajo.
 
 \begin{figure}[htbp]
 \centering
-	\includegraphics[scale=0.7]{data/img/proc}
-	\caption{En el estudio de la muestra de aire a presión constante deben igualarse los dos niveles bajando el extremo libre de la manguera. En el estudio a volumen constante se debe subir hasta que el nivel 1 regrese a la altura de referencia.}
+	\includegraphics[scale=0.47]{data/img/figure01}
+	\caption{El volumen de un gramo de agua a temperatura $T \in [0º, 100º]$, ha aumentado a 1.034 $cm^3$. Si el coeficiente de exoansión del agua fuer constante, se observaría una relación lineal. Imagen tomada de \cite{young2011sears}}
 \end{figure}
 
-Presión hidrostatica: $\Delta P = \rho g \Delta h$. Comportamiento de gases ideales. Cero absoluto de temperatura.\\
+\begin{itemize}
+\item Demostración: (Ver figura 2)
 
-\begin{enumerate}
-\item En términos de $H$ encontrar la ecuación que representa al volumen total de la muestra de aire. ¿Qué otras dos cantidades además de $H$ son necesarias?
+\begin{figure}[htbp]
+\centering
+	\includegraphics[scale=0.47]{data/img/figure03}
+	\caption{Demostración}
+\end{figure}
 
-\vspace{40 mm}
+\item $\alpha = 3.3 \times 10^{-6}\ K^{-1}$ : coeficiente de dilatación lineal del vidrio  
+\end{itemize}
 
-\item En términos de $L$ y la presión atmosférica en el laboratorio $P_0$, encontrar la ecuación para hallar la presión absoluta del gas en el escenario donde el volumen se mantiene constante.
-
-\vspace{40 mm}
-
-\item 
-Consultar el valor de la presión atmosférica en Bogotá.
-\end{enumerate}
+\newpage
 
 \section*{Procedimiento experimental}
 
-\begin{figure}[htbp]
-\centering
-	\includegraphics[scale=0.5]{data/img/disp}
-	\caption{Disposición de elementos para el desarrollo del laboratorio. Señalización de los niveles.}
-\end{figure}
-
-En este experimento tomamos una muestra de aire con temperatura controlada para determinar el comportamiento de su presión cuando su volumen permanece constante, y el del volumen cuando la presión se mantiene fija. La muestra de aire a estudiar esta contenida en un matraz y en un segmento de manguera; el agua sirve el doble propósito de aprisionar la muestra de aire y de servir como testigo de la presión manometrica de la misma. Llamamos \textit{nivel 1} al nivel que esta en contacto con la muestra de aire, y \textit{nivel 2} al que esta en contacto con el aire del laboratorio.\\
-
-En el experimento regulamos la temperatura de la muestra de aire modificando la temperatura de un reservorio ter mico que rodea al matraz que lo contiene. Para controlar la presión se mueve el extremo libre de la manguera hasta que los dos niveles de agua se igualan, el nivel 1 indica el aumento de volumen del gas. Para controlar el volumen se mueve el extremo libre hasta que el nivel 1 regresa a su posición inicial; la diferencia de los dos niveles señala la presión manometrica del aire.\\
-
-Con los datos a presión y volumen constantes, hacemos en cada uno una extrapolación para estimar el cero absoluto de temperatura, que en el escenario de presión constante corresponde a la temperatura a la cual el volumen se anula, y que en el caso de volumen constante corresponde a la temperatura a la cual la presión se anula. Los materiales necesarios son:
+En este experimento, se busca observar el efecto que tiene la temperatura sobre el volumen de una muestra de agua. El cambio en volumen es pequeño pero lo hacemos visible forzándolo a presentarse en un tubo delgado. Dadas las peculiaridades de la dilatación térmica del agua el modelo lineal no es valido en todo el intervalo de temperaturas que vamos a estudiar, en consecuencia tenemos que tener cuidado de interpretar correctamente las mediciones obtenidas. Los materiales necesarios son:
 
 \begin{itemize}
-\item Calorímetro
-\item Matraz Erlenmeyer con tapón y manguera
-\item Termómetro
-\item Regla
+\item Tubo delgado de vidrio.
+\item Tapón
+\item Vaso
 \item Agua
-\item Jeringa
+\item Matraz de Erlenmeyer
 \item Termómetro
-\item Horno
-\item Soporte universal
+\item Calibrador
+\item Balanza
+\item Probeta
 \end{itemize}
 
-La cantidad de agua en la manguera debe ser tal que ocupe entre 50 y 100 cm. Inicialmente el matraz debe estar inmerso en agua fría. Si se tiene disponible un barómetro en el laboratorio usar su lectura para la presión atmosférica, de lo contrario utilice el valor consultado.\\
+\begin{figure}[htbp]
+\centering
+	\includegraphics[scale=0.6]{data/img/figure02}
+	\caption{Disposición de elementos para el desarrollo del laboratorio.}
+\end{figure}
 
-Con la manguera desconectada del matraz movemos el extremo libre de la manguera hacia arriba o hacia abajo hasta dejar el nivel inicial cerca del centro de la regla o un poco más abajo. Conectamos con firmeza la manguera al matraz y no la desconectamos durante todo el experimento. Ponemos una gota de agua en el borde del matraz que sirva como indicador de alguna fuga. Al conectar la manguera los dos niveles cambian un poco, volvemos a igualarlos manipulando el extremo libre, una vez igualados registramos la altura correspondiente en la regla; esta será la altura de referencia para todo el experimento.\\
+Calentamos agua a una temperatura no inferior a $65º$C. Ponemos el matraz al interior del vaso de aluminio vació y vertimos en el agua caliente hasta que quede completa- mente lleno. Ponemos el tapón (que tiene ajustado el tubo) cuidándonos de que quede muy bien fijo y de que al interior del matraz no queden burbujas de aire. Llenamos completamente el tubo con agua caliente. Llenamos casi completamente el vaso con agua caliente; esta agua que rodea al matraz sirve el propósito de reservorio térmico.\\
+
+Disminuimos la temperatura del reservorio térmico añadiendo agua fría o reemplazando algo del agua del reservorio con agua fría; cambios de temperatura de $5º$C son apropiados. Medimos la temperatura del agua al interior del matraz, como hacer esto?, y tomamos con el calibrador la distancia h (ver figura) que indica el nivel del agua dentro del tubo.\\
+
+Disminuimos repetidamente la temperatura y registramos datos hasta llegar a la temperatura ambiente. Al final, para medir el volumen inicial de la muestra de agua, llenamos el tubo con agua a temperatura ambiente, y con la ayuda de una probeta graduada, o con una balanza, lo determinamos.
+
+\section*{Análisis cualitativo}
+
+\begin{enumerate}
+\item Un reservorio térmico, es un recipiente que sirve para reservar las temperaturas sin pérdidas de calor. Uno ideal, no posee el mismo perdidas de calor ni presenta cambios frente la temperatura contenida.
+
+\item El agua expande su volumen para adaptarse a la forma de 
+l recipiente ocupado.
+\end{enumerate}
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
@@ -153,8 +163,6 @@ Con la manguera desconectada del matraz movemos el extremo libre de la manguera 
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
   \bibitem{young2011sears} Sears and Zemansky.B. {\em Sears and Zemansky's University Physics / Tutorials in Introductory Physics / Tutorials in Introductory Physics Homework. 17:565--567}, Pearson Education.  2011.
-  
-  \bibitem{Wikipedia} \textit{https://es.wikipedia.org/wiki/Gas\_ideal}, Consultado en Febrero 2016.
  
 \end{thebibliography}
 

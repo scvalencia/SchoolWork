@@ -1,0 +1,43 @@
+@book{siauw2014introduction,
+  title={An Introduction to MATLAB{\textregistered} Programming and Numerical Methods for Engineers},
+  author={Siauw, T. and Bayen, A.},
+  isbn={9780127999142},
+  url={https://books.google.com.co/books?id=GwrUAgAAQBAJ},
+  year={2014},
+  publisher={Elsevier Science},
+  pages={198-200}
+}
+
+@book{lopez2014matlab,
+  title={MATLAB Symbolic Algebra and Calculus Tools},
+  author={Lopez, C.},
+  isbn={9781484203439},
+  series={MATLAB Solutions Series},
+  url={https://books.google.com.co/books?id=sYcnCgAAQBAJ},
+  year={2014},
+  publisher={Apress},
+  pages={73-75}
+}
+
+@book{jaluria2011computer,
+  title={Computer Methods for Engineering with MATLAB{\textregistered} Applications, Second Edition},
+  author={Jaluria, Y.},
+  isbn={9781591690368},
+  lccn={2011014687},
+  series={Series in Computational and Physical Processes in Mechanics and Thermal Sciences},
+  url={https://books.google.com.co/books?id=RrQSJTwpxdMC},
+  year={2011},
+  publisher={Taylor \& Francis},
+  pages={60-63}
+}
+
+@book{yang2005applied,
+  title={Applied Numerical Methods Using MATLAB},
+  author={Yang, W.Y. and Cao, W. and Chung, T.S. and Morris, J.},
+  isbn={9780471705185},
+  url={https://books.google.com.co/books?id=otnFUvp6U3MC},
+  year={2005},
+  publisher={Wiley},
+  pages={50-57}
+}
+

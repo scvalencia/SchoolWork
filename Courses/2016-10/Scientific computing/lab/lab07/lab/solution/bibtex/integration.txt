@@ -1,0 +1,20 @@
+@book{moler2010numerical,
+  title={Numerical Computing with MATLAB: Revised Reprint},
+  author={Moler, C.B.},
+  isbn={9780898716603},
+  lccn={2004045360},
+  url={https://books.google.com.co/books?id=\_Cad7uaYcloC},
+  year={2010},
+  publisher={Society for Industrial and Applied Mathematics},
+  pages={65-98}
+}
+
+@book{lindfield2012numerical,
+  title={Numerical Methods: Using MATLAB},
+  author={Lindfield, G. and Penny, J.},
+  isbn={9780123869883},
+  url={https://books.google.com.co/books?id=Argct8PNcc4C},
+  year={2012},
+  publisher={Elsevier Science},
+  pages={281-305}
+}
