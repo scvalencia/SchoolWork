@@ -1,6 +1,6 @@
 function []  = plotter(M, cmap)
 
-    tolerance = 3.0e-5;
+    tolerance = 0.5e-4;
 
     [r c] = size(M);
 
@@ -9,8 +9,8 @@ function []  = plotter(M, cmap)
     xloc = xloc(:); yloc = yloc(:);
     str = strtrim(cellstr( num2str(M(:),'%.3g') ));
     
-    xx = ['x[1]'; 'x[2]'; 'x[3]'; 'x[4]'; 'x[5]'];
-    yy = ['GE      '; 'INV     '; 'LINSOLVE'; 'DIV     '; 'RREF    '];
+    xx = ['10 '; '20 '; '50 '; '75 '; '100'; '500'];
+    yy = ['JACOBI    '; 'GAUSSEIDEL'; 'RREF      '; 'INV       '; 'LINSOLVE  '; 'MLDIVIDE  '];
     
     xticklabels = cellstr(xx);
     yticklabels = cellstr(yy);
@@ -18,7 +18,7 @@ function []  = plotter(M, cmap)
     % xticklabels = cellstr( num2str((1:c)','M%d') );
     % yticklabels = cellstr( num2str((1:r)','M%d') );
     
-    mask = abs(M) < tolerance;
+    mask = abs(M) > tolerance;
     
     h = imagesc(1:c, 1:r, ones(size(M)));
     set(h, 'AlphaData',mask)

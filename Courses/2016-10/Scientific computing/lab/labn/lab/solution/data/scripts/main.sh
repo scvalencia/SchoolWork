@@ -1,2 +1,2 @@
-cd /Users/scvalencia606/Documents/University/school-work/Courses/2016-10/Scientific' computing'/lab/lab03/lab/solution/data/scripts/
-addpath /Users/scvalencia606/Documents/University/school-work/Courses/2016-10/Scientific' computing'/lab/lab03/lab/solution/data/scripts/
+cd /Users/scvalencia606/Documents/University/school-work/Courses/2016-10/Scientific' computing'/lab/lab04/lab/solution/data/scripts/
+addpath /Users/scvalencia606/Documents/University/school-work/Courses/2016-10/Scientific' computing'/lab/lab04/lab/solution/data/scripts/
